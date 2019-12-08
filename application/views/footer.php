@@ -43,11 +43,12 @@
                     </div>
                     <div class="col-md-4 pt-3 float-right">
                     <h4 style="font-family: 'Nunito' ;  font-size: 25px;">Social Media</h4>
-                    <div class="col-md-4 pt-2">
+                    <div class="col-md-7 pt-2">
                         <div class="single_footer_area">
                             <ul class="footer_widget_menu">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
+                        <!--   <li class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</li> -->
+                            <li><a href="#"><i class="fa fa-instagram"></i> @UnniKoreanFood</a></li>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i> Unni Korean Food</a></li>
                             </ul>
                         </div>
                     </div>

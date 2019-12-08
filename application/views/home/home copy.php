@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -22,6 +23,104 @@
 
 </head>
 
+        <!-- ****** Header Area Start ****** -->
+        <header class="header_area">
+            <!-- Top Header Area Start -->
+            <div class="top_header_area">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center justify-content-end">
+
+                        <div class="col-12 col-lg-7">
+                            <div class="top_single_area d-flex align-items-center">
+                                <!-- Logo Area -->
+                                <div class="top_logo">
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/img/core-img/logo.png" alt=""></a>
+                                </div>
+                                <!-- Cart & Menu Area -->
+                                <div class="header-cart-menu d-flex align-items-center ml-auto">
+                                    <!-- Cart Area -->
+                                    <div class="cart">
+                                        <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">0</span> <i class="ti-bag"></i> Total Belanja Anda</color></a>
+                                        <!-- Cart List Area Start -->
+                                        <ul class="cart-list">
+                                            <li>
+                                                <a href="#" class="image"><img src="<?php echo base_url(); ?>/assets/img/product-img/product-10.jpg" class="cart-thumb" alt=""></a>
+                                                <div class="cart-item-desc">
+                                                    <h6><a href="#">Women's Fashion</a></h6>
+                                                    <p>1x - <span class="price">$10</span></p>
+                                                </div>
+                                                <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="image"><img src="<?php echo base_url(); ?>/assets/img/product-img/product-11.jpg" class="cart-thumb" alt=""></a>
+                                                <div class="cart-item-desc">
+                                                    <h6><a href="#">Women's Fashion</a></h6>
+                                                    <p>1x - <span class="price">$10</span></p>
+                                                </div>
+                                                <span class="dropdown-product-remove"><i class="icon-cross"></i></span>
+                                            </li>
+                                            <li class="total">
+                                                <span class="pull-right">Total: $20.00</span>
+                                                <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
+                                                <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-right-side-menu ml-15">
+                                        </i><font color=red> Rp.0 </color>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Header Area End -->
+            <div class="main_header_area">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12 d-md-flex justify-content-between">
+                            <!-- Header Social Area -->
+                            <div class="header-social-area">
+                                <a href="#"><span class="karl-level">Bagikan</span> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            </div>
+                            <!-- Menu Area -->
+                            <div class="main-menu-area">
+                                <nav class="navbar navbar-expand-lg align-items-start">
+
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#karl-navbar" aria-controls="karl-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="ti-menu"></i></span></button>
+
+                                    <div class="collapse navbar-collapse align-items-start collapse" id="karl-navbar">
+                                        <ul class="navbar-nav animated" id="nav">
+                                            <li class="nav-item active"><a class="nav-link" href="index.html">Beranda</a></li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Belanja</a>
+                                                <div class="dropdown-menu" aria-labelledby="karlDropdown">
+                                                    <a class="dropdown-item" href="#">Hijab Instan</a>
+                                                    <a class="dropdown-item" href="#">Hijab Segiempat</a>
+                                                    <a class="dropdown-item" href="#">Baju Muslim</a>
+                                                    <a class="dropdown-item" href="#">Aksesoris</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Konfirmasi</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- Help Line -->
+                            <div class="help-line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ****** Header Area End ****** -->
 
         <!-- ****** Top Discount Area Start ****** -->
         <section class="top-discount-area d-md-flex align-items-center">
@@ -399,7 +498,60 @@
             </div>
         </section>
         <!-- ****** Popular Brands Area End ****** -->
+
+        <!-- ****** Footer Area Start ****** -->
+        <footer class="footer_area">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Area Start -->
+                    <!-- Single Footer Area Start -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+                        <div class="single_footer_area">
+                        <div class="footer_heading mb-30">
+                                <h6>Unni Korean Group</h6>
+                            </div>
+                            <ul class="footer_widget_menu">
+                                <li><a href="#">Unni Korean Food</a></li>
+                                <li><a href="#">Unni Korean Rent Car</a></li>
+                                <li><a href="#">Unni Korean Fashion</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Single Footer Area Start -->
+                    <div class="col-12 col-lg-5">
+                        <div class="single_footer_area">
+                            <div class="footer_heading mb-30">
+                                <h6>Unni Korean Fashion</h6>
+                            </div>
+                            <div class="subscribtion_form">
+                                <ul class="footer_widget_menu">
+                                <li><a href="#">Tentang</a></li>
+                                <li><a href="#">Kontak Kami</a></li>
+                                <li><a href="#">Kebijakan pengguna</a></li>
+                                <li><a href="#">Sales</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+
                 <!-- Footer Bottom Area Start -->
+                <div class="footer_bottom_area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer_social_area text-center">
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ****** Footer Area End ****** -->
     </div>
     <!-- /.wrapper end -->
 

@@ -8,35 +8,35 @@
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
 
                                 <ol class="carousel-indicators">
-                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-1.jpg);">
+                                    <li class="active" data-target="#product_details_slider" data-slide-to="1" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-1.jpg);">
                                     </li>
-                                    <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-2.jpg);">
+                                    <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-2.jpg);">
                                     </li>
-                                    <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-3.jpg);">
+                                    <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-3.jpg);">
                                     </li>
-                                    <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-4.jpg);">
+                                    <li data-target="#product_details_slider" data-slide-to="4" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-4.jpg);">
                                     </li>
                                 </ol>
 
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="gallery_img" href="img/product-img/product-9.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-9.jpg" alt="First slide">
+                                        <a class="gallery_img" href="assets/img/product-img/product-1.jpg">
+                                        <img class="d-block w-100" src="assets/img/product-img/product-1.jpg" alt="First slide">
                                     </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="gallery_img" href="img/product-img/product-2.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-2.jpg" alt="Second slide">
+                                        <a class="gallery_img" href="assets/img/product-img/product-2.jpg">
+                                        <img class="d-block w-100" src="assets/img/product-img/product-2.jpg" alt="Second slide">
                                     </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="gallery_img" href="img/product-img/product-3.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-3.jpg" alt="Third slide">
+                                        <a class="gallery_img" href="assets/img/product-img/product-3.jpg">
+                                        <img class="d-block w-100" src="assets/img/product-img/product-3.jpg" alt="Third slide">
                                     </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="gallery_img" href="img/product-img/product-4.jpg">
-                                        <img class="d-block w-100" src="img/product-img/product-4.jpg" alt="Fourth slide">
+                                        <a class="gallery_img" href="assets/img/product-img/product-4.jpg">
+                                        <img class="d-block w-100" src="assets/img/product-img/product-4.jpg" alt="Fourth slide">
                                     </a>
                                     </div>
                                 </div>
@@ -47,9 +47,9 @@
                     <div class="col-12 col-md-6">
                         <div class="single_product_desc">
 
-                            <h4 class="title"><a href="#">Long Yellow Dress</a></h4>
+                            <h4 class="title"><a href="#">Mukena</a></h4>
 
-                            <h4 class="price">$ 39.99</h4>
+                            <h4 class="price">Rp. 100.000,00</h4>
 
                             <p class="available">Available: <span class="text-muted">In Stock</span></p>
 
@@ -62,20 +62,33 @@
                             </div>
 
                             <div class="widget size mb-50">
-                                <h6 class="widget-title">Size</h6>
+                                <h6 class="widget-title">Ukuran</h6>
                                 <div class="widget-desc">
                                     <ul>
-                                        <li><a href="#">32</a></li>
-                                        <li><a href="#">34</a></li>
-                                        <li><a href="#">36</a></li>
-                                        <li><a href="#">38</a></li>
-                                        <li><a href="#">40</a></li>
+                                        <li><a href="#">S</a></li>
+                                        <li><a href="#">M</a></li>
+                                        <li><a href="#">L</a></li>
+                                        <li><a href="#">XL</a></li>
+                                        <li><a href="#">XXL</a></li>
                                         <li><a href="#">42</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <!-- Add to Cart Form -->
+                            <div class="col-12 col-md-6">
+                            <form action="kuantitas.php" method="get">
+      <p><input type='radio' name='' value='' />kuantitas</p>
+     
+                            <form class="cart clearfix mb-50 d-flex" method="post">
+                                <div class="quantity">
+                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
+                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </div>
+                               
+                            </form>
+                            <p><input type='radio' name='' value=''/>Grosir</p>
                             <form class="cart clearfix mb-50 d-flex" method="post">
                                 <div class="quantity">
                                     <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
@@ -84,6 +97,8 @@
                                 </div>
                                 <button type="submit" name="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
                             </form>
+                            </form>
+                            </div>
 
                             <div id="accordion" role="tablist">
                                 <div class="card">
@@ -104,7 +119,7 @@
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingTwo">
                                         <h6 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Cart Details</a>
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bahan</a>
                                         </h6>
                                     </div>
                                     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">

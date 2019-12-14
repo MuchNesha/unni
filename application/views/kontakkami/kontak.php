@@ -37,9 +37,9 @@
  <br>
  <br>
             <div class="cart-page-heading">
-            <h1>Kontak Kami</h1>
+           <bo <h1>Kontak Kami</h1>
            <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <!-- <img class="kanan" src="<?php echo base_url(); ?>/assets/img/bg-img/kontakkami.png"  height="100px" top="10px" align="right" /> -->
+          <img class="kanan" src="<?php echo base_url(); ?>/assets/img/bg-img/kontakkami.png"  height="100px" top="10px" align="right" />
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

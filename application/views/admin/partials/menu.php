@@ -95,7 +95,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href=" <?php echo base_url(); ?>/index.html"> <i class="ni ni-tv-2 text-primary"></i> Data Barang
+          <a class=" nav-link active " href=" <?php echo base_url(); ?>/index.html"> <i class="ni ni-box-2 text-primary"></i> Data Barang
             </a>
           </li>
           <li class="nav-item">

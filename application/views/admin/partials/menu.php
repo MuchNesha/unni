@@ -95,7 +95,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href=" <?php echo base_url(); ?>/index.html"> <i class="ni ni-tv-2 text-primary"></i> Beranda
+          <a class=" nav-link active " href=" <?php echo base_url(); ?>/index.html"> <i class="ni ni-tv-2 text-primary"></i> Data Barang
             </a>
           </li>
           <li class="nav-item">
@@ -116,16 +116,6 @@
           <li class="nav-item">
             <a class="nav-link " href="<?php echo base_url(); ?>/examples/tables.html">
               <i class="ni ni-bullet-list-67 text-red"></i> Tables
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>/examples/login.html">
-              <i class="ni ni-key-25 text-info"></i> Login
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>/examples/register.html">
-              <i class="ni ni-circle-08 text-pink"></i> Register
             </a>
           </li>
         </ul>

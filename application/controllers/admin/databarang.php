@@ -39,9 +39,9 @@ class databarang extends CI_Controller
         $this->load->view("admin/tambahbarang");
     }
 
-    public function edit($no_rm = null)
+    public function edit($id_barang = null)
     {
-        if (!isset($no_rm)) redirect('admin/databarang');
+        if (!isset($id_barang)) redirect('admin/databarang');
 
         $barang = $this->model_barang;
         $validation = $this->form_validation;

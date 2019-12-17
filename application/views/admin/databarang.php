@@ -25,6 +25,8 @@
                                             <th>Harga Barang</th>
                                             <th>Grosir Barang</th>
                                             <th>Diskon Barang</th>
+                                            <th>Aksi</th>
+
 
                                         </tr>
                                     </thead>

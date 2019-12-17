@@ -27,10 +27,10 @@ class databarang extends CI_Controller
     {
         $barang = $this->model_barang;
         $validation = $this->form_validation;
-        $validation->set_rules($pasien->rules());
+        $validation->set_rules($barang->rules());
 
         if ($validation->run()) {
-            $pasien->save();
+            $barang->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         } else {
             $this->session->set_flashdata('error', 'Error');
@@ -52,7 +52,7 @@ class databarang extends CI_Controller
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["barang"] = $pasien->getById($id_barang);
+        $data["barang"] = $barang->getById($id_barang);
         if (!$data["barang"]) show_404();
 
         $this->load->view("admin/editbarang", $data);
@@ -63,7 +63,7 @@ class databarang extends CI_Controller
         if (!isset($id_barang)) show_404();
 
         if ($this->model_barang->delete($id_barang)) {
-            redirect(site_url('databarang'));
+            redirect(site_url('admin/databarang'));
         }
     }
 

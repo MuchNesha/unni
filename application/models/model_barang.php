@@ -40,7 +40,7 @@ class model_barang extends CI_Model
         $this->id_barang = $post["id_barang"];
         $this->nama_barang = $post["nama_brg"];
         $this->jenis_barang = $post["jenis_brg"];
-        $this->deskripsi_barang = $post["deksripsi"];
+        $this->deskripsi_barang = $post["deskripsi"];
         $this->gambar_barang = $this->UploadFoto();
         $this->harga_barang = $post["harga"];
         $this->grosir_barang = $post["grosir"];
@@ -54,8 +54,8 @@ class model_barang extends CI_Model
         $post = $this->input->post();
         $this->id_barang = $post["id_barang"];
         $this->nama_barang = $post["nama_brg"];
-        $this->jenis_barang = $post["nama"];
-        $this->deskripsi_barang = $post["tgl_lahir"];
+        $this->jenis_barang = $post["jenis_brg"];
+        $this->deskripsi_barang = $post["deskripsi"];
         if (!empty($_FILES["foto"]["name"])) {
             $this->foto = $this->UploadFoto()();
         } else {
@@ -75,11 +75,11 @@ class model_barang extends CI_Model
 
     private function UploadFoto()
     {
-        $config['upload_path']          = ('assets/img/upload/databarang');
+        $config['upload_path']          = ('./assets/img/upload/databarang');
         $config['allowed_types']        = 'gif|png|jpg';
         $config['file_name']            = $this->id_barang;
         $config['overwrite']            = true;
-        $config['max_size']             = 102400;
+        $config['max_size']             = 2048;
 
         $this->load->library('upload', $config);
 

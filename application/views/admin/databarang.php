@@ -6,6 +6,9 @@
             <div class="container-fluid">
                 <div class="header-body">
       <!-- Table -->
+    <a class="btn btn-success" href="<?= site_url('admin/databarang/add'); ?>">Tambah Data </a>
+    <br>
+    <br>
       <div class="row">
         <div class="col">
           <div class="card shadow">
@@ -15,11 +18,12 @@
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
-                  <tr>                    <th>Nama Barang</th>
-                                            <th>Kategori</th>
-                                            <th>Harga Barang</th>
-                                            <th>Sisa Stock</th>
-                                            <th>Aksi</th>
+                  <tr>                    
+                    <th>Nama Barang</th>
+                      <th>Kategori</th>
+                      <th>Harga Barang</th>
+                      <th>Sisa Stock</th>
+                      <th>Aksi</th>
 
 
                                         </tr>
@@ -30,7 +34,7 @@
                                                 <td><?php echo $barang->nama_barang ?></td>
                                                 <td><?php echo $barang->jenis_barang ?></td>
                                                 <td><?php echo $barang->harga_barang ?></td>
-                                                <td><?php echo $barang->grosir_barang ?></td>
+                                                <td><?php echo $barang->Stock ?></td>
 
                                                 <td>
                                                     <a href="<?php echo site_url('admin/databarang/edit/' . $barang->id_barang) ?>">
@@ -75,9 +79,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
       <!-- Footer -->
       <?php $this->load->view('admin/partials/footer.php'); ?>
     </div>

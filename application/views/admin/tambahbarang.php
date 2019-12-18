@@ -81,6 +81,14 @@
                                                 </div>
                                             </div>
 
+                                            <div class=" col-3">
+                                                <div class="form-group">
+                                                    <label for="Stock">Stock</label>
+                                                    <input class="form-control" type="text" name="Stock"
+                                                        placeholder="Stock" />
+                                                </div>
+                                            </div>
+                                        </div>
 
 
 

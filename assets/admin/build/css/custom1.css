@@ -1,0 +1,76 @@
+.panel_toolbox {
+    float: right;
+    min-width: 70px; }
+  
+.panel_toolbox > li {
+    float: left;
+    cursor: pointer; }
+  
+.panel_toolbox > li > a {
+    padding: 5px;
+    color: #C5C7CB;
+    font-size: 14px; }
+  
+.panel_toolbox > li > a:hover {
+    background: #F5F7FA; }
+
+    .clearfix:after, form:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+
+        table.tile h3, table.tile h4, table.tile span {
+            font-weight: bold;
+            vertical-align: middle !important; }
+          
+          table.tile th, table.tile td {
+            text-align: center; }
+          
+          table.tile th {
+            border-bottom: 1px solid #E6ECEE; }
+          
+          table.tile td {
+            padding: 5px 0; }
+          
+          table.tile td ul {
+            text-align: left;
+            padding-left: 0; }
+          
+          table.tile td ul li {
+            list-style: none;
+            width: 100%; }
+          
+          table.tile td ul li a {
+            width: 100%; }
+          
+          table.tile td ul li a big {
+            right: 0;
+            float: right;
+            margin-right: 13px; }
+          
+          table.tile_info {
+            width: 100%; }
+          
+          table.tile_info td {
+            text-align: left;
+            padding: 1px;
+            font-size: 15px; }
+          
+          table.tile_info td p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            line-height: 28px; }
+          
+          table.tile_info td i {
+            margin-right: 8px;
+            font-size: 17px;
+            float: left;
+            width: 18px;
+            line-height: 28px; }
+          
+          table.tile_info td:first-child {
+            width: 83%; }

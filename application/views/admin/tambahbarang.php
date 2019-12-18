@@ -93,19 +93,27 @@
                                         <?php endif; ?>
                                     </form>
 
-                                </div>
+                                    </div>
 
 
-                            </div>
-                            <!-- /.container-fluid -->
+</div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-        </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<!-- End of Main Content -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
         <!-- Footer -->
       <?php $this->load->view('admin/partials/footer.php'); ?>
     </div>

@@ -95,27 +95,26 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href=" <?php echo base_url(); ?>admin/databarang"> <i class="ni ni-box-2 text-primary"></i> Data Barang
+          <a class=" nav-link active " href="#"> <i class="ni ni-circle-08 text-pink"></i> User
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo base_url(); ?>/examples/icons.html">
-              <i class="ni ni-planet text-blue"></i> Icons
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        <!-- Heading -->
+        <h6 class="navbar-heading text-muted">Manajemen</h6>
+        <!-- Navigation -->
+        <ul class="navbar-nav mb-md-3">
+        <li class="nav-item  class=" active" ">
+          <a class=" nav-link active " href="#"> <i class="ni ni-delivery-fast text-primary"></i> Konfirmasi
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo base_url(); ?>/examples/maps.html">
-              <i class="ni ni-pin-3 text-orange"></i> Maps
+          <li class="nav-item  class=" active" ">
+          <a class=" nav-link active " href="#"> <i class="ni ni-bullet-list-67 text-primary"></i> Tambah Barang
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo base_url(); ?>/examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo base_url(); ?>/examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Tables
+          <li class="nav-item  class=" active" ">
+          <a class=" nav-link active " href=" <?php echo base_url(); ?>admin/databarang"> <i class="ni ni-box-2 text-primary"></i> Barang
             </a>
           </li>
         </ul>

@@ -5,25 +5,20 @@
             <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
             <div class="container-fluid">
                 <div class="header-body">
-                <!-- Table -->
-                <a class="btn btn-success" href="<?= site_url('admin/databarang/add'); ?>">Tambah Data barang</a>
-                <div class="row mt-5">
-                    <div class="col">
-                        <div class="card bg-default shadow">
-                            <div class="card-header bg-transparent border-0">
-                                <h3 class="text-white mb-0">Tabel Data barang</h3>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table align-items-center table-dark table-flush">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>Nama Barang</th>
-                                            <th>Jenis Barang</th>
-                                            <th>Deskripsi Barang</th>
-                                            <th>Gambar Barang</th>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <h3 class="mb-0">Daftar Barang</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>                    <th>Nama Barang</th>
+                                            <th>Kategori</th>
                                             <th>Harga Barang</th>
-                                            <th>Grosir Barang</th>
-                                            <th>Diskon Barang</th>
+                                            <th>Sisa Stock</th>
                                             <th>Aksi</th>
 
 
@@ -34,22 +29,21 @@
                                             <tr>
                                                 <td><?php echo $barang->nama_barang ?></td>
                                                 <td><?php echo $barang->jenis_barang ?></td>
-                                                <td><?php echo $barang->deskripsi_barang ?></td>
-                                                <td><?php echo $barang->gambar_barang ?></td>
                                                 <td><?php echo $barang->harga_barang ?></td>
                                                 <td><?php echo $barang->grosir_barang ?></td>
-                                                <td><?php echo $barang->diskon_barang ?></td>
 
                                                 <td>
-                                                    <a href="<?php echo site_url('admin/databarang/edit/' . $barang->id_barang) ?>" class="btn btn-small"><i class="fas fa-edit"></i></a>
-                                                    <a onclick="deleteConfirm" href="<?php echo site_url('admin/databarang/delete/' . $barang->id_barang) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i></a>
+                                                    <a href="<?php echo site_url('admin/databarang/edit/' . $barang->id_barang) ?>">
+                                                    <button type="submit" class="btn btn-success" >Edit/Rincian</button></a>
+                                                    <a href="<?php echo site_url('admin/databarang/delete/' . $barang->id_barang) ?>">
+                                                    <button type="submit" class="btn btn-danger" >Hapus</button></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
-                <div class="card-footer-dark py-4">
+                <div class="card-footer py-4">
                 <nav aria-label="...">
                 <ul class="pagination justify-content-end mb-0">
                   <li class="page-item disabled">

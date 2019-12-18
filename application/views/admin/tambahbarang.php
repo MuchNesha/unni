@@ -6,34 +6,58 @@
             <div class="container-fluid">
                 <div class="header-body">
                     <!-- Start Container Fluid -->
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Tambah Barang</h3>
+                </div>
+                <div class="col-4 text-right">
+                <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
+                                        <br />
+                                        <?php if ($this->session->flashdata('success')) : ?>
+                                        <div class="alert alert-success" role="alert">
+                                            <?php echo $this->session->flashdata('success'); ?>
+                                        </div>
+                                        <?php endif; ?>
+                </div>
+              </div>
+            </div>
 
-                    <div id="content-wrapper">
-
-                        <div class="container-fluid">
-
-                            <div class="card mb-3">
-                                <div class="card-header">
-                                </div>
-                                <div class="card-body">
-
+                            <div class="card-body">
                                     <form action="<?php base_url('admin/databarang/add') ?>" method="post"
                                         enctype="multipart/form-data">
                                         <div class="row">
-                                            <div class="col-4">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="id_barang">No Barang</label>
                                                     <input class="form-control" type="text" name="id_barang"
                                                         placeholder="No Barang" />
                                                 </div>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="nama_brg">Nama Barang</label>
                                                     <input class="form-control" type="text" name="nama_brg"
                                                         placeholder="Nama Barang" />
                                                 </div>
                                             </div>
-                                            <div class=" col-4">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="harga">Harga Barang</label>
+                                                    <input class="form-control" type="text" name="harga"
+                                                        placeholder="Harga Barang" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="grosir">Grosir Barang</label>
+                                                    <input class="form-control" type="text" name="grosir"
+                                                        placeholder="Grosir Barang" />
+                                                </div>
+                                            </div>
+                                            
+                                            <div class=" col-md-4">
                                                 <div class="form-group">
                                                     <label for="jenis_brg">Jenis Barang</label>
                                                     <input class="form-control" type="text" name="jenis_brg"
@@ -43,35 +67,21 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-3">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="deskripsi">Deskripsi Barang</label>
                                                     <input class="form-control" type="text" name="deskripsi"
                                                         placeholder="Deskripsi Barang" />
                                                 </div>
                                             </div>
-                                            <div class="col-3">
+                                        </div>
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="gambar_barang">Gambar Barang</label>
                                                     <input class="form-control" type="file" name="gambar_barang"
                                                         placeholder="Gambar Barang" />
                                                 </div>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="form-group">
-                                                    <label for="harga">Harga Barang</label>
-                                                    <input class="form-control" type="text" name="harga"
-                                                        placeholder="Harga Barang" />
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="form-group">
-                                                    <label for="grosir">Grosir Barang</label>
-                                                    <input class="form-control" type="text" name="grosir"
-                                                        placeholder="Grosir Barang" />
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <div class="col-3">
                                                 <div class="form-group">

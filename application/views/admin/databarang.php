@@ -34,7 +34,7 @@
 
                                                 <td>
                                                     <a href="<?php echo site_url('admin/databarang/edit/' . $barang->id_barang) ?>">
-                                                    <button type="submit" class="btn btn-success" >Edit/Rincian</button></a>
+                                                    <button type="submit" class="btn btn-primary" >Edit/Rincian</button></a>
                                                     <a href="<?php echo site_url('admin/databarang/delete/' . $barang->id_barang) ?>">
                                                     <button type="submit" class="btn btn-danger" >Hapus</button></a>
                                                 </td>

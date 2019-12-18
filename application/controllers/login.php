@@ -45,7 +45,7 @@ class login extends CI_Controller {
 					];
 					$data['logged_in'] = TRUE;
 					$this->session->set_userdata($data);
-					redirect('admin/beranda');
+					redirect('admin/databarang');
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf password yang anda masukkan salah!</div>');
 					redirect('login_admin');

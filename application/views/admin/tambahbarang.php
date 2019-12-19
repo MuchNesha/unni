@@ -52,21 +52,19 @@
                                                     <input class="form-control" type="number" name="harga" placeholder="Rp." />
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="grosir">Harga Grosir Barang</label>
-                                                    <input class="form-control" type="number" name="grosir"
-                                                        placeholder="Grosir Barang" />
+                                                    <input class="form-control" type="number" name="grosir" placeholder="Rp." />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="grosir">Per</label>
+                                                    <input class="form-control" type="number" name="qty" placeholder="QTY" />
                                                 </div>
                                             </div>
                                             
-                                            <div class=" col-md-4">
-                                                <div class="form-group">
-                                                    <label for="jenis_brg">Jenis Barang</label>
-                                                    <input class="form-control" type="text" name="jenis_brg"
-                                                        placeholder="Jenis Barang" />
-                                                </div>
-                                            </div>
                                         </div>
 
                                         <div class="row">

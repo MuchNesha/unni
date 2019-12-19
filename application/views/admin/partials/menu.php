@@ -106,7 +106,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
         <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href="#"> <i class="ni ni-delivery-fast text-primary"></i> Konfirmasi
+          <a class=" nav-link active " href="<?php echo base_url(); ?>admin/konfirmasi"> <i class="ni ni-delivery-fast text-primary"></i> Konfirmasi
             </a>
           </li>
           <li class="nav-item  class=" active" ">

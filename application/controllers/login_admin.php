@@ -47,7 +47,7 @@ class login_admin extends CI_Controller
 					$this->session->set_userdata($data);
 					redirect('admin/databarang');
 				} else {
-					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf password yang anda masukkan salah!</div>');
+					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf password yang anda masukkan salah! 👨‍✈️ d</div>');
 					redirect('login_admin');
 				}
 			} else {
@@ -66,7 +66,7 @@ class login_admin extends CI_Controller
 	{
 		$this->session->unset_userdata('username');
 
-		$this->session->set_flashdata('message', '<div class="alert alert-primary" role="alert">anda telah keluar 🙅‍♀️</div>');
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Telah Keluar     🙋‍♀️ 👋 👋 </div>');
 		redirect('login_admin');
 	}
 }

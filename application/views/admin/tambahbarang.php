@@ -71,7 +71,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="gambar_barang">Gambar Barang</label>
-                                                    <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" />
+                                                    <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" multiple="multiple"/>
                                                 </div>
                                             </div>
 

@@ -5,6 +5,10 @@
             <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
             <div class="container-fluid">
                 <div class="header-body">
+                    <h1 style="color:aliceblue">Tambah Barang</h1>
+                        <br>
+                        <h3 style="color:aliceblue">Admin bisa menambahkan barang dihalaman ini</h3>
+                        <br> <br>
                     <!-- Start Container Fluid -->
           <div class="card bg-secondary shadow">
             <div class="card-header bg-white border-0">
@@ -73,7 +77,7 @@
 
                                             <div class=" col-3">
                                                 <div class="form-group">
-                                                    <label for="Stock">Jumlah Stock</label>
+                                                    <label for="Stock">Stock</label>
                                                     <input class="form-control" type="number" name="Stock" placeholder="Stock" />
                                                 </div>
                                             </div>
@@ -137,7 +141,7 @@
 
 </div>
 </div>
-</div>
+            </div>
 </div>
 
 </div>

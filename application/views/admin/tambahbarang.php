@@ -64,6 +64,13 @@
                                                     <input class="form-control" type="number" name="qty" placeholder="QTY" />
                                                 </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="gambar_barang">Gambar Barang</label>
+                                                    <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" />
+                                                </div>
+                                            </div>
+
                                             <div class=" col-2">
                                                 <div class="form-group">
                                                     <label for="Stock">Stock</label>
@@ -74,7 +81,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="deskripsi">Deskripsi Barang</label>
                                                     <form>
@@ -82,16 +89,9 @@
                                                     </form>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label for="gambar_barang">Gambar Barang</label>
-                                                    <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" />
-                                                    <input class="form-control" type="file" name="gambar_barang2" placeholder="Gambar Barang 2" />
-                                                </div>
-                                            </div>
                                         </div>
                                            
-                                        <h4>Ukuran yang Tersedia</h4>
+                                        <label>Ukuran yang Tersedia</label>
                                         <div class="custom-control custom-checkbox mb-3">
                                             <input class="custom-control-input" id="s" type="checkbox">
                                             <label class="custom-control-label" for="s">S</label>

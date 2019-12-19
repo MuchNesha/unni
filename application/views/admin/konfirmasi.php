@@ -50,7 +50,7 @@
                           </button>
                       </div>
                       <div class="modal-body">
-                      <b> <h3>Info Transfer</h3> <br> </b>
+                      <b> <h3>1. Info Transfer</h3> <br> </b>
                       <h4>ID Pesanan :</h4>
                         <h5>$var</h5>
                       <h4>Tanggal :</h4>
@@ -63,7 +63,8 @@
                         <h5>$var</h5>
                       <h4>Nama Pemilik Rekening :</h4>
                         <h5>$var</h5>
-                      <br> <h3>Info Pemesan</h3>
+
+                      <br> <h3>2. Info Pemesan</h3>
                       <h4>Nama Lengkap Pemesan :</h4>
                         <h5>$var</h5>
                       <h4>No Hp :</h4>
@@ -80,8 +81,8 @@
                         <h5>$var</h5>
                       <h4>Harga Ongkir :</h4>
                         <h5>$var</h5>
-                      <br> <h3>Foto Bukti Transfer :</h3>
-                      
+                      <br> <h3>3. Foto Bukti Transfer :</h3>
+
 
                       </div>
                       <div class="modal-footer">

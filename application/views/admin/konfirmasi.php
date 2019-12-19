@@ -29,7 +29,7 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Project</th>
+                    <th scope="col">Projsect</th>
                     <th scope="col">Budget</th>
                     <th scope="col">Status</th>
                     <th scope="col">Users</th>

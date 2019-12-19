@@ -64,15 +64,22 @@
                                                     <input class="form-control" type="number" name="qty" placeholder="QTY" />
                                                 </div>
                                             </div>
+                                            <div class=" col-2">
+                                                <div class="form-group">
+                                                    <label for="Stock">Stock</label>
+                                                    <input class="form-control" type="number" name="Stock" placeholder="Stock" />
+                                                </div>
+                                            </div>
                                             
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="deskripsi">Deskripsi Barang</label>
-                                                    <input class="form-control" type="text" name="deskripsi"
-                                                        placeholder="Deskripsi Barang" />
+                                                    <form>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tulis deskripsi barang..."></textarea>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,13 +99,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class=" col-3">
-                                                <div class="form-group">
-                                                    <label for="Stock">Stock</label>
-                                                    <input class="form-control" type="text" name="Stock"
-                                                        placeholder="Stock" />
-                                                </div>
-                                            </div>
+                                            
                                         </div>
 
                                         <h4>Ukuran yang Tersedia</h4>

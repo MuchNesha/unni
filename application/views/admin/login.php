@@ -69,7 +69,7 @@
                   <?php echo form_error('password', '<small class="text-danger-pl-3">', '</small>'); ?>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary my-4">Sign in</button>
+                  <button type="submit" class="btn btn-primary my-4">Masuk</button>
                 </div>
               </form>
             </div>

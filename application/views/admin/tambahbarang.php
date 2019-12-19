@@ -125,7 +125,7 @@
                                         </div>
 
 
-                                        <input class="btn btn-success" type="submit" name="btn" value="Save" />
+                                        
                                         <br />
                                         <?php if ($this->session->flashdata('success')) : ?>
                                         <div class="alert alert-success" role="alert">

@@ -37,7 +37,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="nama_brg">Kategori Barang</label>
+                                                    <label for="form-control">Pilih kategori Barang</label>
                                                     <select class="form-control" id="kategoribarang">
                                                     <option>Hijab Instant</option>
                                                     <option>Hijab Segiempat</option>
@@ -49,14 +49,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="harga">Harga Barang</label>
-                                                    <input class="form-control" type="text" name="harga"
-                                                        placeholder="Harga Barang" />
+                                                    <input class="form-control" type="number" name="harga" placeholder="Rp." />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="grosir">Grosir Barang</label>
-                                                    <input class="form-control" type="text" name="grosir"
+                                                    <label for="grosir">Harga Grosir Barang</label>
+                                                    <input class="form-control" type="number" name="grosir"
                                                         placeholder="Grosir Barang" />
                                                 </div>
                                             </div>

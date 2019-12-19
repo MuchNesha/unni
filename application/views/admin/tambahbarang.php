@@ -100,7 +100,7 @@
                                             </div>
                                         </div>
 
-                                        <h4>Ukuran</h4>
+                                        <h4>Ukuran yang Tersedia</h4>
                                         <div class="custom-control custom-checkbox mb-3">
                                             <input class="custom-control-input" id="s" type="checkbox">
                                             <label class="custom-control-label" for="s">S</label>

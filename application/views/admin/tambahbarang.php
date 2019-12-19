@@ -66,7 +66,6 @@
                                             </div>
                                         </div>
 
-
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
@@ -101,6 +100,27 @@
                                             </div>
                                         </div>
 
+                                        <h4>Ukuran</h4>
+                                        <div class="custom-control custom-checkbox mb-3">
+                                            <input class="custom-control-input" id="s" type="checkbox">
+                                            <label class="custom-control-label" for="s">S</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-3">
+                                            <input class="custom-control-input" id="m" type="checkbox">
+                                            <label class="custom-control-label" for="m">M</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-3">
+                                            <input class="custom-control-input" id="l" type="checkbox">
+                                            <label class="custom-control-label" for="l">L</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-3">
+                                            <input class="custom-control-input" id="xl" type="checkbox">
+                                            <label class="custom-control-label" for="xl">XL</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-3">
+                                            <input class="custom-control-input" id="xxl" type="checkbox">
+                                            <label class="custom-control-label" for="xxl">XXL</label>
+                                        </div>
 
 
                                         <input class="btn btn-success" type="submit" name="btn" value="Save" />

@@ -7,7 +7,7 @@
                 <div class="header-body">
                     <h1 style="color:aliceblue">Tambah Barang</h1>
                         <br>
-                        <h3 style="color:aliceblue">Admin bisa menambahkan barang dihalaman ini</h3>
+                        <h3 style="color:aliceblue">Admin bisa menambahkan barang dihalaman ini 🙂</h3>
                         <br> <br>
                     <!-- Start Container Fluid -->
           <div class="card bg-secondary shadow">

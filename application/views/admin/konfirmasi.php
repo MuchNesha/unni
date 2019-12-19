@@ -15,7 +15,7 @@
           <!-- Card stats -->
          <h1 style="color:aliceblue">Pemesanan Belum Dikonfirmasi</h1>
          <br>
-         <h3 style="color:aliceblue">Admin bisa menyetujui pesanan yang belum dikonfirmasi</h3>
+         <h3 style="color:aliceblue">Admin bisa menyetujui pesanan yang belum dikonfirmasi 🙂</h3>
         </div>
       </div>
     </div>

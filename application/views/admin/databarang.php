@@ -7,7 +7,7 @@
                 <div class="header-body">
                 <h1 style="color:aliceblue">Daftar Barang</h1>
                         <br>
-                        <h3 style="color:aliceblue">Admin bisa mengatur daftar barang dihalaman ini</h3>
+                        <h3 style="color:aliceblue">Admin bisa mengatur daftar barang dihalaman ini 🙂</h3>
                         <br> <br>
       <!-- Table -->
     <a class="btn btn-success" href="<?= site_url('admin/databarang/add'); ?>">Tambah Barang </a>

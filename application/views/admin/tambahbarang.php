@@ -78,30 +78,19 @@
                                                 <div class="form-group">
                                                     <label for="deskripsi">Deskripsi Barang</label>
                                                     <form>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tulis deskripsi barang..."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
                                                     </form>
                                                 </div>
                                             </div>
-                                        </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="gambar_barang">Gambar Barang</label>
-                                                    <input class="form-control" type="file" name="gambar_barang"
-                                                        placeholder="Gambar Barang" />
+                                                    <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" />
+                                                    <input class="form-control" type="file" name="gambar_barang2" placeholder="Gambar Barang 2" />
                                                 </div>
                                             </div>
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <div class="form-group">
-                                                    <label for="diskon">Diskon Barang</label>
-                                                    <input class="form-control" type="text" name="diskon"
-                                                        placeholder="Diskon Barang" />
-                                                </div>
-                                            </div>
-
-                                            
                                         </div>
-
+                                           
                                         <h4>Ukuran yang Tersedia</h4>
                                         <div class="custom-control custom-checkbox mb-3">
                                             <input class="custom-control-input" id="s" type="checkbox">

@@ -52,13 +52,13 @@
                                                     <input class="form-control" type="number" name="harga" placeholder="Rp." />
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="grosir">Harga Grosir Barang</label>
                                                     <input class="form-control" type="number" name="grosir" placeholder="Rp." />
                                                 </div>
                                             </div>
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="grosir">Per</label>
                                                     <input class="form-control" type="number" name="qty" placeholder="QTY" />
@@ -71,10 +71,17 @@
                                                 </div>
                                             </div>
 
-                                            <div class=" col-2">
+                                            <div class=" col-3">
                                                 <div class="form-group">
-                                                    <label for="Stock">Stock</label>
+                                                    <label for="Stock">Jumlah Stock</label>
                                                     <input class="form-control" type="number" name="Stock" placeholder="Stock" />
+                                                </div>
+                                            </div>
+
+                                            <div class=" col-3">
+                                                <div class="form-group">
+                                                    <label for="Stock">Diskon (%)</label>
+                                                    <input class="form-control" type="number" name="diskon" placeholder="%" />
                                                 </div>
                                             </div>
                                             

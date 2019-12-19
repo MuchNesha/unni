@@ -24,7 +24,6 @@
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
         <a class="navbar-brand" href="">
-          <h1 style="color: white;">Unni Korean - Fashion</h1>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,7 +53,8 @@
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-lg-5 col-md-6">
-              <h1 class="text-white">Selamat Datang!</h1>
+            <h1 class="text-white">HijabyHumairah</h1> <br>
+              <h2 class="text-white">Selamat Datang!</h2>
             </div>
           </div>
         </div>

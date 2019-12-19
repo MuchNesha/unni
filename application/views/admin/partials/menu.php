@@ -32,7 +32,7 @@
             <div class="dropdown-divider"></div>
             <a href="<?= base_url('login_admin/logout'); ?>" class="dropdown-item">
             <i class="ni ni-user-run"></i>
-            <span>Logout</span>
+            <span>Keluwar</span>
             </a>
           </div>
         </li>
@@ -135,7 +135,7 @@
                             <div class="dropdown-divider"></div>
                             <a href="<?= base_url('login_admin/logout'); ?>" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
-                                <span>Logout</span>
+                                <span>Keluar</span>
               </a>
             </div>
           </li>

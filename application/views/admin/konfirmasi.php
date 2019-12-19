@@ -52,10 +52,36 @@
                       <div class="modal-body">
                       <b> <h3>Info Transfer</h3> <br> </b>
                       <h4>ID Pesanan :</h4>
-                      <h5>$var</h5>
-                      <
+                        <h5>$var</h5>
                       <h4>Tanggal :</h4>
-                      <h5>$VAR</h5>
+                        <h5>$VAR</h5>
+                      <h4>Jumlah Bayar :</h4>
+                        <h5>$var</h5>
+                      <h4>Metode Pembayaran :</h4>
+                        <h5>$var</h5>
+                      <h4>Dari Bank :</h4>
+                        <h5>$var</h5>
+                      <h4>Nama Pemilik Rekening :</h4>
+                        <h5>$var</h5>
+                      <br> <h3>Info Pemesan</h3>
+                      <h4>Nama Lengkap Pemesan :</h4>
+                        <h5>$var</h5>
+                      <h4>No Hp :</h4>
+                        <h5>$var</h5>
+                      <h4>Email :</h4>
+                        <h5>$var</h5>
+                      <h4>Alamat :</h4>
+                        <h5>$var</h5>
+                      <h4>Provinsi :</h4>
+                        <h5>$var</h5>
+                      <h4>Kota/Kab :</h4>
+                        <h5>$var</h5>
+                      <h4>Kecamatan :</h4>
+                        <h5>$var</h5>
+                      <h4>Harga Ongkir :</h4>
+                        <h5>$var</h5>
+                      <br> <h3>Foto Bukti Transfer :</h3>
+                      
 
                       </div>
                       <div class="modal-footer">
@@ -87,10 +113,7 @@
                       </span>
                     </td>
                     <td>
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
-                    Rincian
-                    </button>
-
+                      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Rincian</button>
                     </td>
                     <td>
                       <button type="button" class="btn btn-primary">Setujui</button>

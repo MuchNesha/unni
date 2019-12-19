@@ -36,7 +36,7 @@
                                                 <div class="form-group">
                                                     <label for="id_barang">Nama Barang</label>
                                                     <input class="form-control" type="text" name="id_barang"
-                                                        placeholder="No Barang" />
+                                                        placeholder="Nama Barang" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

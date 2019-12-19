@@ -30,16 +30,21 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="id_barang">No Barang</label>
+                                                    <label for="id_barang">Nama Barang</label>
                                                     <input class="form-control" type="text" name="id_barang"
                                                         placeholder="No Barang" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="nama_brg">Nama Barang</label>
-                                                    <input class="form-control" type="text" name="nama_brg"
-                                                        placeholder="Nama Barang" />
+                                                    <label for="nama_brg">Kategori Barang</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

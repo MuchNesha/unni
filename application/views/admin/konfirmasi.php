@@ -151,13 +151,12 @@
           </div>
         </div>
       </div>
-     <br>
-    </div>
-    </div>
-      <!-- Footer -->
-      <?php $this->load->view('admin/partials/footer.php'); ?>
     </div>
       </div>
-  </div>
+      </div>
+      <br> <br>
+    </div>
+    <!-- Footer -->
+      <?php $this->load->view('admin/partials/footer.php'); ?>
   <!--   Core   -->
   <?php $this->load->view('admin/partials/js.php'); ?>

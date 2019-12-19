@@ -11,22 +11,22 @@
                         <br>
                     <!-- Start Container Fluid -->
                     <div class="card bg-secondary shadow">
-                        <div class="card-header bg-white border-0">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                <h3 class="mb-0">Tambah Barang</h3>
-                                </div>
-                                    <div class="col-4 text-right">
-                                    <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
-                                    <br />
-                                    <?php if ($this->session->flashdata('success')) : ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?php echo $this->session->flashdata('success'); ?>
-                                        </div>
-                                        <?php endif; ?>
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                    <h3 class="mb-0">Tambah Barang</h3>
                                     </div>
+                                        <div class="col-4 text-right">
+                                        <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
+                                        <br />
+                                        <?php if ($this->session->flashdata('success')) : ?>
+                                            <div class="alert alert-success" role="alert">
+                                                <?php echo $this->session->flashdata('success'); ?>
+                                            </div>
+                                            <?php endif; ?>
+                                        </div>
+                                </div>
                             </div>
-                        </div>
 
                             <div class="card-body">
                                 <form action="<?php base_url('admin/databarang/add') ?>" method="post" enctype="multipart/form-data">
@@ -127,7 +127,6 @@
                                         </div>
                                         <?php endif; ?>
                                 </form>
-
                             </div>
                     </div>
                 </div>
@@ -138,9 +137,7 @@
 </div>
 <!-- End of Main Content -->
 <!-- Footer -->
-        <!-- Footer -->
-      <?php $this->load->view('admin/partials/footer.php'); ?>
-    </div>
-  </div>
-  <!--   Core   -->
-  <?php $this->load->view('admin/partials/js.php'); ?>
+<?php $this->load->view('admin/partials/footer.php'); ?>
+
+<!--   Core   -->
+<?php $this->load->view('admin/partials/js.php'); ?>

@@ -69,7 +69,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href="#"> <i class="ni ni-circle-08 text-pink"></i> User
+          <a class=" nav-link active " href="<?php echo base_url(); ?>admin/user"> <i class="ni ni-circle-08 text-pink"></i> Akun
             </a>
           </li>
         </ul>

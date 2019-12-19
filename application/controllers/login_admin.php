@@ -52,12 +52,12 @@ class login_admin extends CI_Controller
 				}
 			} else {
 
-				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan tidak aktif!</div>');
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan tidak aktif! 🙂</div>');
 				redirect('login_admin');
 			}
 		} else {
 
-			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan salah!</div>');
+			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan salah! ❌</div>');
 			redirect('login_admin');
 		}
 	}
@@ -66,7 +66,7 @@ class login_admin extends CI_Controller
 	{
 		$this->session->unset_userdata('username');
 
-		$this->session->set_flashdata('message', '<div class="alert alert-primary" role="alert">anda telah logged out</div>');
+		$this->session->set_flashdata('message', '<div class="alert alert-primary" role="alert">anda telah keluar 🙅‍♀️</div>');
 		redirect('login_admin');
 	}
 }

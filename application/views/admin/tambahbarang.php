@@ -38,12 +38,11 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="nama_brg">Kategori Barang</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
+                                                    <select class="form-control" id="kategoribarang">
+                                                    <option>Hijab Instant</option>
+                                                    <option>Hijab Segiempat</option>
+                                                    <option>Baju Muslim</option>
+                                                    <option>Aksesoris</option>
                                                     </select>
                                                 </div>
                                             </div>

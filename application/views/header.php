@@ -103,7 +103,7 @@
                                                     <a class="dropdown-item" href="#">Aksesoris</a>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Konfirmasi</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="<?= site_url('konfirmasi'); ?>">Konfirmasi</a></li>
                                             <li class="nav-item"><a class="nav-link" href="<?= site_url('tentangkami'); ?>">Tentang</a></li>
                                             <li class="nav-item"><a class="nav-link" href="<?= site_url('kontakkami'); ?>">Kontak</a></li>
                                         </ul>

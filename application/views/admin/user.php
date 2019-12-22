@@ -38,7 +38,7 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="user">Username</label>
-                        <input class="form-control" type="text" name="user" 
+                        <input class="form-control" type="text" name="username" 
                         placeholder="Username" value="<?php echo $admin->username ?>" />
                       </div>
                     </div>

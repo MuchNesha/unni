@@ -15,9 +15,7 @@ class model_user extends CI_Model
                 'field' => 'id_admin',
                 'label' => 'id_admin',
                 'rules' => 'required'
-            ]
-
-            ,
+            ],
 
         ];
     }
@@ -37,8 +35,8 @@ class model_user extends CI_Model
     {
         $post = $this->input->post();
         $this->id_admin = $post["id_admin"];
-        $this->username = $post["user"];
-        $this->password = $post["pass"];
+        $this->username = $post["username"];
+        $this->password = $post["password"];
 
         $this->db->update($this->_table, $this, array('id_admin' => $post['id_admin']));
     }

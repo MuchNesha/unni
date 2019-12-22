@@ -26,12 +26,12 @@
                   <h3 class="mb-0">Akun Saya</h3>
                 </div>
                 <div class="col-4 text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">Simpan</a>
+                  <a value="save" class="btn btn-sm btn-primary">Simpan</a>
                 </div>
               </div>
             </div>
             <div class="card-body">
-              <form action="<?php base_url('admin/user/edit') ?>" method="post" enctype="multipart/form-data">
+              <?php foreach ($admin as $admin) : ?>
                 <h6 class="heading-small text-muted mb-4">Informasi Pengguna Admin</h6>
                 <div class="pl-lg-4">
                   <div class="row">
@@ -48,7 +48,7 @@
                       <div class="form-group">
                         <label class="form-control-label" for="input-username">Kata Sandi</label>
                         <input type="password" name="pass" class="form-control form-control-alternative" 
-                        placeholder="Username" value="lucky.jesse">
+                        placeholder="Username" value="<?php echo $admin->password ?>">
                       </div>
                     </div>
                   </div>
@@ -57,12 +57,13 @@
                       <div class="form-group">
                         <label class="form-control-label" for="input-first-name">Ulangi Kata Sandi</label>
                         <input type="password" id="input-first-name" class="form-control form-control-alternative" 
-                        placeholder="First name" value="Lucky">
+                        placeholder="First name" value="<?php echo $admin->password ?>">
                       </div>
                     </div>
                   </div>
                 </div>
               </form>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>

@@ -31,14 +31,15 @@
               </div>
             </div>
             <div class="card-body">
-              <form>
+              <form action="<?php base_url('admin/user/edit') ?>" method="post" enctype="multipart/form-data">
                 <h6 class="heading-small text-muted mb-4">Informasi Pengguna Admin</h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+                        <label class="form-control-label" for="user">Username</label>
+                        <input class="form-control" type="text" name="user" 
+                        placeholder="Username" value="<?php echo $admin->username ?>" />
                       </div>
                     </div>
                   </div>
@@ -46,7 +47,8 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-username">Kata Sandi</label>
-                        <input type="password" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+                        <input type="password" name="pass" class="form-control form-control-alternative" 
+                        placeholder="Username" value="lucky.jesse">
                       </div>
                     </div>
                   </div>
@@ -54,7 +56,8 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-first-name">Ulangi Kata Sandi</label>
-                        <input type="password" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                        <input type="password" id="input-first-name" class="form-control form-control-alternative" 
+                        placeholder="First name" value="Lucky">
                       </div>
                     </div>
                   </div>

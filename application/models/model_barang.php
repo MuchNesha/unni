@@ -6,7 +6,6 @@ class model_barang extends CI_Model
     public $id_barang;
     public $nama_barang;
     public $jenis_barang;
-    public $Stock;
     public $deskripsi_barang;
     public $gambar_barang;
     public $harga_barang;
@@ -21,6 +20,13 @@ class model_barang extends CI_Model
                 'label' => 'Name',
                 'rules' => 'required'
             ],
+
+                        
+            [
+                'field' => 'username',
+                'label' => 'username',
+                'rules' => 'required'
+            ]
 
         ];
     }
@@ -57,7 +63,6 @@ class model_barang extends CI_Model
         $this->id_barang = $post["id_barang"];
         $this->nama_barang = $post["nama_brg"];
         $this->jenis_barang = $post["jenis_brg"];
-        $this->Stock = $post["Stock"];
         $this->deskripsi_barang = $post["deskripsi"];
         $this->gambar_barang = $this->UploadFoto();
         $this->harga_barang = $post["harga"];

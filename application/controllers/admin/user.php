@@ -10,7 +10,7 @@ class user extends CI_Controller
         if (!$this->session->logged_in) {
             redirect('login_admin');
         }
-        $this->load->model("model_barang");
+        $this->load->model("model_user");
         $this->load->library('form_validation');
         $this->load->helper('url');
         $this->load->helper('form');
@@ -19,13 +19,28 @@ class user extends CI_Controller
     public function index()
     {
 
-        $data["barang"] = $this->model_barang->getAll();
+        $data["admin"] = $this->model_user->getAll();
         $this->load->view("admin/user", $data);
     }
 
-    public function edit()
+    public function edit($id_admin = null)
     {
-        
+        if (!isset($id_admin)) redirect('admin/user');
+
+        $admin = $this->model_user;
+        $validation = $this->form_validation;
+        $validation->set_rules($admin->rules());
+
+        if ($validation->run()) {
+            $admin->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $data["admin"] = $admin->getById($id_admin);
+        if (!$data["admin"]) show_404();
+
     }
 
-}
+    }
+
+

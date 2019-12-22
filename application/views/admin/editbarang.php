@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="card-body">
 
-                                    <form action="<?php base_url('admin/databarang/add') ?>" method="post"
+                                    <form action="<?php base_url('admin/databarang/edit') ?>" method="post"
                                         enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-4">

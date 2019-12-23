@@ -36,7 +36,7 @@
                                         <?php foreach ($barang as $barang) : ?>
                                             <tr>
                                                 <td><?php echo $barang->nama_barang ?></td>
-                                                <td><?php echo $barang->jenis_barang ?></td>
+                                                <td><?php echo $barang->id_jenis ?></td>
                                                 <td><?php echo $barang->harga_barang ?></td>
                                                 <td><?php echo $barang->Stock ?></td>
 

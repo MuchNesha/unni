@@ -67,4 +67,14 @@ class databarang extends CI_Controller
         }
     }
 
+    public function kategori(){
+        if($_POST){
+            $checkboxes = $this->input->post('check_list');
+
+            $this->wmodel_barang->insertkategori(array(
+                'option' 		=> $kategori
+            ));
+        }
+    }	
+
 }

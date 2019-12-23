@@ -51,31 +51,31 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="harga">Harga Barang</label>
-                                                <input class="form-control" type="number" name="harga" placeholder="Rp." />
+                                                <input class="form-control" type="number" name="harga_brg" placeholder="Rp." />
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for="grosir">Harga Grosir Barang</label>
-                                                <input class="form-control" type="number" name="grosir" placeholder="Rp." />
+                                                <input class="form-control" type="number" name="harga_grosir" placeholder="Rp." />
                                             </div>
                                         </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="grosir">Per</label>
-                                                    <input class="form-control" type="number" name="qty" placeholder="QTY" />
+                                                    <input class="form-control" type="number" name="per" placeholder="QTY" />
                                                 </div>
                                             </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="gambar_barang">Gambar Barang</label>
-                                                <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" multiple="multiple"/>
+                                                <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" multiple="multiple"/>
                                             </div>
                                         </div>
                                         <div class=" col-3">
                                             <div class="form-group">
                                                 <label for="Stock">Stock</label>
-                                                <input class="form-control" type="number" name="Stock" placeholder="Stock" />
+                                                <input class="form-control" type="number" name="stock" placeholder="Stock" />
                                             </div>
                                         </div>
                                         <div class=" col-3">
@@ -92,7 +92,7 @@
                                                 <div class="form-group">
                                                     <label for="deskripsi">Deskripsi Barang</label>
                                                     <form>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
+                                                    <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
                                                     </form>
                                                 </div>
                                             </div>
@@ -125,6 +125,7 @@
                                         <div class="alert alert-success" role="alert">
                                             <?php echo $this->session->flashdata('success'); ?>
                                         </div>
+                                        
                                         <?php endif; ?>
                                 </form>
                             </div>

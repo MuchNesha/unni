@@ -5,28 +5,31 @@ class model_barang extends CI_Model
     private $_table = "barang";
     public $id_barang;
     public $nama_barang;
-    public $jenis_barang;
-    public $deskripsi_barang;
-    public $gambar_barang;
+    public $id_jenis;
+    public $nama_jenis;
     public $harga_barang;
     public $grosir_barang;
+    public $per;
+    public $Stock;
     public $diskon_barang;
+    public $gambar;
+    public $deskripsi_barang;
+    public $ukuran;
 
     public function rules()
     {
         return [
             [
                 'field' => 'id_barang',
-                'label' => 'Name',
+                'label' => 'id_barang',
                 'rules' => 'required'
             ],
 
-                        
             [
-                'field' => 'username',
-                'label' => 'username',
+                'field' => 'id_jenis',
+                'label' => 'id_jenis',
                 'rules' => 'required'
-            ]
+            ],
 
         ];
     }
@@ -46,28 +49,35 @@ class model_barang extends CI_Model
         $post = $this->input->post();
         $this->id_barang = $post["id_barang"];
         $this->nama_barang = $post["nama_brg"];
-        $this->jenis_barang = $post["jenis_brg"];
-        $this->Stock = $post["Stock"];
-        $this->deskripsi_barang = $post["deskripsi"];
-        $this->gambar_barang = $this->UploadFoto();
-        $this->harga_barang = $post["harga"];
-        $this->grosir_barang = $post["grosir"];
-        $this->diskon_barang = $post["diskon"];
+        $this->nama_jenis = $post["nama_jenis"];
+        $this->harga_barang = $post["harga_brg"];
+        $this->grosir_barang = $post["grosir_barang"];
+        $this->per = $post["per"];
+        $this->stock = $post["stock"];
+        $this->diskon_barang = $post["diskon_barang"];
+        $this->gambar = $this->UploadFoto();
+        $this->deskripsi = $post["deskripsi"];
+        $this->ukuran = $post["ukuran"];
+
 
         $this->db->insert($this->_table, $this);
     }
+
 
     public function update()
     {
         $post = $this->input->post();
         $this->id_barang = $post["id_barang"];
         $this->nama_barang = $post["nama_brg"];
-        $this->jenis_barang = $post["jenis_brg"];
-        $this->deskripsi_barang = $post["deskripsi"];
-        $this->gambar_barang = $this->UploadFoto();
-        $this->harga_barang = $post["harga"];
-        $this->grosir_barang = $post["grosir"];
-        $this->diskon_barang = $post["diskon"];
+        $this->nama_jenis = $post["nama_jenis"];
+        $this->harga_barang = $post["harga_brg"];
+        $this->grosir_barang = $post["grosir_barang"];
+        $this->per = $post["per"];
+        $this->stock = $post["stock"];
+        $this->diskon_barang = $post["diskon_barang"];
+        $this->gambar = $this->UploadFoto();
+        $this->deskripsi = $post["deskripsi"];
+        $this->ukuran = $post["ukuran"];
 
         $this->db->update($this->_table, $this, array('id_barang' => $post['id_barang']));
     }

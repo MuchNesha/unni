@@ -30,6 +30,15 @@ class model_user extends CI_Model
         return $this->db->get_where($this->_table, ["id_admin" => $id_admin])->row();
     }
 
+    public function Simpan()
+    {
+        $post = $this->input->post();
+        $this->id_admin = $post["id_admin"];
+        $this->username = $post["username"];
+        $this->password = $post["password"];
+
+        $this->db->insert($this->_table, $this);
+    }
 
     public function update()
     {

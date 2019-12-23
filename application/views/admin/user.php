@@ -26,7 +26,7 @@
                   <h3 class="mb-0">Akun Saya</h3>
                 </div>
                 <div class="col-4 text-right">
-                  <a value="save" class="btn btn-sm btn-primary">Simpan</a>
+                <input class="btn btn-primary" type="submit" name="btn" value="simpan" >
                 </div>
               </div>
             </div>

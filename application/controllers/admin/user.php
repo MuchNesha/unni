@@ -32,7 +32,7 @@ class user extends CI_Controller
         $validation->set_rules($admin->rules());
 
         if ($validation->run()) {
-            $admin->update();
+            $admin->Simpan();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pengiriman extends CI_Controller {
+class keranjang extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -11,7 +11,7 @@ class pengiriman extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('header');
-		$this->load->view('pengiriman/pengiriman');
+		$this->load->view('keranjang/keranjang');
 		$this->load->view('footer');
 	}
 }

@@ -11,7 +11,7 @@
   <div class="form-row">
   <div class="form-group col-md-6">
 			<label for="contoh1">Nama Lengkap</label>
-			<input type="text" class="form-control" id="contoh1" placeholder="">
+			<input type="text" class="form-control" id="contoh1" placeholder="ID">
 		</div>
         <div class="form-group col-md-6">
 			<label for="contoh1">Provinsi</label>

@@ -95,8 +95,8 @@
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 
                     <div class="modal-body">
                         <div class="quickview_body">
@@ -293,25 +293,25 @@
         </section>
         <!-- ****** Offer Area End ****** -->
 
-  <!-- ****** Offer Area Start ****** -->
-  <section class="offer_area height-700 section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/bg-6.jpg);">
+        <!-- ****** Offer Area Start ****** -->
+        <section class="offer_area height-700 section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/bg-6.jpg);">
         </section>
         <!-- ****** Offer Area End ****** -->
-                <!-- Footer Bottom Area Start -->
-    </div>
-    <!-- /.wrapper end -->
+        <!-- Footer Bottom Area Start -->
+        </div>
+        <!-- /.wrapper end -->
 
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="<?php echo base_url(); ?>/assets/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="<?php echo base_url(); ?>/assets/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="<?php echo base_url(); ?>/assets/js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="<?php echo base_url(); ?>/assets/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="<?php echo base_url(); ?>/assets/js/active.js"></script>
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="<?php echo base_url(); ?>/assets/js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="<?php echo base_url(); ?>/assets/js/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="<?php echo base_url(); ?>/assets/js/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="<?php echo base_url(); ?>/assets/js/plugins.js"></script>
+        <!-- Active js -->
+        <script src="<?php echo base_url(); ?>/assets/js/active.js"></script>
 
-</body>
+        </body>
 
-</html>
+        </html>

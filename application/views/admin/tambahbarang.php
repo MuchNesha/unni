@@ -41,10 +41,13 @@
                                             <div class="form-group">
                                                 <label for="form-control">Pilih kategori Barang</label>
                                                 <select class="form-control" id="kategoribarang">
-                                                <option>Hijab Instant</option>
-                                                <option>Hijab Segiempat</option>
-                                                <option>Baju Muslim</option>
-                                                <option>Aksesoris</option>
+                                                 <option value="">Kategori Barang</option>
+                                                <?php 
+                                                foreach($groups as $row)
+                                                { 
+                                                echo '<option value="'.$row->jenis_barang.'">'.$row->nama_jenis.'</option>';
+                                                }
+                                                ?>
                                                 </select>
                                             </div>
                                         </div>

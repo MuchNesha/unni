@@ -26,6 +26,7 @@ class databarang extends CI_Controller
 
     public function add()
     {
+        $data["groups"] = $this->model_kategori->getAllGroups();
         $barang = $this->model_barang;
         $validation = $this->form_validation;
         $validation->set_rules($barang->rules());

@@ -5,9 +5,9 @@
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
         <div class="container-fluid">
             <div class="header-body">
-                <h1 style="color:aliceblue">Tambah Barang</h1>
+                <h1 style="color:aliceblue">Edit Barang</h1>
                 <br>
-                <h3 style="color:aliceblue">Admin bisa menambahkan barang dihalaman ini 😉</h3>
+                <h3 style="color:aliceblue">Admin bisa mengedit barang dihalaman ini 😉</h3>
                 <br>
                 <!-- Start Container Fluid -->
                 <div class="card bg-secondary shadow">
@@ -41,6 +41,7 @@
                                     <div class="form-group">
                                         <label for="form-control">Pilih kategori Barang</label>
                                         <select class="form-control" id="kategoribarang">
+                                        <option value="">Kategori Barang</option>
                                         <?php 
                                         foreach($groups as $row)
                                         { 

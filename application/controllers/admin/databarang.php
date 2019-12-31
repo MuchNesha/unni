@@ -11,6 +11,7 @@ class databarang extends CI_Controller
             redirect('login_admin');
         }
         $this->load->model("model_barang");
+        $this->load->model("model_kategori");
         $this->load->library('form_validation');
         $this->load->helper('url');
         $this->load->helper('form');
@@ -43,6 +44,7 @@ class databarang extends CI_Controller
     {
         if (!isset($id_barang)) redirect('admin/databarang');
 
+        $data["groups"] = $this->model_kategori->getAllGroups();
         $barang = $this->model_barang;
         $validation = $this->form_validation;
         $validation->set_rules($barang->rules());

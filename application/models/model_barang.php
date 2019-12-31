@@ -56,7 +56,7 @@ class model_barang extends CI_Model
         $this->stock = $post["stock"];
         $this->diskon_barang = $post["diskon_barang"];
         $this->gambar = $this->UploadFoto();
-        $this->deskripsi = $post["deskripsi"];
+        $this->deskripsi_barang = $post["deskripsi"];
         $this->ukuran = $post["ukuran"];
 
 
@@ -76,7 +76,7 @@ class model_barang extends CI_Model
         $this->stock = $post["stock"];
         $this->diskon_barang = $post["diskon_barang"];
         $this->gambar = $this->UploadFoto();
-        $this->deskripsi = $post["deskripsi"];
+        $this->deskripsi_barang = $post["deskripsi"];
         $this->ukuran = $post["ukuran"];
 
         $this->db->update($this->_table, $this, array('id_barang' => $post['id_barang']));

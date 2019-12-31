@@ -41,10 +41,12 @@
                                     <div class="form-group">
                                         <label for="form-control">Pilih kategori Barang</label>
                                         <select class="form-control" id="kategoribarang">
-                                            <option>Hijab Instant</option>
-                                            <option>Hijab Segiempat</option>
-                                            <option>Baju Muslim</option>
-                                            <option>Aksesoris</option>
+                                        <?php 
+                                        foreach($groups as $row)
+                                        { 
+                                        echo '<option value="'.$row->id_jenis.'">'.$row->id_jenis.'</option>';
+                                        }
+                                        ?>
                                         </select>
                                     </div>
                                 </div>
@@ -56,8 +58,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="grosir">Harga Barang</label>
-                                        <input class="form-control" type="text" name="grosir" value="<?php echo $barang->harga_grosir ?>" />
+                                        <label for="grosir">Harga Grosir</label>
+                                        <input class="form-control" type="text" name="grosir" value="<?php echo $barang->grosir_barang ?>" />
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -69,19 +71,19 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" value="<?php echo $barang->gambar ?>" />
+                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" value="<?php echo $barang->gambar_barang ?>" />
                                     </div>
                                 </div>
                                 <div class=" col-3">
                                     <div class="form-group">
                                         <label for="stock">Stock Barang</label>
-                                        <input class="form-control" type="text" name="stock" placeholder="Harga" value="<?php echo $barang->stock ?>" />
+                                        <input class="form-control" type="text" name="stock" placeholder="Harga" value="<?php echo $barang->Stock ?>" />
                                     </div>
                                 </div>
                                 <div class=" col-3">
                                     <div class="form-group">
                                         <label for="diskon">Diskon</label>
-                                        <input class="form-control" type="text" name="diskon" placeholder="%" value="<?php echo $barang->diskon ?>" />
+                                        <input class="form-control" type="text" name="diskon" placeholder="%" value="<?php echo $barang->diskon_barang ?>" />
                                     </div>
                                 </div>
 
@@ -91,7 +93,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="deskripsi">Deskripsi Barang</label>
-                                        <input class="form-control" type="text" name="deskripsi" placeholder="Deskripsi" value="<?php echo $barang->deskripsi ?>" />
+                                        <input class="form-control" type="text" name="deskripsi" placeholder="Deskripsi" value="<?php echo $barang->deskripsi_barang ?>" />
                                     </div>
                                 </div>
                             </div>

@@ -44,7 +44,7 @@
                                         <?php 
                                         foreach($groups as $row)
                                         { 
-                                        echo '<option value="'.$row->id_jenis.'">'.$row->id_jenis.'</option>';
+                                        echo '<option value="'.$row->jenis_barang.'">'.$row->nama_jenis.'</option>';
                                         }
                                         ?>
                                         </select>

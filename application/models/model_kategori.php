@@ -17,11 +17,11 @@ public function __construct()
             echo $row->description;
         }*/
 
-        $query = $this->db->query('SELECT id_jenis FROM jenis_barang');
+        $query = $this->db->query('SELECT * FROM jenis_barang');
 
 
         return $query->result();
 
         //echo 'Total Results: ' . $query->num_rows();
     }
-}
+}   

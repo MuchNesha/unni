@@ -10,7 +10,7 @@ class konfirmasi extends CI_Controller
         if (!$this->session->logged_in) {
             redirect('login_admin');
         }
-        $this->load->model("model_barang");
+        $this->load->model("model_konfirmasi");
         $this->load->library('form_validation');
         $this->load->helper('url');
         $this->load->helper('form');
@@ -19,7 +19,8 @@ class konfirmasi extends CI_Controller
     public function index()
     {
 
-        $data["barang"] = $this->model_barang->getAll();
+        $data['konfirmasi'] = $this->model_konfirmasi->getAllData();
+        $data['pelanggan'] = $this->model_konfirmasi->getDataPelanggan();
         $this->load->view("admin/konfirmasi", $data);
     }
 

@@ -50,39 +50,47 @@
                           </button>
                       </div>
                       <div class="modal-body">
+                      <?php foreach ($konfirmasi as $row) : ?>
                       <b> <h3>1. Info Transfer</h3> <br> </b>
                       <h4>ID Pesanan :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $row->id_konfirmasi ?></h5>
                       <h4>Tanggal :</h4>
-                        <h5>$VAR</h5>
+                        <h5><?php echo $row->tgl_bayar ?></h5>
                       <h4>Jumlah Bayar :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $row->jumlah_bayar ?></h5>
                       <h4>Metode Pembayaran :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $row->metode_pembayaran ?></h5>
                       <h4>Dari Bank :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $row->dari_bank ?></h5>
                       <h4>Nama Pemilik Rekening :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $row->nama_pemilik_rekening ?></h5>
+                        <?php endforeach; ?>
 
+                      <?php foreach ($pelanggan as $pelanggan) : ?>
                       <br> <h3>2. Info Pemesan</h3>
                       <h4>Nama Lengkap Pemesan :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->nama_pelanggan ?></h5>
                       <h4>No Hp :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->no_hp_pelanggan ?></h5>
                       <h4>Email :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->email_pelanggan ?></h5>
                       <h4>Alamat :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->alamat ?></h5>
                       <h4>Provinsi :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->provinsi ?></h5>
                       <h4>Kota/Kab :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->kabupaten ?></h5>
                       <h4>Kecamatan :</h4>
-                        <h5>$var</h5>
+                        <h5><?php echo $pelanggan->kecamatan ?></h5>
+                        <?php endforeach; ?>
+
                       <h4>Harga Ongkir :</h4>
                         <h5>$var</h5>
+                      
+                      <?php foreach ($konfirmasi as $bukti) : ?>
                       <br> <h3>3. Foto Bukti Transfer :</h3>
-
+                      <h5><?php echo $bukti->gambar_bukti ?></h5>
+                      <?php endforeach; ?>
 
                       </div>
                       <div class="modal-footer">
@@ -93,19 +101,20 @@
                   </div>
                 </div>
                 <tbody>
+                <?php foreach ($konfirmasi as $konfirmasi) : ?>
                   <tr>
                     <th scope="row">
                       <div class="media align-items-center">
                         <div class="media-body">
                           <span class="mb-0 text-sm">
-                            111
+                          <td><?php echo $konfirmasi->id_konfirmasi ?></td>
                           </span>
                         </div>
                       </div>
                     </th>
                     <td>
                     <span class="mb-0 text-sm">
-                      11111111
+                    <td><?php echo $konfirmasi->tgl_bayar ?></td>
                     </span>
                     </td>
                     <td>
@@ -120,6 +129,7 @@
                       <button type="button" class="btn btn-primary">Setujui</button>
                     </td>
                   </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>

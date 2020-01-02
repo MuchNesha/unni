@@ -40,7 +40,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="form-control">Pilih kategori Barang</label>
-                                                <select class="form-control" id="kategoribarang">
+                                                <select class="form-control" name="nama_jenis">
                                                  <option value="">Kategori Barang</option>
                                                 <?php 
                                                 foreach($groups as $row)

@@ -18,9 +18,8 @@ class konfirmasi extends CI_Controller
 
     public function index()
     {
-
         $data['konfirmasi'] = $this->model_konfirmasi->getAllData();
-        $data['pelanggan'] = $this->model_konfirmasi->getDataPelanggan();
+        $data['pelanggan'] = $this->model_konfirmasi->getDataPelanggan();;
         $this->load->view("admin/konfirmasi", $data);
     }
 

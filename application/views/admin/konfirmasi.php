@@ -53,7 +53,7 @@
                       <?php foreach ($konfirmasi as $row) : ?>
                       <b> <h3>1. Info Transfer</h3> <br> </b>
                       <h4>ID Pesanan :</h4>
-                        <h5><?php echo $row->id_konfirmasi ?></h5>
+                        <h5><?php echo $row->id_pesanan ?></h5>
                       <h4>Tanggal :</h4>
                         <h5><?php echo $row->tgl_bayar ?></h5>
                       <h4>Jumlah Bayar :</h4>
@@ -107,19 +107,19 @@
                       <div class="media align-items-center">
                         <div class="media-body">
                           <span class="mb-0 text-sm">
-                          <td><?php echo $konfirmasi->id_konfirmasi ?></td>
+                          <?php echo $konfirmasi->id_pesanan ?>
                           </span>
                         </div>
                       </div>
                     </th>
                     <td>
                     <span class="mb-0 text-sm">
-                    <td><?php echo $konfirmasi->tgl_bayar ?></td>
+                    <?php echo $konfirmasi->tgl_bayar ?>
                     </span>
                     </td>
                     <td>
                       <span class="mb-0 text-sm">
-                        completed
+                      <?php echo $konfirmasi->jumlah_bayar ?>
                       </span>
                     </td>
                     <td>

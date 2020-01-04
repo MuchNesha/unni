@@ -36,18 +36,22 @@
  <br>
  <br>
  <br>
-            <div class="cart-page-heading">
-           <bo <h1>Kontak Kami</h1>
-           <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <img class="kanan" src="<?php echo base_url(); ?>/assets/img/bg-img/kontakkami.png"  height="100px" top="10px" align="right" />
+<div class="container">
+            <div class="cart-page-heading col ml-3 ">
+            <img class="kanan" src="<?php echo base_url(); ?>/assets/img/bg-img/kontakkami.png"  width="500px top="10px" align="right" /> 
+         <h1>Kontak Kami</h1>
+            <br> 
+          <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
            </div>
-
+           </div>
+        <br><br><br><br><br><br><br><br><br>
         <!-- ****** Offer Area Start ****** -->
         <section class="offer_area height-70 section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/kontak.png);">
         </section>
+      
         <!-- ****** Offer Area End ****** -->
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="<?php echo base_url(); ?>/assets/js/jquery/jquery-2.2.4.min.js"></script>

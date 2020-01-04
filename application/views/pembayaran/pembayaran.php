@@ -1,4 +1,24 @@
 <div class="container">
+            <div class="row  pt-2 pb-2">
+                <div class="col-3 md-3 pt-6 text-center">
+                    <button type="button" class="btn btn-danger">1</button>
+                    <a class="text-center" href="<?= site_url('keranjang'); ?>">keranjang belanja</a>
+                </div>
+                <div class="col-3 md-4 pt-6 text-center">
+                     <button type="button" class="btn btn-danger">2</button>
+                     <a class="text-center" href="<?= site_url('pengiriman'); ?>">pengiriman</a>
+                </div>
+                <div class="col-3 md-4 pt-6 text-center">
+                    <button type="button" class="btn btn-danger">3</button>
+                    <a class="text-center" href="<?= site_url('pembayaran'); ?>">pembayaran</a>
+                </div>
+                <div class="col-3 md-3 pt-6 float-right text-center">
+                    <button type="button" class="btn btn-danger">4</button>
+                    <a class="text-center" href="<?= site_url('konfirmasi'); ?>">konfirmasi</a>
+                </div>
+            </div>
+            <br><br>
+<div class="container">
   <h3>DATA & ALAMAT PENERIMA</h3>
   <div class="row">
                 <div class="col ml-1">

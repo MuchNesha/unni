@@ -103,4 +103,14 @@ class model_barang extends CI_Model
         return "default.jpg";
     }
 
+    public function input_data($data, $tabel)
+    {
+        $this->db->insert($tabel, $data);
+    }
+
+    public function update_data($data, $id_barang)
+    {
+        $this->db->where('id_barang', $id_barang);
+        $this->db->update()('barang', $data);
+    }
 }

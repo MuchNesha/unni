@@ -24,41 +24,93 @@ class databarang extends CI_Controller
         $this->load->view("admin/databarang", $data);
     }
 
+    public function form_add()
+    {
+        $data['kategori'] = $this->model_kategori->getAllGroups();
+        $this->load->view("admin/tambahbarang", $data);
+    }
+
     public function add()
     {
-        $data["groups"] = $this->model_kategori->getAllGroups();
-        $barang = $this->model_barang;
-        $validation = $this->form_validation;
-        $validation->set_rules($barang->rules());
-
-        if ($validation->run()) {
-            $barang->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        } else {
-            $this->session->set_flashdata('error', 'Error');
-        }
-
-        $this->load->view("admin/tambahbarang");
+        $id_barang = $this->input->post('id_barang');
+        $nama_jenis = $this->input->post('nama_jenis');
+        $nama_brg = $this->input->post('nama_brg');
+        $harga_brg = $this->input->post('harga_brg');
+        $harga_grosir = $this->input->post('harga_grosir');
+        $per = $this->input->post('per');
+        $gambar = $this->input->post('gambar');
+        $stock = $this->input->post('stock');
+        $diskon = $this->input->post('diskon');
+        $deskripsi = $this->input->post('deskripsi');
+        $data = array(
+            'id_barang' => $id_barang,
+            'id_jenis' => $nama_jenis,
+            'nama_barang' => $nama_brg,
+            'harga_barang' => $harga_brg,
+            'grosir_barang' => $harga_grosir,
+            'per' => $per,
+            'gambar_barang' => $gambar,
+            'stock' => $stock,
+            'diskon_barang' => $diskon,
+            'deskripsi_barang' => $deskripsi,
+        );
+        $this->model_barang->input_data($data, 'barang');
+        redirect('admin/databarang');
     }
+
+    // public function edit($id_barang = null)
+    // {
+    //     if (!isset($id_barang)) redirect('admin/databarang');
+
+    //     $data["groups"] = $this->model_kategori->getAllGroups();
+    //     $barang = $this->model_barang;
+    //     $validation = $this->form_validation;
+    //     $validation->set_rules($barang->rules());
+
+    //     if ($validation->run()) {
+    //         $barang->update();
+    //         $this->session->set_flashdata('success', 'Berhasil disimpan');
+    //     }
+
+    //     $data["barang"] = $barang->getById($id_barang);
+    //     if (!$data["barang"]) show_404();
+
+    //     $this->load->view("admin/editbarang", $data);
+    // }
 
     public function edit($id_barang = null)
     {
-        if (!isset($id_barang)) redirect('admin/databarang');
-
-        $data["groups"] = $this->model_kategori->getAllGroups();
-        $barang = $this->model_barang;
-        $validation = $this->form_validation;
-        $validation->set_rules($barang->rules());
-
-        if ($validation->run()) {
-            $barang->update();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
-
-        $data["barang"] = $barang->getById($id_barang);
-        if (!$data["barang"]) show_404();
-
+        $data['kategori'] = $this->model_kategori->getAllGroups();
+        $data["barang"] = $this->model_barang->getById($id_barang);
         $this->load->view("admin/editbarang", $data);
+    }
+
+
+    public function editdata()
+    {
+        $id_barang = $this->input->post('id_barang');
+        $nama_jenis = $this->input->post('nama_jenis');
+        $nama_brg = $this->input->post('nama_brg');
+        $harga_brg = $this->input->post('harga_brg');
+        $harga_grosir = $this->input->post('harga_grosir');
+        $per = $this->input->post('per');
+        $gambar = $this->input->post('gambar');
+        $stock = $this->input->post('stock');
+        $diskon = $this->input->post('diskon');
+        $deskripsi = $this->input->post('deskripsi');
+        $data = array(
+            'id_jenis' => $nama_jenis,
+            'nama_barang' => $nama_brg,
+            'harga_barang' => $harga_brg,
+            'grosir_barang' => $harga_grosir,
+            'per' => $per,
+            'gambar_barang' => $gambar,
+            'stock' => $stock,
+            'diskon_barang' => $diskon,
+            'deskripsi_barang' => $deskripsi,
+        );
+        $this->model_barang->update_data($data, $id_barang);
+        redirect('admin/databarang');
     }
 
     public function delete($id_barang = null)
@@ -69,15 +121,4 @@ class databarang extends CI_Controller
             redirect(site_url('admin/databarang'));
         }
     }
-
-    public function kategori(){
-        if($_POST){
-            $checkboxes = $this->input->post('check_list');
-
-            $this->wmodel_barang->insertkategori(array(
-                'option' 		=> $kategori
-            ));
-        }
-    }	
-
 }

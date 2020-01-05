@@ -11,19 +11,17 @@
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
-        
+
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-              <img alt="Image placeholder"
-              src="<?php echo base_url(); ?>/assets/img/brand/usericon.png" alt="">
-                                </span>
-                                <div class="media-body ml-2 d-none d-lg-block">
-                                    <span
-                                        class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('username'); ?></span>
-                                </div>
-                            </div>
+                <img alt="Image placeholder" src="<?php echo base_url(); ?>/assets/img/brand/usericon.png" alt="">
+              </span>
+              <div class="media-body ml-2 d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('username'); ?></span>
+              </div>
+            </div>
           </a>
           <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
             <div class=" dropdown-header noti-title">
@@ -31,8 +29,8 @@
             </div>
             <div class="dropdown-divider"></div>
             <a href="<?= base_url('login_admin/logout'); ?>" class="dropdown-item">
-            <i class="ni ni-user-run"></i>
-            <span>Keluwar</span>
+              <i class="ni ni-user-run"></i>
+              <span>Keluwar</span>
             </a>
           </div>
         </li>
@@ -69,7 +67,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href="<?php echo base_url(); ?>admin/user"> <i class="ni ni-circle-08 text-pink"></i> Akun
+          <a class=" nav-link active " href=" <?php echo base_url(); ?>admin/user"> <i class="ni ni-circle-08 text-pink"></i> Akun
             </a>
           </li>
         </ul>
@@ -79,12 +77,12 @@
         <h6 class="navbar-heading text-muted">Manajemen</h6>
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
-        <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href="<?php echo base_url(); ?>admin/konfirmasi"> <i class="ni ni-delivery-fast text-primary"></i> Konfirmasi
+          <li class="nav-item  class=" active" ">
+          <a class=" nav-link active " href=" <?php echo base_url(); ?>admin/konfirmasi"> <i class="ni ni-delivery-fast text-primary"></i> Konfirmasi
             </a>
           </li>
           <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href="<?= site_url('admin/databarang/add'); ?>"><i class="ni ni-bullet-list-67 text-primary"></i> Tambah Barang
+          <a class=" nav-link active " href=" <?= site_url('admin/databarang/form_add'); ?>"><i class="ni ni-bullet-list-67 text-primary"></i> Tambah Barang
             </a>
           </li>
           <li class="nav-item  class=" active" ">
@@ -114,28 +112,25 @@
         </form>
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="media align-items-center">
-                                <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder"
-                                        src="<?php echo base_url(); ?>/assets/img/brand/usericon.png" alt="">
-                                </span>
-                                <div class="media-body ml-2 d-none d-lg-block">
-                                    <span
-                                        class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('username'); ?></span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                            <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Selamat Datang!</h6>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <a href="<?= base_url('login_admin/logout'); ?>" class="dropdown-item">
-                                <i class="ni ni-user-run"></i>
-                                <span>Keluar</span>
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="Image placeholder" src="<?php echo base_url(); ?>/assets/img/brand/usericon.png" alt="">
+                </span>
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('username'); ?></span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Selamat Datang!</h6>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="<?= base_url('login_admin/logout'); ?>" class="dropdown-item">
+                <i class="ni ni-user-run"></i>
+                <span>Keluar</span>
               </a>
             </div>
           </li>

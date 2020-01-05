@@ -17,7 +17,7 @@
                                 <h3 class="mb-0">Tambah Barang</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
+
                                 <br />
                                 <?php if ($this->session->flashdata('success')) : ?>
                                     <div class="alert alert-success" role="alert">
@@ -41,13 +41,13 @@
                                     <div class="form-group">
                                         <label for="form-control">Pilih kategori Barang</label>
                                         <select class="form-control" id="kategoribarang">
-                                        <option value="">Kategori Barang</option>
-                                        <?php 
-                                        foreach($groups as $row)
-                                        { 
-                                        echo '<option value="'.$row->jenis_barang.'">'.$row->nama_jenis.'</option>';
-                                        }
-                                        ?>
+                                            <option value="">Kategori Barang</option>
+                                            <?php
+                                            foreach ($kategori as $grup) { ?>
+                                                <option <?php if ($grup->id_jenis == $barang->id_jenis) {
+                                                            echo 'selected="selected"';
+                                                        } ?> value="<?php echo $grup->id_jenis ?>"><?php echo $grup->nama_jenis ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                 </div>
@@ -121,7 +121,9 @@
                             <input class="custom-control-input" id="xxl" type="checkbox">
                             <label class="custom-control-label" for="xxl">XXL</label>
                         </div>
+                        <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
                     </div>
+
 
                     <br />
                     <?php if ($this->session->flashdata('success')) : ?>

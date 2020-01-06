@@ -34,7 +34,6 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="id_barang">Nama Barang</label>
-                                        <input class="form-control" type="hidden" name="id_barang" value="<?php echo $barang->id_barang ?>" />
                                         <input class="form-control" type="text" name="nama_barang" value="<?php echo $barang->nama_barang ?>" />
                                     </div>
                                 </div>
@@ -99,6 +98,28 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- <label>Ukuran yang Tersedia</label>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input class="custom-control-input" name="ukuran" id="s" value="S" type="checkbox">
+                                <label class="custom-control-label" for="s">S</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input class="custom-control-input" name="ukuran" id="m" value="M" type="checkbox">
+                                <label class="custom-control-label" for="m">M</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input class="custom-control-input" name="ukuran" id="l" value="L" type="checkbox">
+                                <label class="custom-control-label" for="l">L</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input class="custom-control-input" name="ukuran" id="xl" value="XL" type="checkbox">
+                                <label class="custom-control-label" for="xl">XL</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
+                                <label class="custom-control-label" for="xxl">XXL</label>
+                            </div> -->
                             <div class="col-md-3">
                                 <label>Ukuran yang Tersedia</label>
                                 <div class="form-check">

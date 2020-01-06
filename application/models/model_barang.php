@@ -103,21 +103,21 @@ class model_barang extends CI_Model
         }
     }
 
-    private function UploadFoto()
-    {
-        $config['upload_path']          = ('./assets/img/upload/databarang');
-        $config['allowed_types']        = 'gif|png|jpg';
-        $config['file_name']            = $this->id_barang;
-        $config['overwrite']            = true;
-        $config['max_size']             = 2048;
+    // private function UploadFoto()
+    // {
+    //     $config['upload_path']          = ('./assets/img/upload/databarang');
+    //     $config['allowed_types']        = 'gif|png|jpg';
+    //     $config['file_name']            = $this->id_barang;
+    //     $config['overwrite']            = true;
+    //     $config['max_size']             = 2048;
 
-        $this->load->library('upload', $config);
+    //     $this->load->library('upload', $config);
 
-        if ($this->upload->do_upload('foto')) {
-            return $this->upload->data('file_name');
-        }
-        return "default.jpg";
-    }
+    //     if ($this->upload->do_upload('foto')) {
+    //         return $this->upload->data('file_name');
+    //     }
+    //     return "default.jpg";
+    // }
 
     public function input_data($data, $tabel)
     {

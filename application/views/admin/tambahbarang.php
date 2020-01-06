@@ -99,27 +99,59 @@
                                 </div>
 
                                 <label>Ukuran yang Tersedia</label>
-                                <!-- <div class="custom-control custom-checkbox mb-3">
-                                <input class="custom-control-input" id="s" type="checkbox">
-                                <label class="custom-control-label" for="s">S</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input class="custom-control-input" id="m" type="checkbox">
-                                <label class="custom-control-label" for="m">M</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input class="custom-control-input" id="l" type="checkbox">
-                                <label class="custom-control-label" for="l">L</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input class="custom-control-input" id="xl" type="checkbox">
-                                <label class="custom-control-label" for="xl">XL</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input class="custom-control-input" id="xxl" type="checkbox">
-                                <label class="custom-control-label" for="xxl">XXL</label>
-                            </div>-->
-                                <div class="form-check">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="s" value="S" type="checkbox">
+                                    <label class="custom-control-label" for="s">S</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="m" value="M" type="checkbox">
+                                    <label class="custom-control-label" for="m">M</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="l" value="L" type="checkbox">
+                                    <label class="custom-control-label" for="l">L</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="xl" value="XL" type="checkbox">
+                                    <label class="custom-control-label" for="xl">XL</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
+                                    <label class="custom-control-label" for="xxl">XXL</label>
+                                </div>
+
+                                <!-- <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="deskripsi">Deskripsi Barang</label>
+                                        <form>
+                                            <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <label>Ukuran yang Tersedia</label>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="s" value="S" type="checkbox">
+                                    <label class="custom-control-label" for="s">S</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="m" value="M" type="checkbox">
+                                    <label class="custom-control-label" for="m">M</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="l" value="L" type="checkbox">
+                                    <label class="custom-control-label" for="l">L</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="xl" value="XL" type="checkbox">
+                                    <label class="custom-control-label" for="xl">XL</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
+                                    <label class="custom-control-label" for="xxl">XXL</label>
+                                </div> -->
+                                <!-- <div class="form-check">
                                     <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
                                     <label class="form-check-label" for="exampleRadios1">
                                         M
@@ -136,7 +168,7 @@
                                     <label class="form-check-label" for="exampleRadios3">
                                         XL
                                     </label>
-                                </div>
+                                </div> -->
                                 <input class="btn btn-primary" type="submit">
                                 <br />
                                 <?php if ($this->session->flashdata('success')) : ?>
@@ -145,10 +177,8 @@
                                     </div>
 
                                 <?php endif; ?>
-
-                            </div>
-
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -156,7 +186,7 @@
     </div>
 </div>
 
-</div>
+
 <!-- End of Main Content -->
 <!-- Footer -->
 <?php $this->load->view('admin/partials/footer.php'); ?>

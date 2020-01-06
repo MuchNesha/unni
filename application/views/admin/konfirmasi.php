@@ -40,17 +40,18 @@
             </thead>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Rincian ID Pesanan : </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <?php foreach ($konfirmasi as $row) : ?>
+            <?php foreach ($model as $row) : ?>
+              <div class="modal fade" id="exampleModal<?= $row->id_konfirmasi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Rincian ID Pesanan : </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+
                       <b>
                         <h3>1. Info Transfer</h3> <br>
                       </b>
@@ -66,40 +67,42 @@
                       <h5><?php echo $row->dari_bank ?></h5>
                       <h4>Nama Pemilik Rekening :</h4>
                       <h5><?php echo $row->nama_pemilik_rekening ?></h5>
-                    <?php endforeach; ?>
 
-                    <?php foreach ($pelanggan as $pelanggan) : ?>
                       <br>
                       <h3>2. Info Pemesan</h3>
                       <h4>Nama Lengkap Pemesan :</h4>
-                      <h5><?php echo $pelanggan->nama_pelanggan ?></h5>
+                      <h5><?php echo $row->nama_pelanggan ?></h5>
                       <h4>No Hp :</h4>
-                      <h5><?php echo $pelanggan->no_hp_pelanggan ?></h5>
+                      <h5><?php echo $row->no_hp_pelanggan ?></h5>
                       <h4>Email :</h4>
-                      <h5><?php echo $pelanggan->email_pelanggan ?></h5>
+                      <h5><?php echo $row->email_pelanggan ?></h5>
                       <h4>Alamat :</h4>
-                      <h5><?php echo $pelanggan->alamat ?></h5>
+                      <h5><?php echo $row->alamat ?></h5>
                       <h4>Provinsi :</h4>
-                      <h5><?php echo $pelanggan->provinsi ?></h5>
+                      <h5><?php echo $row->provinsi ?></h5>
                       <h4>Kota/Kab :</h4>
-                      <h5><?php echo $pelanggan->kabupaten ?></h5>
+                      <h5><?php echo $row->kabupaten ?></h5>
                       <h4>Kecamatan :</h4>
-                      <h5><?php echo $pelanggan->kecamatan ?></h5>
-                    <?php endforeach; ?>
+                      <h5><?php echo $row->kecamatan ?></h5>
 
-                    <h4>Harga Ongkir :</h4>
-                    <h5>$var</h5>
 
-                    <?php foreach ($konfirmasi as $k) : ?>
+                      <h4>Harga Ongkir :</h4>
+                      <h5>$var</h5>
+
                       <br>
                       <h3>3. Foto Bukti Transfer :</h3>
-                      <img src="<?= base_url('assets/upload/bukti' . $k->gambar_bukti) ?>" <?php endforeach; ?> </div> <div class="modal-footer">
+                      <img width="300px" height="100px" src="<?= base_url('assets/upload/bukti/' . $row->gambar_bukti) ?>">
+                    </div>
+                    <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                       <button type="button" class="btn btn-primary">Setujui</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            <?php endforeach; ?>
+
+
             <tbody>
               <?php foreach ($konfirmasi as $konfirmasi) : ?>
                 <tr>
@@ -123,7 +126,7 @@
                     </span>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Rincian</button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal<?= $konfirmasi->id_konfirmasi ?>">Rincian</button>
                   </td>
                   <td>
                     <button type="button" class="btn btn-primary">Setujui</button>

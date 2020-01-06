@@ -9,7 +9,7 @@ class model_user extends CI_Model
 
     public function rules()
     {
-        
+
         return [
             [
                 'field' => 'id_admin',
@@ -49,6 +49,4 @@ class model_user extends CI_Model
 
         $this->db->update($this->_table, $this, array('id_admin' => $post['id_admin']));
     }
-
-
 }

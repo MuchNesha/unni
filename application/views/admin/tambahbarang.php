@@ -40,7 +40,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form-control">Pilih kategori Barang</label>
-                                        <select class="form-control" name="nama_jenis">
+                                        <select class="form-control" name="id_jenis">
                                             <option value="">Kategori Barang</option>
                                             <?php
                                             foreach ($kategori as $grup) {
@@ -59,7 +59,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="grosir">Harga Grosir Barang</label>
-                                        <input class="form-control" type="number" name="harga_grosir" placeholder="Rp." />
+                                        <input class="form-control" type="number" name="grosir_barang" placeholder="Rp." />
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -71,37 +71,35 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar_barang">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" multiple="multiple" />
+                                        <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" multiple="multiple" />
                                     </div>
                                 </div>
                                 <div class=" col-3">
                                     <div class="form-group">
                                         <label for="Stock">Stock</label>
-                                        <input class="form-control" type="number" name="stock" placeholder="Stock" />
+                                        <input class="form-control" type="number" name="stok" placeholder="Stock" />
                                     </div>
                                 </div>
                                 <div class=" col-3">
                                     <div class="form-group">
                                         <label for="Stock">Diskon (%)</label>
-                                        <input class="form-control" type="number" name="diskon" placeholder="%" />
+                                        <input class="form-control" type="number" name="diskon_barang" placeholder="%" />
                                     </div>
                                 </div>
 
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="deskripsi">Deskripsi Barang</label>
-                                        <form>
-                                            <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
-                                        </form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="deskripsi">Deskripsi Barang</label>
+                                            <form>
+                                                <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <label>Ukuran yang Tersedia</label>
-                            <div class="custom-control custom-checkbox mb-3">
+                                <label>Ukuran yang Tersedia</label>
+                                <!-- <div class="custom-control custom-checkbox mb-3">
                                 <input class="custom-control-input" id="s" type="checkbox">
                                 <label class="custom-control-label" for="s">S</label>
                             </div>
@@ -120,15 +118,35 @@
                             <div class="custom-control custom-checkbox mb-3">
                                 <input class="custom-control-input" id="xxl" type="checkbox">
                                 <label class="custom-control-label" for="xxl">XXL</label>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Simpan</button>
-                            <br />
-                            <?php if ($this->session->flashdata('success')) : ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?php echo $this->session->flashdata('success'); ?>
+                            </div>-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        M
+                                    </label>
                                 </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios2" value="L">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        L
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios3" value="XL">
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        XL
+                                    </label>
+                                </div>
+                                <input class="btn btn-primary" type="submit">
+                                <br />
+                                <?php if ($this->session->flashdata('success')) : ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <?php echo $this->session->flashdata('success'); ?>
+                                    </div>
 
-                            <?php endif; ?>
+                                <?php endif; ?>
+
+                            </div>
 
                         </form>
                     </div>

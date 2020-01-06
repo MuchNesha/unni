@@ -32,29 +32,8 @@ class databarang extends CI_Controller
 
     public function add()
     {
-        $id_barang = $this->input->post('id_barang');
-        $nama_jenis = $this->input->post('nama_jenis');
-        $nama_brg = $this->input->post('nama_brg');
-        $harga_brg = $this->input->post('harga_brg');
-        $harga_grosir = $this->input->post('harga_grosir');
-        $per = $this->input->post('per');
-        $gambar = $this->input->post('gambar');
-        $stock = $this->input->post('stock');
-        $diskon = $this->input->post('diskon');
-        $deskripsi = $this->input->post('deskripsi');
-        $data = array(
-            'id_barang' => $id_barang,
-            'id_jenis' => $nama_jenis,
-            'nama_barang' => $nama_brg,
-            'harga_barang' => $harga_brg,
-            'grosir_barang' => $harga_grosir,
-            'per' => $per,
-            'gambar_barang' => $gambar,
-            'stock' => $stock,
-            'diskon_barang' => $diskon,
-            'deskripsi_barang' => $deskripsi,
-        );
-        $this->model_barang->input_data($data, 'barang');
+
+        $this->model_barang->save();
         redirect('admin/databarang');
     }
 
@@ -88,28 +67,8 @@ class databarang extends CI_Controller
 
     public function editdata()
     {
-        $id_barang = $this->input->post('id_barang');
-        $nama_jenis = $this->input->post('nama_jenis');
-        $nama_brg = $this->input->post('nama_brg');
-        $harga_brg = $this->input->post('harga_brg');
-        $harga_grosir = $this->input->post('harga_grosir');
-        $per = $this->input->post('per');
-        $gambar = $this->input->post('gambar');
-        $stock = $this->input->post('stock');
-        $diskon = $this->input->post('diskon');
-        $deskripsi = $this->input->post('deskripsi');
-        $data = array(
-            'id_jenis' => $nama_jenis,
-            'nama_barang' => $nama_brg,
-            'harga_barang' => $harga_brg,
-            'grosir_barang' => $harga_grosir,
-            'per' => $per,
-            'gambar_barang' => $gambar,
-            'stock' => $stock,
-            'diskon_barang' => $diskon,
-            'deskripsi_barang' => $deskripsi,
-        );
-        $this->model_barang->update_data($data, $id_barang);
+
+        $this->model_barang->update();
         redirect('admin/databarang');
     }
 

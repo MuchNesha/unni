@@ -1,8 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class login extends CI_Controller {
-	
+class login extends CI_Controller
+{
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -41,7 +42,8 @@ class login extends CI_Controller {
 				if ($cekpass->num_rows() > 0) {
 
 					$data = [
-						'username' => $admin['username']
+						'username' => $admin['username'],
+						'id_admin' => $admin['id_admin'],
 					];
 					$data['logged_in'] = TRUE;
 					$this->session->set_userdata($data);

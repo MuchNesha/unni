@@ -18,8 +18,9 @@ class user extends CI_Controller
 
     public function index()
     {
+        $id_admin = $this->session->userdata('id_admin');
 
-        $data["admin"] = $this->model_user->getAll();
+        $data["admin"] = $this->model_user->getById($id_admin);
         $this->load->view("admin/user", $data);
     }
 
@@ -38,9 +39,5 @@ class user extends CI_Controller
 
         $data["admin"] = $admin->getById($id_admin);
         if (!$data["admin"]) show_404();
-
     }
-
-    }
-
-
+}

@@ -18,6 +18,6 @@
   <link href="<?php echo base_url(); ?>/assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
 
 
-    <!-- Custom Theme Style -->
-    <link href="<?php echo base_url();?>assets/admin/build/css/custom1.css" rel="stylesheet">
+  <!-- Custom Theme Style -->
+  <link href="<?php echo base_url(); ?>assets/admin/build/css/custom1.css" rel="stylesheet">
 </head>

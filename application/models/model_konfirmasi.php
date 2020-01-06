@@ -1,8 +1,9 @@
-<?php 
+<?php
 
-class model_konfirmasi extends CI_Model{
+class model_konfirmasi extends CI_Model
+{
 
-public function __construct()
+    public function __construct()
     {
         parent::__construct();
     }
@@ -16,14 +17,17 @@ public function __construct()
         {
             echo $row->description;
         }*/
-
-        $query = $this->db->query('SELECT * FROM konfirmasi');
+        $this->db->select('*');
+        $this->db->from('konfirmasi');
+        $this->db->join('pelanggan', 'pelanggan.id_pelanggan=konfirmasi.id_pelanggan');
+        $query = $this->db->get();
 
 
         return $query->result();
 
         //echo 'Total Results: ' . $query->num_rows();
     }
+
 
     function getDataPelanggan()
     {
@@ -42,4 +46,4 @@ public function __construct()
 
         //echo 'Total Results: ' . $query->num_rows();
     }
-}   
+}

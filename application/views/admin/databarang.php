@@ -38,7 +38,7 @@
                         <td><?php echo $barang->nama_barang ?></td>
                         <td><?php echo $barang->id_jenis ?></td>
                         <td><?php echo $barang->harga_barang ?></td>
-                        <td><?php echo $barang->Stock ?></td>
+                        <td><?php echo $barang->stok ?></td>
 
                         <td>
                           <a href="<?php echo site_url('admin/databarang/edit/' . $barang->id_barang) ?>">

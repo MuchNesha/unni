@@ -29,18 +29,19 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="<?php base_url('admin/databarang/add') ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url('admin/databarang/editdata') ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="id_barang">No Barang</label>
-                                        <input class="form-control" type="text" name="id_barang" value="<?php echo $barang->id_barang ?>" />
+                                        <label for="id_barang">Nama Barang</label>
+                                        <input class="form-control" type="hidden" name="id_barang" value="<?php echo $barang->id_barang ?>" />
+                                        <input class="form-control" type="text" name="nama_barang" value="<?php echo $barang->nama_barang ?>" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form-control">Pilih kategori Barang</label>
-                                        <select class="form-control" id="kategoribarang">
+                                        <select class="form-control" name="id_jenis" id="kategoribarang">
                                             <option value="">Kategori Barang</option>
                                             <?php
                                             foreach ($kategori as $grup) { ?>
@@ -60,7 +61,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="grosir">Harga Grosir</label>
-                                        <input class="form-control" type="text" name="grosir" value="<?php echo $barang->grosir_barang ?>" />
+                                        <input class="form-control" type="text" name="grosir_barang" value="<?php echo $barang->grosir_barang ?>" />
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -72,19 +73,19 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" value="<?php echo $barang->gambar_barang ?>" />
+                                        <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" value="<?php echo $barang->gambar_barang ?>" />
                                     </div>
                                 </div>
                                 <div class=" col-3">
                                     <div class="form-group">
                                         <label for="stock">Stock Barang</label>
-                                        <input class="form-control" type="text" name="stock" placeholder="Harga" value="<?php echo $barang->Stock ?>" />
+                                        <input class="form-control" type="text" name="stok" placeholder="Harga" value="<?php echo $barang->stok ?>" />
                                     </div>
                                 </div>
                                 <div class=" col-3">
                                     <div class="form-group">
                                         <label for="diskon">Diskon</label>
-                                        <input class="form-control" type="text" name="diskon" placeholder="%" value="<?php echo $barang->diskon_barang ?>" />
+                                        <input class="form-control" type="text" name="diskon_barang" placeholder="%" value="<?php echo $barang->diskon_barang ?>" />
                                     </div>
                                 </div>
 
@@ -98,31 +99,30 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-3">
+                                <label>Ukuran yang Tersedia</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        M
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios2" value="L">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        L
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios3" value="XL">
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        XL
+                                    </label>
+                                </div>
+                                <input class="btn btn-primary" type="submit">
+                            </div>
                     </div>
-                    <div class="col-md-3">
-                        <label>Ukuran yang Tersedia</label>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input class="custom-control-input" id="s" type="checkbox">
-                            <label class="custom-control-label" for="s">S</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input class="custom-control-input" id="m" type="checkbox">
-                            <label class="custom-control-label" for="m">M</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input class="custom-control-input" id="l" type="checkbox">
-                            <label class="custom-control-label" for="l">L</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input class="custom-control-input" id="xl" type="checkbox">
-                            <label class="custom-control-label" for="xl">XL</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input class="custom-control-input" id="xxl" type="checkbox">
-                            <label class="custom-control-label" for="xxl">XXL</label>
-                        </div>
-                        <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
-                    </div>
+
 
 
                     <br />

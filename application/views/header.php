@@ -60,8 +60,8 @@
                                     </li>
                                     <li class="total">
                                         <span class="pull-right">Total: $20.00</span>
-                                        <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
-                                        <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
+                                        <a href="<?= site_url('keranjang'); ?>" class="btn btn-sm btn-cart">Cart</a>
+                                        <a href="<?= site_url('pengiriman'); ?>" class="btn btn-sm btn-checkout">Checkout</a>
                                     </li>
                                 </ul>
                             </div>

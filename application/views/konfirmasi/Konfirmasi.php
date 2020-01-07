@@ -27,23 +27,23 @@
                     </div>
                 </div>
     </div>
-  <form>
+  <form action="<?php echo base_url('konfirmasi/add') ?>" method="post">
   <div class="form-row">
   <div class="form-group col-md-6">
 			<label for="contoh1">ID Pesanan</label>
-			<input type="text" class="form-control" id="contoh1" placeholder="ID">
+			<input type="text" class="form-control" id="contoh1" name="id_pesanan" placeholder="">
 		</div>
         </div>
     <div class="form-row">
                 <div class="form-group col-md-6">
                 <label for="nama">Tanggal Bayar :</label>
-                    <input type="" name="" class="form-control" id="" placeholder="" data-rule=""
+                    <input type="" name="tgl_bayar" class="form-control" id="" placeholder="" data-rule=""
                         data-msg="Please enter at least 4 chars" required/>
                     <div class="validation"></div>
                 </div>
                 <div class="form-group col-md-6">
                 <label for="nama">jumlah bayar (Rp):</label>
-                    <input type="" class="form-control" name="" id="" placeholder="" data-rule=""
+                    <input type="" class="form-control" name="jumlah_bayar" id="" placeholder="" data-rule=""
                         data-msg="Please enter a valid email" required/>
                     <div class="validation"></div>
                 </div>
@@ -52,17 +52,17 @@
 	<div class="form-row">
 		<div class="form-group col-md-6">
 			<label for="contoh1">Metode Pembayaran</label>
-			<input type="text" class="form-control" id="contoh1" placeholder="">
+			<input type="text" class="form-control" name="metode_pembayaran" id="contoh1" placeholder="">
 		</div>
 		<div class="form-group col-md-6">
 			<label for="contoh2">Dari Bank</label>
-			<input type="text" class="form-control" id="contoh2" placeholder="">
+			<input type="text" class="form-control" name="dari_bank" id="contoh2" placeholder="">
 		</div>
 	</div>
     <div class="form-row">
 		<div class="form-group col-md-6">
 			<label for="contoh1">Nama Pemilik Rekening</label>
-			<input type="text" class="form-control" id="contoh1" placeholder="">
+			<input type="text" class="form-control" id="contoh1" name="nama_pemilik_rekening" placeholder="">
 		</div>
         <div class="form-row">
             <div class="form-group col-md-12">

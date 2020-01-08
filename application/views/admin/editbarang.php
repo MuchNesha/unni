@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/partials/head.php'); ?>
 <?php $this->load->view('admin/partials/menu.php'); ?>
 <div class="main-content">
-    <!-- Page content -->
+    <!-- Page content -->d
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
         <div class="container-fluid">
             <div class="header-body">

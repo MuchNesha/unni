@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/partials/head.php'); ?>
 <?php $this->load->view('admin/partials/menu.php'); ?>
 <div class="main-content">
-    <!-- Page content -->d
+    <!-- Page content -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
         <div class="container-fluid">
             <div class="header-body">
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="<?= base_url('admin/databarang/editdata') ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo base_url('admin/databarang/editdata') ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -99,7 +99,7 @@
                                 </div>
                             </div>
 
-                            <!-- <label>Ukuran yang Tersedia</label>
+                            <label>Ukuran yang Tersedia</label>
                             <div class="custom-control custom-checkbox mb-3">
                                 <input class="custom-control-input" name="ukuran" id="s" value="S" type="checkbox">
                                 <label class="custom-control-label" for="s">S</label>
@@ -119,8 +119,8 @@
                             <div class="custom-control custom-checkbox mb-3">
                                 <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
                                 <label class="custom-control-label" for="xxl">XXL</label>
-                            </div> -->
-                            <div class="col-md-3">
+                            </div>
+                            <!-- <div class="col-md-3">
                                 <label>Ukuran yang Tersedia</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
@@ -139,25 +139,25 @@
                                     <label class="form-check-label" for="exampleRadios3">
                                         XL
                                     </label>
-                                </div>
-                                <input class="btn btn-primary" type="submit">
-                            </div>
+                                </div> -->
+                            <input class="btn btn-primary" type="submit">
+                    </div>
+                </div>
+
+
+
+                <br />
+                <?php if ($this->session->flashdata('success')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $this->session->flashdata('success'); ?>
                     </div>
 
-
-
-                    <br />
-                    <?php if ($this->session->flashdata('success')) : ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $this->session->flashdata('success'); ?>
-                        </div>
-
-                    <?php endif; ?>
-                    </form>
-                </div>
+                <?php endif; ?>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 

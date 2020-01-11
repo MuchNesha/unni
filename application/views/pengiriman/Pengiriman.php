@@ -1,99 +1,84 @@
 <div class="container">
     <div class="row  pt-2 pb-2">
-        <div class="col-3 md-3 pt-6 text-center">
-            <button type="button" class="btn btn-danger">1</button>
-            <a class="text-center" href="<?= site_url('keranjang'); ?>">keranjang belanja</a>
+        <div class="col-md-2 pt-6 text-center">
+        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('keranjang'); ?>'">1</button>
+            <a class="text-center" href="<?= site_url('keranjang'); ?>"><br><br>KERANJANG BELANJA</a>
         </div>
-        <div class="col-3 md-4 pt-6 text-center">
-            <button type="button" class="btn btn-danger">2</button>
-            <a class="text-center" href="<?= site_url('pengiriman'); ?>">pengiriman</a>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 text-center">
+        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('pengiriman'); ?>'">2</button>
+            <a class="text-center" href="<?= site_url('pengiriman'); ?>"><br><br>PENGIRIMAN</a>
         </div>
-        <div class="col-3 md-4 pt-6 text-center">
-            <button type="button" class="btn btn-danger">3</button>
-            <a class="text-center" href="<?= site_url('pembayaran'); ?>">pembayaran</a>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 text-center">
+            <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('pembayaran'); ?>'">3</button>
+            <a class="text-center" href="<?= site_url('pembayaran'); ?>"><br>PEMBAYARAN</a>
         </div>
-        <div class="col-3 md-3 pt-6 float-right text-center">
-            <button type="button" class="btn btn-danger">4</button>
-            <a class="text-center" href="<?= site_url('konfirmasi'); ?>">konfirmasi</a>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 float-right text-center">
+            <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('konfirmasi'); ?>'">4</button>
+            <a class="text-center" href="<?= site_url('konfirmasi'); ?>"><br>KONFIRMASI</a>
         </div>
     </div>
-    <br><br>
-    <div class="container">
-        <h3>DATA & ALAMAT PENERIMA</h3>
-        <div class="row">
-            <div class="col ml-1">
-                <div class="text-top">
-                    <p>Isi data dengan benar! </p>
+    <br>
+    <!-- ****** Checkout Area Start ****** -->
+    <div class="checkout_area section_padding_100">
+            <div class="container">
+                <div class="row">
+
+                    <div class="md-6 ml-auto">
+                        <div class="checkout_details_area mt-50 clearfix">
+
+                            <div class="row" y
+                            <div class="cart-page-heading">
+                                <h2>DATA DAN ALAMAT PENERIMA</h2>
+                                <p>Isikan data identitas alamat dengan benar agar mempermudah saat rekap ndbjhsdbhkjk  pengiriman!</p>
+                            </div>
+
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="first_name">Nama Lengkap <span>*</span></label>
+                                        <input type="text" class="form-control" id="first_name" value="" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="last_name">Provinsi <span>*</span></label>
+                                        <input type="text" class="form-control" id="last_name" value="" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="company">Nomor HP</label>
+                                        <input type="number" class="form-control" id="company" value="">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="street_address">Kota/Kabupaten <span>*</span></label>
+                                        <input type="text" class="form-control mb-3" id="street_address" value="">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="postcode">Email <span>*</span></label>
+                                        <input type="email" class="form-control" id="postcode" value="">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city">Kecamatan <span>*</span></label>
+                                        <input type="text" class="form-control" id="city" value="">
+                                    </div>
+                                    <div class="col-md-6 mb-5">
+                                        <label for="state">Catatan Pengiriman <span>*</span></label>
+                                        <input type="text" class="form-control" id="state" value="">
+                                    </div>
+                                    <div class="col-md-6 mb-5">
+                                        <label for="phone_number">Kode Pos <span>*</span></label>
+                                        <input type="number" class="form-control" id="phone_number" min="0" value="">
+                                    </div>
+                                    <div class="col-3 mb-5">
+                                    <button class="btn karl-checkout-btn" type="submit">Lanjut ke Pembayaran</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <form action="<?php echo base_url('pengiriman/add') ?>" method="post">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="contoh1">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="contoh1" name="nama_pelanggan" placeholder="">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="contoh1">Provinsi</label>
-                    <input type="text" class="form-control" id="contoh1" name="provinsi" placeholder=" ">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="nama">Nomor Handphone </label>
-                    <input type="" name="no_hp_pelanggan" class="form-control" id="" placeholder="" data-rule="" data-msg="Please enter at least 4 chars"  required />
-                    <div class="validation"></div>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="nama">Kota/Kabupaten</label>
-                    <input type="" class="form-control" name="kabupaten" id="" placeholder="" data-rule="" data-msg="Please enter a valid email" required />
-                    <div class="validation"></div>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="contoh1">E-mail</label>
-                    <input type="text" class="form-control" name="email_pelanggan" id="contoh1" placeholder="">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="contoh2">Kecamatan</label>
-                    <input type="text" class="form-control" name="kecamatan" id="contoh2" placeholder="">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="contoh1">Catatan Pengiriman</label>
-                    <input type="text" class="form-control" id="contoh1" placeholder="">
-                </div>
-                <!-- <div class="form-row"> -->
-                <div class="form-group col-md-6">
-                    <label for="contoh1">Kode Pos</label>
-                    <input type="text" class="form-control" name="kode_pos" id="contoh1" placeholder="">
-                </div>
-            </div>
-
-            <!-- </div> -->
-    </div>
-
-
-
-    <div class="text-center mb-3"><button type="submit" class="btn btn-danger" name="inputkk" href="<?= site_url('pembayaran'); ?>">Lanjut ke Pembayaran </button></div>
-    </form>
+        <!-- ****** Checkout Area End ****** -->
 </div>
-
-
-<!-- jQuery (Necessary for All JavaScript Plugins) -->
-<script src="<?php echo base_url(); ?>/assets/js/jquery/jquery-2.2.4.min.js"></script>
-<!-- Popper js -->
-<script src="<?php echo base_url(); ?>/assets/js/popper.min.js"></script>
-<!-- Bootstrap js -->
-<script src="<?php echo base_url(); ?>/assets/js/bootstrap.min.js"></script>
-<!-- Plugins js -->
-<script src="<?php echo base_url(); ?>/assets/js/plugins.js"></script>
-<!-- Active js -->
-<script src="<?php echo base_url(); ?>/assets/js/active.js"></script>
-
-</body>
-
-</html>
+</div>

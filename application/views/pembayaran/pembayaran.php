@@ -19,7 +19,9 @@
             </div>
             <br><br>
 <div class="container">
+    <aside>
   <h3>DATA & ALAMAT PENERIMA</h3>
+    </aside>
   <div class="row">
                 <div class="col ml-1">
                     <div class="text-top">

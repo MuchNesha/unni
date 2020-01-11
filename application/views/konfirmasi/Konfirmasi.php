@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/core-style.css">
+<link href="css/responsive.css" rel="stylesheet">
 
 <div class="container">
             <div class="row  pt-2 pb-2">
@@ -19,6 +22,7 @@
                 </div>
             </div>
 <br></br>
+
   <h3>SILAHKAN ISI DATA</h3>
   <div class="row">
                 <div class="col ml-1">

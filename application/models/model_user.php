@@ -17,6 +17,28 @@ class model_user extends CI_Model
                 'rules' => 'required'
             ],
 
+            [
+                'field' => 'username',
+                'label' => 'username',
+                'rules' => 'required'
+            ],
+
+            ['required' => 'Username anda tidak boleh kosong!'],
+
+            [
+                'field' => 'password',
+                'label' => 'password',
+                'rules' => 'required|matches[password]'
+            ],
+
+            ['matches' => 'Konfirmasi password anda salah!'],
+
+            [
+                'field' => 'password2',
+                'label' => 'Konfirmasi Pasword',
+                'rules' => 'required|matches[password2]'
+            ]
+
         ];
     }
 

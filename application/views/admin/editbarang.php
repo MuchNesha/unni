@@ -73,7 +73,11 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" value="<?php echo $barang->gambar ?>" />
+                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" />
+                                        <input type="hidden" name="old-image" value="<?php echo $barang->gambar ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <img src="<?= base_url('assets/upload/produk/' . $barang->gambar) ?>" width="200px" height="100">
                                     </div>
                                 </div>
                                 <div class=" col-3">
@@ -95,12 +99,12 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="deskripsi">Deskripsi Barang</label>
-                                        <input class="form-control" type="text" name="deskripsi" placeholder="Deskripsi" value="<?php echo $barang->deskripsi_barang ?>" />
+                                        <textarea class="form-control" type="text" name="deskripsi" placeholder="Deskripsi"><?php echo $barang->deskripsi_barang ?></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <label>Ukuran yang Tersedia</label>
+                            <!-- <label>Ukuran yang Tersedia</label>
                             <div class="custom-control custom-checkbox mb-3">
                                 <input class="custom-control-input" name="ukuran" id="s" value="S" type="checkbox">
                                 <label class="custom-control-label" for="s">S</label>
@@ -120,45 +124,39 @@
                             <div class="custom-control custom-checkbox mb-3">
                                 <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
                                 <label class="custom-control-label" for="xxl">XXL</label>
+                            </div> -->
+                            <label>Ukuran yang Tersedia</label>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select name="ukuran" class="form-control">
+                                        <option>--Ukuran--</option>
+                                        <option value="M" <?php if ($barang->ukuran == "M") {
+                                                                echo "selected=\"selected\"";
+                                                            } ?>>M</option>
+                                        <option value="L" <?php if ($barang->ukuran == "L") {
+                                                                echo "selected=\"selected\"";
+                                                            } ?>>L</option>
+                                        <option value="XL" <?php if ($barang->ukuran == "XL") {
+                                                                echo "selected=\"selected\"";
+                                                            } ?>>XL</option>
+                                    </select> </div> <button class="btn btn-primary" type="submit">Ubah</button>
                             </div>
-                            <!-- <div class="col-md-3">
-                                <label>Ukuran yang Tersedia</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        M
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios2" value="L">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        L
-                                    </label>
-                                </div>
-                                <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios3" value="XL">
-                                    <label class="form-check-label" for="exampleRadios3">
-                                        XL
-                                    </label>
-                                </div> -->
-                            <button class="btn btn-primary" type="submit">Ubah</button>
                     </div>
+
+
+
+                    <br />
+                    <?php if ($this->session->flashdata('success')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?php echo $this->session->flashdata('success'); ?>
+                        </div>
+
+                    <?php endif; ?>
+                    </form>
                 </div>
-
-
-
-                <br />
-                <?php if ($this->session->flashdata('success')) : ?>
-                    <div class="alert alert-success" role="alert">
-                        <?php echo $this->session->flashdata('success'); ?>
-                    </div>
-
-                <?php endif; ?>
-                </form>
             </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 

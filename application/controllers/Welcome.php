@@ -6,12 +6,14 @@ class Welcome extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model('model_barang');
 	}
 
 	public function index()
 	{
-		$this->load->view('header');
-		$this->load->view('home/home');
-		$this->load->view('footer');
+		$data['brg'] =$this->model_barang->getAll();
+		$this->load->view('header', $data);
+		$this->load->view('home/home', $data);
+		$this->load->view('footer', $data);
 	}
 }

@@ -39,6 +39,7 @@ class user extends CI_Controller
 
         $data["admin"] = $admin->getById($id_admin);
         if (!$data["admin"]) show_404();
+        $this->load->view("admin/user", $data);
     }
 
     public function edituser()

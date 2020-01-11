@@ -17,7 +17,7 @@
         <div class="col-1"></div>
         <div class="col-md-2 pt-6 float-right text-center">
             <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('konfirmasi'); ?>'">4</button>
-            <a class="text-center" href="<?= site_url('konfirmasi'); ?>"><br><br><b>KONFIRMASI</</a>
+            <a class="text-center" href="<?= site_url('konfirmasi'); ?>"><br><br><b>KONFIRMASI</b></a>
         </div>
     </div>
     <br>

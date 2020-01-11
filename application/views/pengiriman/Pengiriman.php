@@ -7,7 +7,7 @@
         <div class="col-1"></div>
         <div class="col-md-2 pt-6 text-center">
         <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('pengiriman'); ?>'">2</button>
-            <a class="text-center" href="<?= site_url('pengiriman'); ?>"><br><br>PENGIRIMAN</a>
+            <a class="text-center" href="<?= site_url('pengiriman'); ?>"><br><br><b>PENGIRIMAN</b></a>
         </div>
         <div class="col-1"></div>
         <div class="col-md-2 pt-6 text-center">

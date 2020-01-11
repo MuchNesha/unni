@@ -1,25 +1,26 @@
-<body>
-    
-    <div id="wrapper">
-
-        <section class="top-discount-area d-md-flex align-items-center">
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Free Shipping &amp; Returns</h5>
-                <h6><a href="#">BUY NOW</a></h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for all dresses</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for students</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-        </section>
-
+<div class="container">
+    <div class="row  pt-2 pb-2">
+        <div class="col-md-2 pt-6 text-center">
+        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('keranjang'); ?>'">1</button>
+            <a class="text-center" href="<?= site_url('keranjang'); ?>"><br><br>KERANJANG BELANJA</a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 text-center">
+        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('pengiriman'); ?>'">2</button>
+            <a class="text-center" href="<?= site_url('pengiriman'); ?>"><br><br>PENGIRIMAN</a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 text-center">
+            <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('pembayaran'); ?>'">3</button>
+            <a class="text-center" href="<?= site_url('pembayaran'); ?>"><br><br>PEMBAYARAN</a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 float-right text-center">
+            <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('konfirmasi'); ?>'">4</button>
+            <a class="text-center" href="<?= site_url('konfirmasi'); ?>"><br><br><b>KONFIRMASI</</a>
+        </div>
+    </div>
+    <br>
         <!-- ****** Checkout Area Start ****** -->
         <div class="checkout_area section_padding_100">
             <div class="container">

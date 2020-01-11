@@ -99,7 +99,7 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Belanja</a>
                                         <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                            <a class="dropdown-item" href="#">Hijab Instan</a>
+                                            <a class="dropdown-item" href="<?= site_url('list_barang'); ?>">Hijab Instan</a>
                                             <a class="dropdown-item" href="#">Hijab Segiempat</a>
                                             <a class="dropdown-item" href="#">Baju Muslim</a>
                                             <a class="dropdown-item" href="#">Aksesoris</a>

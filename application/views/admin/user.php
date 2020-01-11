@@ -39,6 +39,7 @@
                       <label class="form-control-label" for="user">Username</label>
                       <input class="form-control" type="hidden" name="id_admin" value=" <?php echo $admin->id_admin ?>" />
                       <input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $admin->username ?>" />
+                      <?php echo form_error('username', '<small class="text-danger pl-3>', '</small>') ?>
                     </div>
                   </div>
                 </div>
@@ -46,7 +47,8 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-username">Kata Sandi</label>
-                      <input type="password" name="pass" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $admin->password ?>">
+                      <input type="password" name="password" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $admin->password ?>">
+                      <?php echo form_error('password', '<small class="text-danger pl-3>', '</small>') ?>
                     </div>
                   </div>
                 </div>
@@ -54,7 +56,8 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-first-name">Ulangi Kata Sandi</label>
-                      <input type="password" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $admin->password ?>">
+                      <input type="password" id="input-first-name" name="password2" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $admin->password ?>">
+                      <?php echo form_error('password2', '<small class="text-danger pl-3>', '</small>') ?>
                     </div>
                   </div>
                 </div>

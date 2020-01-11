@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="<?php echo base_url('admin/databarang/add') ?>" method="post">
+                        <form action="<?php echo base_url('admin/databarang/add') ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -56,13 +56,13 @@
                                         <input class="form-control" type="number" name="harga_brg" placeholder="Rp." />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="grosir">Harga Grosir Barang</label>
                                         <input class="form-control" type="number" name="grosir_barang" placeholder="Rp." />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="grosir">Per</label>
                                         <input class="form-control" type="number" name="per" placeholder="QTY" />
@@ -71,56 +71,25 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar_barang">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" multiple="multiple" />
+                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" />
                                     </div>
                                 </div>
-                                <div class=" col-3">
+                                <div class=" col-6">
                                     <div class="form-group">
                                         <label for="Stock">Stock</label>
                                         <input class="form-control" type="number" name="stok" placeholder="Stock" />
                                     </div>
                                 </div>
-                                <div class=" col-3">
+                                <div class=" col-6">
                                     <div class="form-group">
                                         <label for="Stock">Diskon (%)</label>
                                         <input class="form-control" type="number" name="diskon_barang" placeholder="%" />
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="deskripsi">Deskripsi Barang</label>
-                                            <form>
-                                                <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="4" placeholder="Tulis deskripsi barang..."></textarea>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
 
-                                <label>Ukuran yang Tersedia</label>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input class="custom-control-input" name="ukuran" id="s" value="S" type="checkbox">
-                                    <label class="custom-control-label" for="s">S</label>
-                                </div>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input class="custom-control-input" name="ukuran" id="m" value="M" type="checkbox">
-                                    <label class="custom-control-label" for="m">M</label>
-                                </div>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input class="custom-control-input" name="ukuran" id="l" value="L" type="checkbox">
-                                    <label class="custom-control-label" for="l">L</label>
-                                </div>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input class="custom-control-input" name="ukuran" id="xl" value="XL" type="checkbox">
-                                    <label class="custom-control-label" for="xl">XL</label>
-                                </div>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
-                                    <label class="custom-control-label" for="xxl">XXL</label>
-                                </div>
-
-                                <!-- <div class="row">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="deskripsi">Deskripsi Barang</label>
@@ -150,8 +119,10 @@
                                 <div class="custom-control custom-checkbox mb-3">
                                     <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
                                     <label class="custom-control-label" for="xxl">XXL</label>
-                                </div> -->
-                                <!-- <div class="form-check">
+                                </div>
+                                <!-- <div class="col-md-3">
+                                <label>Ukuran yang Tersedia</label>
+                                <div class="form-check">
                                     <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
                                     <label class="form-check-label" for="exampleRadios1">
                                         M
@@ -169,24 +140,22 @@
                                         XL
                                     </label>
                                 </div> -->
+                                <br />
                                 <input class="btn btn-primary" type="submit">
                                 <br />
                                 <?php if ($this->session->flashdata('success')) : ?>
                                     <div class="alert alert-success" role="alert">
                                         <?php echo $this->session->flashdata('success'); ?>
                                     </div>
-
                                 <?php endif; ?>
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
+</div>
 <!-- End of Main Content -->
 <!-- Footer -->
 <?php $this->load->view('admin/partials/footer.php'); ?>

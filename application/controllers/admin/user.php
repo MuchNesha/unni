@@ -33,11 +33,20 @@ class user extends CI_Controller
         $validation->set_rules($admin->rules());
 
         if ($validation->run()) {
-            $admin->Simpan();
+            $admin->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
         $data["admin"] = $admin->getById($id_admin);
         if (!$data["admin"]) show_404();
+    }
+
+    public function edituser()
+    {
+        $data['user'] = $this->model_user->getAll();
+        $user = $this->model_user;
+        $user->update();
+        $this->session->set_flashdata('success', '<div class="alert alert-success" role="alert">Data Berhasil Diubah :)</div>');
+        redirect('admin/user', $data);
     }
 }

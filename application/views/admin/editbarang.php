@@ -73,7 +73,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar_barang" placeholder="Gambar Barang" value="<?php echo $barang->gambar_barang ?>" />
+                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" value="<?php echo $barang->gambar ?>" />
                                     </div>
                                 </div>
                                 <div class=" col-3">

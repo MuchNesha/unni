@@ -11,7 +11,7 @@ class model_barang extends CI_Model
     public $per;
     public $stok;
     public $diskon_barang;
-    public $gambar_barang;
+    public $gambar;
     public $deskripsi_barang;
 
 
@@ -53,7 +53,7 @@ class model_barang extends CI_Model
         $this->per = $post["per"];
         $this->stok = $post["stok"];
         $this->diskon_barang = $post["diskon_barang"];
-        $this->gambar_barang = $this->_uploadImage();
+        $this->gambar = $this->_uploadImage();
         $this->deskripsi_barang = $post["deskripsi"];
         $this->ukuran = $post["ukuran"];
 
@@ -73,7 +73,7 @@ class model_barang extends CI_Model
         $this->per = $post["per"];
         $this->stok = $post["stok"];
         $this->diskon_barang = $post["diskon_barang"];
-        $this->gambar_barang = $this->_uploadImage();
+        $this->gambar = $this->_uploadImage();
         $this->deskripsi_barang = $post["deskripsi"];
         $this->ukuran = $post["ukuran"];
 
@@ -87,20 +87,20 @@ class model_barang extends CI_Model
 
     private function _uploadImage()
     {
-        $config['upload_path']          = './assets/upload/produk/';
+        $config['upload_path']          = './assets/upload/produk';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['file_name']            = $_FILES['gambar_barang']['name'];
+        $nama_lengkap = $_FILES['gambar']['name'];
+        $config['file_name']            = $nama_lengkap;
         $config['overwrite']            = true;
-        $config['max_size']             = 3048;
-        // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 3024;
 
         $this->load->library('upload', $config);
 
-        if ($this->upload->do_upload('gambar_barang')) {
+        if ($this->upload->do_upload('gambar')) {
             return $this->upload->data("file_name");
         }
+
+        print_r($this->upload->display_errors());
     }
 
     // private function UploadFoto()

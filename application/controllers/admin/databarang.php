@@ -34,6 +34,7 @@ class databarang extends CI_Controller
     {
 
         $this->model_barang->save();
+        $this->session->set_flashdata('success', '<div class="alert alert-success" role="alert">Data Berhasil Diubah :)</div>');
         redirect('admin/databarang');
     }
 

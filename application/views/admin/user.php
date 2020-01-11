@@ -30,13 +30,14 @@
             </div>
           </div>
           <div class="card-body">
-            <form>
+            <form method="post" action="<?php echo base_url('admin/user/edituser') ?>" enctype="multipart/form-data">
               <h6 class="heading-small text-muted mb-4">Informasi Pengguna Admin</h6>
               <div class="pl-lg-4">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="user">Username</label>
+                      <input class="form-control" type="hidden" name="id_admin" value=" <?php echo $admin->id_admin ?>" />
                       <input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $admin->username ?>" />
                     </div>
                   </div>
@@ -57,24 +58,19 @@
                     </div>
                   </div>
                 </div>
+                <button class="btn btn-primary" type="submit">Edit</button>
               </div>
-              <input class="btn btn-primary" type="submit" name="btn" value="simpan">
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Footer -->
-  <footer class="footer">
-    <?php $this->load->view('admin/partials/footer.php'); ?>
-  </footer>
 </div>
-</div>
+<!-- Footer -->
+<footer class="footer">
+  <?php $this->load->view('admin/partials/footer.php'); ?>
+</footer>
 <!--   Core   -->
 <?php $this->load->view('admin/partials/js.php'); ?>
 <!--   Optional JS   -->
-
-</body>
-
-</html>

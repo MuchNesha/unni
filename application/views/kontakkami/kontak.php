@@ -47,7 +47,7 @@
            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
            </div>
            </div>
-        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
         <!-- ****** Offer Area Start ****** -->
         <section class="offer_area height-70 section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/kontak.png);">
         </section>

@@ -34,6 +34,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="id_barang">Nama Barang</label>
+                                        <input class="form-control" type="hidden" name="id_barang" value="<?php echo $barang->id_barang ?>" />
                                         <input class="form-control" type="text" name="nama_barang" value="<?php echo $barang->nama_barang ?>" />
                                     </div>
                                 </div>
@@ -140,7 +141,7 @@
                                         XL
                                     </label>
                                 </div> -->
-                            <input class="btn btn-primary" type="submit">
+                            <button class="btn btn-primary" type="submit">Ubah</button>
                     </div>
                 </div>
 

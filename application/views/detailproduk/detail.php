@@ -7,36 +7,10 @@
                 <div class="single_product_thumb">
                     <div id="product_details_slider" class="carousel slide" data-ride="carousel">
 
-                        <ol class="carousel-indicators">
-                            <li class="active" data-target="#product_details_slider" data-slide-to="1" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-1.jpg);">
-                            </li>
-                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-2.jpg);">
-                            </li>
-                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-3.jpg);">
-                            </li>
-                            <li data-target="#product_details_slider" data-slide-to="4" style="background-image: url(<?php echo base_url(); ?>/assets/img/product-img/product-4.jpg);">
-                            </li>
-                        </ol>
-
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a class="gallery_img" href="assets/img/product-img/product-1.jpg">
-                                    <img class="d-block w-100" src="assets/img/product-img/product-1.jpg" alt="First slide">
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a class="gallery_img" href="assets/img/product-img/product-2.jpg">
-                                    <img class="d-block w-100" src="assets/img/product-img/product-2.jpg" alt="Second slide">
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a class="gallery_img" href="assets/img/product-img/product-3.jpg">
-                                    <img class="d-block w-100" src="assets/img/product-img/product-3.jpg" alt="Third slide">
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a class="gallery_img" href="assets/img/product-img/product-4.jpg">
-                                    <img class="d-block w-100" src="assets/img/product-img/product-4.jpg" alt="Fourth slide">
+                                <a class="gallery_img" img src="<?php echo base_url('assets/upload/produk/' . $barang->gambar) ?>">
+                                    <img class="d-block w-100" img src="<?php echo base_url('assets/upload/produk/' . $barang->gambar) ?>" alt="First slide">
                                 </a>
                             </div>
                         </div>
@@ -47,30 +21,18 @@
             <div class="col-12 col-md-6">
                 <div class="single_product_desc">
 
-                    <h4 class="title"><a href="#"><?php echo $barang->id_barang ?></a></h4>
+                    <h4 class="title"><a href="#"><?php echo $barang->nama_barang ?></a></h4>
 
-                    <h4 class="price">Rp. 100.000,00</h4>
+                    <h4 class="price">Rp. <?php echo $barang->harga_barang ?></h4>
 
-                    <p class="available">Available: <span class="text-muted">In Stock</span></p>
+                    <p class="available">Stock Barang<span class="text-muted"> <?php echo $barang->stok ?></span></p>
 
-                    <div class="single_product_ratings mb-15">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                    </div>
 
                     <div class="widget size mb-50">
                         <h6 class="widget-title">Ukuran</h6>
                         <div class="widget-desc">
                             <ul>
-                                <li><a href="#">S</a></li>
-                                <li><a href="#">M</a></li>
-                                <li><a href="#">L</a></li>
-                                <li><a href="#">XL</a></li>
-                                <li><a href="#">XXL</a></li>
-                                <li><a href="#">42</a></li>
+                                <li><a href=""><?php echo $barang->ukuran ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -110,9 +72,7 @@
 
                             <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
-                                    <p>Approx length 66cm/26" (Based on a UK size 8 sample) Mixed fibres</p>
-                                    <p>The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"</p>
+                                    <p> <?php echo $barang->deskripsi_barang ?></p>
                                 </div>
                             </div>
                         </div>

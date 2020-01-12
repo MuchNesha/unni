@@ -121,7 +121,7 @@
                             </div>
                             <!-- Product Description -->
                             <div class="product-description">
-                                <h4 class="product-price"><?= $b->harga_barang ?></h4>
+                                <h4 class="product-price">Rp. <?= $b->harga_barang ?></h4>
                                 <p><?= $b->nama_barang ?></p>
                                 <!-- Add to Cart -->
                                 <a href="#" class="add-to-cart-btn">ADD TO CART</a>

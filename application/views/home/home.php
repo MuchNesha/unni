@@ -152,7 +152,7 @@
                                         <div class="col-12 col-lg-7">
                                             <div class="quickview_pro_des">
                                                 <h4 class="title"><?php echo $row->nama_barang ?></h4>
-                                                <h5 class="price"><?php echo $row->harga_barang ?></h5>
+                                                <h5 class="price">Rp. <?php echo $row->harga_barang ?></h5>
                                                 <p><?php echo $row->deskripsi_barang ?></p>
                                                 <a href="<?php echo site_url('detailproduk/index/' . $row->id_barang) ?>">View Full Product Details</a>
                                             </div>

@@ -88,7 +88,7 @@ class model_barang extends CI_Model
     private function _uploadImage()
     {
         $config['upload_path']          = './assets/upload/produk';
-        $config['allowed_types']        = 'gif|jpg|png';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $nama_lengkap = $_FILES['gambar']['name'];
         $config['file_name']            = $nama_lengkap;
         $config['overwrite']            = true;

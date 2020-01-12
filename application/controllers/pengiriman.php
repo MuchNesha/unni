@@ -16,7 +16,8 @@ class pengiriman extends CI_Controller
 		$data['pelanggan'] = $this->model_pelanggan->getAll();
 		$this->load->view('header');
 		$this->load->view("pengiriman/pengiriman", $data);
-		$this->load->view('footer');
+        $this->load->view('footer');
+        $this->load->view('script');
 	}
 
 	public function add()

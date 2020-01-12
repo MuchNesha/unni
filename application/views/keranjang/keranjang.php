@@ -1,138 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<h2>Daftar Belanja</h2>
+<form action="<?php echo base_url()?>shopping/ubah_cart" method="post" name="frmShopping" id="frmShopping" class="form-horizontal" enctype="multipart/form-data">
+<?php
+	if ($cart = $this->cart->contents())
+		{
+ ?>
+
+<table class="table">
+<tr id= "main_heading">
+<td width="2%">No</td>
+<td width="10%">Gambar</td>
+<td width="33%">Item</td>
+<td width="17%">Harga</td>
+<td width="8%">Qty</td>
+<td width="20%">Jumlah</td>
+<td width="10%">Hapus</td>
+</tr>
+<?php
+// Create form and send all values in "shopping/update_cart" function.
+$grand_total = 0;
+$i = 1;
+
+foreach ($cart as $item):
+$grand_total = $grand_total + $item['subtotal'];
+?>
+<input type="hidden" name="cart[<?php echo $item['id'];?>][id]" value="<?php echo $item['id'];?>" />
+<input type="hidden" name="cart[<?php echo $item['id'];?>][rowid]" value="<?php echo $item['rowid'];?>" />
+<input type="hidden" name="cart[<?php echo $item['id'];?>][name]" value="<?php echo $item['name'];?>" />
+<input type="hidden" name="cart[<?php echo $item['id'];?>][price]" value="<?php echo $item['price'];?>" />
+<input type="hidden" name="cart[<?php echo $item['id'];?>][gambar]" value="<?php echo $item['gambar'];?>" />
+<input type="hidden" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" />
+<tr>
+<td><?php echo $i++; ?></td>
+<td><img class="img-responsive" src="<?php echo base_url() . 'assets/images/'.$item['gambar']; ?>"/></td>
+<td><?php echo $item['name']; ?></td>
+<td><?php echo number_format($item['price'], 0,",","."); ?></td>
+<td><input type="text" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" /></td>
+<td><?php echo number_format($item['subtotal'], 0,",",".") ?></td>
+<td><a href="<?php echo base_url()?>shopping/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a></td>
+<?php endforeach; ?>
+</tr>
+<tr>
+<td colspan="3"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></td>
+<td colspan="4" align="right">
+<a data-toggle="modal" data-target="#myModal"  class ='btn btn-sm btn-danger'>Kosongkan Cart</a>
+<button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
+<a href="<?php echo base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
+</tr>
+
+</table>
+<?php
+		}
+	else
+		{
+			echo "<h3>Keranjang Belanja masih kosong</h3>";	
+		}	
+?>
+</form>
 
 
-<body>
-   
-    <div id="wrapper">
-
-        <!-- ****** Top Discount Area Start ****** -->
-        <section class="top-discount-area d-md-flex align-items-center">
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Bebas Ongkir</h5>
-                <h6><a href="#">Untuk Wilayah Bondowoso</a></h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Dapatkan Diskon 50%</h5>
-                <h6>Selama Bulan Ramadhan</h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Dapatkan Diskon 20%</h5>
-                <h6>Untuk Mukena</h6>
-            </div>
-        </section>
-        <!-- ****** Top Discount Area End ****** -->
-<br><br>
-        <div class="container">
-            <div class="row  pt-2 pb-2">
-                <div class="col-3 md-3 pt-6 text-center">
-                    <button type="button" class="btn btn-danger">1</button>
-                    <a class="text-center" href="<?= site_url('keranjang'); ?>">keranjang belanja</a>
-                </div>
-                <div class="col-3 md-4 pt-6 text-center">
-                     <button type="button" class="btn btn-danger">2</button>
-                     <a class="text-center" href="<?= site_url('pengiriman'); ?>">pengiriman</a>
-                </div>
-                <div class="col-3 md-4 pt-6 text-center">
-                    <button type="button" class="btn btn-danger">3</button>
-                    <a class="text-center" href="<?= site_url('pembayaran'); ?>">pembayaran</a>
-                </div>
-                <div class="col-3 md-3 pt-6 float-right text-center">
-                    <button type="button" class="btn btn-danger">4</button>
-                    <a class="text-center" href="<?= site_url('konfirmasi'); ?>">konfirmasi</a>
-                </div>
-            </div>
-
-        <!-- ****** Cart Area Start ****** -->
-        <div class="cart_area section_padding_100 clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cart-table clearfix">
-                            <table class="table table-responsive">
-                                <thead>
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="cart_product_img d-flex align-items-center">
-                                            <a href="#"><img src="img/product-img/product-9.jpg" alt="Product"></a>
-                                            <h6>Yellow Cocktail Dress</h6>
-                                        </td>
-                                        <td class="price"><span>$49.88</span></td>
-                                        <td class="qty">
-                                            <div class="quantity">
-                                                <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                <input type="number" class="qty-text" id="qty" step="1" min="1" max="99" name="quantity" value="1">
-                                                <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                            </div>
-                                        </td>
-                                        <td class="total_price"><span>$49.88</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="cart-footer d-flex mt-30">
-                            <div class="back-to-shop w-50">
-                                <a href="shop-grid-left-sidebar.html">Continue shooping</a>
-                            </div>
-                            <div class="update-checkout w-50 text-right">
-                                <a href="#">clear cart</a>
-                                <a href="#">Update cart</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
-                       
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="shipping-method-area mt-70">
-                            <div class="cart-page-heading">
-                                <h5>Shipping method</h5>
-                                <p>Select the one you want</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="cart-total-area mt-70">
-                            <a href="checkout.html" class="btn karl-checkout-btn">Proceed to checkout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Modal Penilai -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<form method="post" action="<?php echo base_url()?>shopping/hapus/all">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Konfirmasi</h4>
         </div>
-        <!-- ****** Cart Area End ****** -->
-
-        <!-- ****** Footer Area Start ****** -->
+        <div class="modal-body">
+			Anda yakin mau mengosongkan Shopping Cart?
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Tidak</button>
+          <button type="submit" class="btn btn-sm btn-default">Ya</button>
+        </div>
         
-        <!-- ****** Footer Area End ****** -->
+        </form>
+      </div>
+      
     </div>
-    <!-- /.wrapper end -->
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-
-</body>
-
-</html>
+  </div>
+  <!--End Modal-->

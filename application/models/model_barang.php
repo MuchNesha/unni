@@ -129,4 +129,21 @@ class model_barang extends CI_Model
         $this->db->where('id_barang', $id_barang);
         $this->db->update()('barang', $data);
     }
+    function getDataBarang()
+    {
+        /*
+        $query = $this->db->get('location');
+
+        foreach ($query->result() as $row)
+        {
+            echo $row->description;
+        }*/
+
+        $query = $this->db->query('SELECT * FROM barang');
+
+
+        return $query->result();
+
+        //echo 'Total Results: ' . $query->num_rows();
+    }
 }

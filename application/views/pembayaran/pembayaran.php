@@ -119,7 +119,15 @@
                                 <h5>Kode Pos</h5>
                                 <p>511441</p>
                             </div>
+                            <div class="col-md-2 lg-2">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            Launch demo modal
+                            </button>
+                            </div>
+                            
                         </div>
+                        
                     </div>
                     <div class="cart-page-heading">
                             <h2 style="color:grey;">LANGKAH 3 -</h2><h3> SYARAT DAN KETENTUAN</h3>
@@ -141,5 +149,6 @@
                         </div> 
             </div>
         </div>
+        
         <!-- ****** Cart Area End ****** -->
 </div>

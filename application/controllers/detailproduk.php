@@ -13,7 +13,6 @@ class detailproduk extends CI_Controller
 
     public function index($id_barang = null)
     {
-        $data["brg"] = $this->model_barang->getAll();
         $data["barang"] = $this->model_barang->getById($id_barang);
         $this->load->view('header', $data);
         $this->load->view('detailproduk/detail', $data);

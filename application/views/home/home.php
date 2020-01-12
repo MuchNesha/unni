@@ -90,50 +90,7 @@
         </section>
         <!-- ****** Top Catagory Area End ****** -->
 
-        <!-- ****** Quick View Modal Area Start ****** -->
-        <div class="modal fade" id="quickview" tabindex="-1" role="dialog" aria-labelledby="quickview" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <?php foreach ($barang as $row) : ?>
-                        <div class="modal-body" id="exampleModal<?= $row->id_barang ?>">
-                            <div class="quickview_body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-5">
-                                            <div class="quickview_pro_img">
-                                                <img src="<?php echo base_url('assets/upload/produk/' . $row->gambar) ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-7">
-                                            <div class="quickview_pro_des">
-                                                <h4 class="title"><?php echo $row->nama_barang ?></h4>
-                                                <h5 class="price"><?php echo $row->harga_barang ?></h5>
-                                                <p><?php echo $row->deskripsi_barang ?></p>
-                                                <a href="<?php echo site_url('detailproduk/' . $row->id_barang) ?>">View Full Product Details</a>
-                                            </div>
-                                            <!-- Add to Cart Form -->
-                                            <form class="cart" method="post">
-                                                <div class="quantity">
-                                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
 
-                                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
-
-                                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                </div>
-                                                <button type="submit" name="addtocart" value="5" class="cart-submit">Add to cart</button>
-                                            </form>
-                                        <?php endforeach; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
         <!-- ****** Quick View Modal Area End ****** -->
 
         <!-- ****** New Arrivals Area Start ****** -->
@@ -159,7 +116,7 @@
                             <div class="product-img">
                                 <img src="<?php echo base_url('assets/upload/produk/' . $b->gambar); ?>" alt="">
                                 <div class="product-quicview">
-                                    <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                                    <a href="" data-toggle="modal" data-target="#quickview<?= $b->id_barang ?>"><i class="ti-plus"></i></a>
                                 </div>
                             </div>
                             <!-- Product Description -->
@@ -174,6 +131,52 @@
                 </div>
             </div>
         </section>
+        <?php foreach ($barang as $row) : ?>
+            <!-- ****** Quick View Modal Area Start ****** -->
+            <div class="modal fade" id="quickview<?= $row->id_barang ?>" tabindex="-1" role="dialog" aria-labelledby="quickview" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class="modal-body" id="exampleModal<?= $row->id_barang ?>">
+                            <div class="quickview_body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-5">
+                                            <div class="quickview_pro_img">
+                                                <img src="<?php echo base_url('assets/upload/produk/' . $row->gambar) ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <div class="quickview_pro_des">
+                                                <h4 class="title"><?php echo $row->nama_barang ?></h4>
+                                                <h5 class="price"><?php echo $row->harga_barang ?></h5>
+                                                <p><?php echo $row->deskripsi_barang ?></p>
+                                                <a href="<?php echo site_url('detailproduk/index/' . $row->id_barang) ?>">View Full Product Details</a>
+                                            </div>
+                                            <!-- Add to Cart Form -->
+                                            <form class="cart" method="post">
+                                                <div class="quantity">
+                                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+
+                                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
+
+                                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                </div>
+                                                <button type="submit" name="addtocart" value="5" class="cart-submit">Add to cart</button>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
         <!-- ****** New Arrivals Area End ****** -->
 
         <!-- ****** Offer Area Start ****** -->

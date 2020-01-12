@@ -77,7 +77,7 @@
                                         <input type="hidden" name="old-image" value="<?php echo $barang->gambar ?>">
                                     </div>
                                     <div class="form-group">
-                                        <img src="<?= base_url('assets/upload/produk/' . $barang->gambar) ?>" width="200px" height="100">
+                                        <img src="<?= base_url('assets/upload/produk/' . $barang->gambar) ?>" width="250px" height="300px">
                                     </div>
                                 </div>
                                 <div class=" col-3">

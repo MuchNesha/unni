@@ -73,7 +73,11 @@ class model_barang extends CI_Model
         $this->per = $post["per"];
         $this->stok = $post["stok"];
         $this->diskon_barang = $post["diskon_barang"];
-        $this->gambar = $this->_uploadImage();
+        if (!empty($_FILES["gambar"]["name"])) {
+            $this->gambar = $this->_uploadImage();
+        } else {
+            $this->gambar = $post["old_image"];
+        }
         $this->deskripsi_barang = $post["deskripsi"];
         $this->ukuran = $post["ukuran"];
 

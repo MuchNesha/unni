@@ -31,7 +31,7 @@
 
                 <div class="col-12 col-lg-7">
                     <div class="top_single_area d-flex align-items-center">
-                        <!-- Logo Area -->
+                        <!-- Logo Area --
                         <div class="top_logo">
                             <a href="#"><img src="<?php echo base_url(); ?>/assets/img/core-img/logo.png" alt=""></a>
                         </div>

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row  pt-2 pb-2">
         <div class="col-md-2 pt-6 text-center">
-            <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('keranjang'); ?>'">1</button>
+            <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('belanja/tampil_cart'); ?>'">1</button>
             <a class="text-center" href="<?= site_url('keranjang'); ?>"><br><br>KERANJANG BELANJA</a>
         </div>
         <div class="col-1"></div>

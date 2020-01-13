@@ -121,7 +121,7 @@
                             </div>
                             <!-- Product Description -->
                             <div class="product-description">
-                                <h4 class="product-price">Rp. <?= $b->harga_barang ?></h4>
+                                <h4 class="product-price">Rp. <?php echo number_format($b->harga_barang, 0,",",".") ?></h4>
                                 <p><?= $b->nama_barang ?></p>
                                 <!-- Add to Cart -->
                                 <a href="" class="add-to-cart-btn">ADD TO CART</a>
@@ -152,7 +152,7 @@
                                         <div class="col-sm">
                                             <div class="quickview_pro_des">
                                                 <h4 class="title"><?php echo $row->nama_barang ?></h4>
-                                                <h5 class="price">Rp. <?php echo $row->harga_barang ?></h5>
+                                                <h5 class="price">Rp. <?php echo number_format($row->harga_barang, 0,",",".")?></h5>
                                                 <p><?php echo $row->deskripsi_barang ?></p>
                                                 <a href="<?php echo site_url('detailproduk/index/' . $row->id_barang) ?>">View Full Product Details</a>
                                             </div>

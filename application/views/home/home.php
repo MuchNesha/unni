@@ -180,7 +180,17 @@
         <!-- ****** New Arrivals Area End ****** -->
 
         <!-- ****** Offer Area Start ****** -->
-        <section class="offer_area height-700 section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/bg-5.jpg);">
+        <section class="offer_area section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/bg-bg.jpg);">
+        <div class="container h-100">
+                <div class="row h-100 align-items-end justify-content-end">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="offer-content-area wow fadeInUp" data-wow-delay="1s">
+                            <h2 style="color: white">DAPATKAN DISKON 50% <span class="karl-level">Hot</span></h2><br>
+                            <p>30 HARI SELAMA RAMADHAN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- ****** Offer Area End ****** -->
 

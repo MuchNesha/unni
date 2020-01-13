@@ -150,4 +150,10 @@ class model_barang extends CI_Model
 
         //echo 'Total Results: ' . $query->num_rows();
     }
+
+    public function tampilan()
+    {
+        $query = $this->db->query("SELECT * FROM barang limit 6 asc");
+        return $query->result();
+    }
 }

@@ -13,7 +13,7 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
-		$data['brg'] = $this->model_barang->getAll();
+		$data['brg'] = $this->model_barang->tampilan();
 		$data['barang'] = $this->model_barang->getDataBarang();
 		$this->load->view('header', $data);
 		$this->load->view('home/home', $data);

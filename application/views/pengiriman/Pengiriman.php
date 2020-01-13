@@ -32,7 +32,7 @@
                             <div class="row" y
                             <div class="cart-page-heading">
                                 <h2>DATA DAN ALAMAT PENERIMA</h2>
-                                <p>Isikan data identitas alamat dengan benar agar mempermudah saat rekap ndbjhsdbhkjk  pengiriman!</p>
+                                <p>Isikan data identitas alamat dengan benar agar mempermudah saat rekap ngiriman!</p>
                             </div>
 
                             <form action="#" method="post">

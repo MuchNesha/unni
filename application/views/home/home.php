@@ -144,12 +144,12 @@
                             <div class="quickview_body">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-12 col-lg-5">
+                                        <div class="col-sm">
                                             <div class="quickview_pro_img">
                                                 <img src="<?php echo base_url('assets/upload/produk/' . $row->gambar) ?>">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-lg-7">
+                                        <div class="col-sm">
                                             <div class="quickview_pro_des">
                                                 <h4 class="title"><?php echo $row->nama_barang ?></h4>
                                                 <h5 class="price">Rp. <?php echo $row->harga_barang ?></h5>

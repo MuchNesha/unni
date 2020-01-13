@@ -45,10 +45,28 @@ class model_konfirmasi1 extends CI_Model
         $this->metode_pembayaran = $post["metode_pembayaran"];
         $this->dari_bank = $post["dari_bank"];
         $this->nama_pemilik_rekening = $post["nama_pemilik_rekening"];
-        $this->gambar_bukti = $post["gambar_bukti"];
+        $this->gambar_bukti = $this->_uploadImage();
 
 
         $this->db->insert($this->_table, $this);
+    }
+
+    private function _uploadImage()
+    {
+        $config['upload_path']          = './assets/upload/bukti';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $nama_lengkap = $_FILES['gambar']['name'];
+        $config['file_name']            = $nama_lengkap;
+        $config['overwrite']            = true;
+        $config['max_size']             = 3024;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('gambar')) {
+            return $this->upload->data("file_name");
+        }
+
+        print_r($this->upload->display_errors());
     }
     
     public function input_data($data, $tabel)

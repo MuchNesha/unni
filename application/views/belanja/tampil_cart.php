@@ -21,7 +21,6 @@
         </div>
     </div>
     <br>
-<h2>Daftar Belanja</h2>
 
 <form action="<?php echo base_url()?>belanja/ubah_cart" method="post" name="frmbelanja" id="frmbelanja" class="form-horizontal" enctype="multipart/form-data">
 <?php
@@ -29,49 +28,63 @@
 		{
  ?>
 
-<table class="table">
-<tr id= "main_heading">
-<td width="2%">No</td>
-<td width="10%">Gambar</td>
-<td width="33%">Item</td>
-<td width="17%">Harga</td>
-<td width="8%">Qty</td>
-<td width="20%">Jumlah</td>
-<td width="10%">Hapus</td>
-</tr>
-<?php
-// Create form and send all values in "belanja/update_cart" function.
-$grand_total = 0;
-$i = 1;
+<div class="cart_area section_padding_100 clearfix">
+            <div class="container">
+<div class="cart-table clearfix">
+                            <table class="table table-responsive">
+                            
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Gambar</th>
+                                        <th>Nama</th>
+                                        <th>Harga</th>
+                                        <th>Banyaknya</th>
+                                        <th>Total</th>
+                                        <th>Hapus ?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                      // Create form and send all values in "belanja/update_cart" function.
+                                      $grand_total = 0;
+                                      $i = 1;
 
-foreach ($cart as $item):
-$grand_total = $grand_total + $item['subtotal'];
-?>
-<input type="hidden" name="cart[<?php echo $item['id'];?>][id]" value="<?php echo $item['id'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][rowid]" value="<?php echo $item['rowid'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][name]" value="<?php echo $item['name'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][price]" value="<?php echo $item['price'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][gambar]" value="<?php echo $item['gambar'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" />
-<tr>
-<td><?php echo $i++; ?></td>
-<td><img class="img-responsive" src="<?php echo base_url() . 'assets/upload/produk/'.$item['gambar']; ?>"/></td>
-<td><?php echo $item['name']; ?></td>
-<td><?php echo number_format($item['price'], 0,",","."); ?></td>
-<td><input type="text" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" /></td>
-<td><?php echo number_format($item['subtotal'], 0,",",".") ?></td>
-<td><a href="<?php echo base_url()?>belanja/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a></td>
-<?php endforeach; ?>
-</tr>
-<tr>
-<td colspan="3"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></td>
-<td colspan="4" align="right">
-<a data-toggle="modal" data-target="#myModal"  class ='btn btn-sm btn-danger'>Kosongkan Cart</a>
-<button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
-<a href="<?php echo base_url()?>belanja/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
-</tr>
+                                      foreach ($cart as $item):
+                                      $grand_total = $grand_total + $item['subtotal'];
+                                      ?>
+                                    <tr>
+                                    <input type="hidden" name="cart[<?php echo $item['id'];?>][id]" value="<?php echo $item['id'];?>" />
+                                    <input type="hidden" name="cart[<?php echo $item['id'];?>][rowid]" value="<?php echo $item['rowid'];?>" />
+                                    <input type="hidden" name="cart[<?php echo $item['id'];?>][name]" value="<?php echo $item['name'];?>" />
+                                    <input type="hidden" name="cart[<?php echo $item['id'];?>][price]" value="<?php echo $item['price'];?>" />
+                                    <input type="hidden" name="cart[<?php echo $item['id'];?>][gambar]" value="<?php echo $item['gambar'];?>" />
+                                    <input type="hidden" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" />
+                                        <td><h6><?php echo $i++; ?></h6></td>
+                                        <td><img src="<?php echo base_url() . 'assets/upload/produk/'.$item['gambar']; ?>" class="img-rounded" width="280" height="180" /></td>
+                                        <td><h6><?php echo $item['name']; ?></h6></td>
+                                        <td><h6>Rp. <?php echo number_format($item['price'], 0,",","."); ?></h6></td>
+                                        <td class="cart_product_img"><input type="number" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" /></td>
+                                        <td class="total_price"><h6 style="color: red">Rp. <?php echo number_format($item['subtotal'], 0,",",".") ?></h6></td>
+                                        <td><a href="<?php echo base_url()?>belanja/hapus/<?php echo $item['rowid'];?>" class="btn karl-checkout-btn">X</a></td>
+                                        <?php endforeach; ?>
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                                <td colspan="3"><h4 style="color: red"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></h4></td>
+                              <td colspan="12" align="right">
+                              <button class='btn karl-btn'  type="submit">Update Cart</button>
+                              <a href="<?php echo base_url()?>belanja/check_out"  class ='btn karl-checkout-btn'>Check Out</a>
+                            </table>
+                        </div>
+            </div>
+</div>
 
-</table>
+
+<tr>
+
+
 <?php
 		}
 	else

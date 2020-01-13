@@ -32,7 +32,7 @@
                             <h2 style="color:grey;">LANGKAH 1 -</h2><h3> ID PESANAN ANDA</h3>
                             <p>Catat atau screenshoot ID Pesanan ini untuk keperluan konfirmasi pembayaran nanti</p>
                             <br><br>
-                            <h3 style="color:red;">112-112</h3>
+                            <h3 style="color:red;">112-1xxx12</h3>
                         </div>
 
                         <div class="cart-page-heading">

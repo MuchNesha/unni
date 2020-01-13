@@ -73,11 +73,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar">Gambar Barang</label>
-                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" />
-                                        <input type="hidden" name="old-image" value="<?php echo $barang->gambar ?>">
+                                        <input class="form-control" type="file" name="gambar" placeholder="Gambar Barang" accept=".jpg, .jpeg, .png "/>
+                                        <input type="hidden" name="old-image" value="<?php echo $barang->gambar ?>" require/>
                                     </div>
                                     <div class="form-group">
                                         <img src="<?= base_url('assets/upload/produk/' . $barang->gambar) ?>" width="250px" height="300px">
+                                        <p><?php echo $barang->gambar ?></p>
+                                        
                                     </div>
                                 </div>
                                 <div class=" col-3">

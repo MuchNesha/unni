@@ -153,7 +153,7 @@ class model_barang extends CI_Model
 
     public function tampilan()
     {
-        $query = $this->db->query("SELECT * FROM barang limit 6 asc");
+        $query = $this->db->query("SELECT * FROM barang order by id_barang desc limit 6");
         return $query->result();
     }
 }

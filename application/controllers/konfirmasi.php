@@ -14,9 +14,9 @@ class konfirmasi extends CI_Controller
 	public function index()
 	{
 		$data['konfirmasi'] = $this->model_konfirmasi1->getAll();
-		$this->load->view('header');
-		$this->load->view('konfirmasi/Konfirmasi');
-		$this->load->view('footer');
+		//$this->load->view('header' , $data);
+		$this->load->view('konfirmasi/Konfirmasi' , $data);
+		$this->load->view('footer' , $data);
 	}
 	public function add()
 	{

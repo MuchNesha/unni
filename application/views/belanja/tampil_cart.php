@@ -1,5 +1,29 @@
+<div class="container">
+    <div class="row  pt-2 pb-2">
+        <div class="col-md-2 pt-6 text-center">
+        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('belanja/tampil_cart'); ?>'">1</button>
+            <a class="text-center" href="<?= site_url('belanja/tampil_cart'); ?>"><br><br><B>KERANJANG BELANJA</B></a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 text-center">
+        <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('pengiriman'); ?>'">2</button>
+            <a class="text-center" href="<?= site_url('pengiriman'); ?>"><br><br>PENGIRIMAN</a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 text-center">
+            <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('pembayaran'); ?>'">3</button>
+            <a class="text-center" href="<?= site_url('pembayaran'); ?>"><br><br>PEMBAYARAN</a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-2 pt-6 float-right text-center">
+            <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('konfirmasi'); ?>'">4</button>
+            <a class="text-center" href="<?= site_url('konfirmasi'); ?>"><br>KONFIRMASI</a>
+        </div>
+    </div>
+    <br>
 <h2>Daftar Belanja</h2>
-<form action="<?php echo base_url()?>shopping/ubah_cart" method="post" name="frmShopping" id="frmShopping" class="form-horizontal" enctype="multipart/form-data">
+
+<form action="<?php echo base_url()?>belanja/ubah_cart" method="post" name="frmbelanja" id="frmbelanja" class="form-horizontal" enctype="multipart/form-data">
 <?php
 	if ($cart = $this->cart->contents())
 		{
@@ -16,7 +40,7 @@
 <td width="10%">Hapus</td>
 </tr>
 <?php
-// Create form and send all values in "shopping/update_cart" function.
+// Create form and send all values in "belanja/update_cart" function.
 $grand_total = 0;
 $i = 1;
 
@@ -31,12 +55,12 @@ $grand_total = $grand_total + $item['subtotal'];
 <input type="hidden" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" />
 <tr>
 <td><?php echo $i++; ?></td>
-<td><img class="img-responsive" src="<?php echo base_url() . 'assets/images/'.$item['gambar']; ?>"/></td>
+<td><img class="img-responsive" src="<?php echo base_url() . 'assets/upload/produk/'.$item['gambar']; ?>"/></td>
 <td><?php echo $item['name']; ?></td>
 <td><?php echo number_format($item['price'], 0,",","."); ?></td>
 <td><input type="text" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" /></td>
 <td><?php echo number_format($item['subtotal'], 0,",",".") ?></td>
-<td><a href="<?php echo base_url()?>shopping/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a></td>
+<td><a href="<?php echo base_url()?>belanja/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a></td>
 <?php endforeach; ?>
 </tr>
 <tr>
@@ -44,7 +68,7 @@ $grand_total = $grand_total + $item['subtotal'];
 <td colspan="4" align="right">
 <a data-toggle="modal" data-target="#myModal"  class ='btn btn-sm btn-danger'>Kosongkan Cart</a>
 <button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
-<a href="<?php echo base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
+<a href="<?php echo base_url()?>belanja/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
 </tr>
 
 </table>
@@ -63,13 +87,13 @@ $grand_total = $grand_total + $item['subtotal'];
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
       <div class="modal-content">
-      	<form method="post" action="<?php echo base_url()?>shopping/hapus/all">
+      	<form method="post" action="<?php echo base_url()?>belanja/hapus/all">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Konfirmasi</h4>
         </div>
         <div class="modal-body">
-			Anda yakin mau mengosongkan Shopping Cart?
+			Anda yakin mau mengosongkan belanja Cart?
             
         </div>
         <div class="modal-footer">

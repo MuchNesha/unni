@@ -120,9 +120,9 @@ class Belanja extends CI_Controller {
 		//-------------------------Hapus shopping cart--------------------------		
 		$this->cart->destroy();
 		$data['kategori'] = $this->keranjang_model->get_kategori_all();
-		$this->load->view('themes/header',$data);
+		$this->load->view('header',$data);
 		$this->load->view('belanja/sukses',$data);
-		$this->load->view('themes/footer');
+		$this->load->view('footer');
 	}
 }
 ?>

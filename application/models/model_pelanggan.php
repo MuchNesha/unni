@@ -51,10 +51,9 @@ class model_pelanggan extends CI_Model
 
         $this->db->insert($this->_table, $this);
     }
-    
+
     public function input_data($data, $tabel)
     {
         $this->db->insert($tabel, $data);
     }
-
 }

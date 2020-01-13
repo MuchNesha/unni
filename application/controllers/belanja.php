@@ -1,35 +1,38 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php 
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class keranjang extends CI_Controller {
+class Belanja extends CI_Controller {
 
-		
-	function __construct()
-	{
+	public function __construct()
+	{	
 		parent::__construct();
-		$this->load->helper('url');
+		$this->load->library('cart');
+		$this->load->model('keranjang_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('header');
-		$this->load->view('keranjang/keranjang');
+		$kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
+		$data['barang'] = $this->keranjang_model->get_produk_kategori($kategori);
+		$data['kategori'] = $this->keranjang_model->get_kategori_all();
+		$this->load->view('header',$data);
+		$this->load->view('belanja/list_produk',$data);
 		$this->load->view('footer');
 	}
 	public function tampil_cart()
 	{
 		$data['kategori'] = $this->keranjang_model->get_kategori_all();
-		$this->load->view('themes/header',$data);
+		$this->load->view('header',$data);
 		$this->load->view('belanja/tampil_cart',$data);
-		$this->load->view('themes/footer');
+		$this->load->view('footer');
 	}
 	
 	public function check_out()
 	{
 		$data['kategori'] = $this->keranjang_model->get_kategori_all();
-		$this->load->view('themes/header',$data);
+		$this->load->view('header',$data);
 		$this->load->view('belanja/check_out',$data);
-		$this->load->view('themes/footer');
+		$this->load->view('footer');
 	}
 	
 	public function detail_produk()
@@ -37,9 +40,9 @@ class keranjang extends CI_Controller {
 		$id=($this->uri->segment(3))?$this->uri->segment(3):0;
 		$data['kategori'] = $this->keranjang_model->get_kategori_all();
 		$data['detail'] = $this->keranjang_model->get_produk_id($id)->row_array();
-		$this->load->view('themes/header',$data);
+		$this->load->view('header',$data);
 		$this->load->view('belanja/detail_produk',$data);
-		$this->load->view('themes/footer');
+		$this->load->view('footer');
 	}
 	
 	
@@ -114,12 +117,12 @@ class keranjang extends CI_Controller {
 						$proses = $this->keranjang_model->tambah_detail_order($data_detail);
 					}
 			}
-		//-------------------------Hapus belanja cart--------------------------		
+		//-------------------------Hapus shopping cart--------------------------		
 		$this->cart->destroy();
 		$data['kategori'] = $this->keranjang_model->get_kategori_all();
 		$this->load->view('themes/header',$data);
 		$this->load->view('belanja/sukses',$data);
 		$this->load->view('themes/footer');
 	}
-
 }
+?>

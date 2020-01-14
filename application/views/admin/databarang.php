@@ -37,7 +37,7 @@
                       <tr>
                         <td><?php echo $barang->nama_barang ?></td>
                         <td><?php echo $barang->id_jenis ?></td>
-                        <td><?php echo $barang->harga_barang ?></td>
+                        <td>Rp. <?php echo number_format($barang->harga_barang, 0,",",".") ?></td>
                         <td><?php echo $barang->stok ?></td>
 
                         <td>

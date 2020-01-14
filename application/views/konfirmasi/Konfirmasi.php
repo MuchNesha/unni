@@ -187,7 +187,7 @@
                                     </div>
                                     <div class="col-12 mb-4">
                                         <label for="k">Unggah Bukti struk <span>*</span></label>
-                                        <input type="file" class="form-control" id="email_address" name="gambar">
+                                        <input type="file" class="form-control" id="email_address" name="gambar_bukti">
                                     </div>
                                     <div class="col-3 mb-5">
                                     <button class="btn karl-checkout-btn" type="submit">konfirmasi</button>
@@ -206,3 +206,17 @@
         
     </div>
     <!-- /.wrapper end -->
+
+    <script>
+  $('.custom-file-input').on('change', function() {
+    let fileName = $(this).val().split('\\').pop();
+    $(this).next('.custom-file-label').addClass("selected").html(fileName);
+  });
+</script>
+<script>
+  window.TrackJS &&
+    TrackJS.install({
+      token: "ee6fab19c5a04ac1a32a645abde4613a",
+      application: "argon-dashboard-free"
+    });
+</script>

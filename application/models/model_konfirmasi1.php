@@ -55,14 +55,14 @@ class model_konfirmasi1 extends CI_Model
     {
         $config['upload_path']          = './assets/upload/bukti';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $nama_lengkap = $_FILES['gambar']['name'];
+        $nama_lengkap = $_FILES['gambar_bukti']['name'];
         $config['file_name']            = $nama_lengkap;
         $config['overwrite']            = true;
         $config['max_size']             = 3024;
 
         $this->load->library('upload', $config);
 
-        if ($this->upload->do_upload('gambar')) {
+        if ($this->upload->do_upload('gambar_bukti')) {
             return $this->upload->data("file_name");
         }
 

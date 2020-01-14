@@ -72,3 +72,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </footer>
         <!-- ****** Footer Area End ****** -->
 </div>
+
+<script>
+  $('.custom-file-input').on('change', function() {
+    let fileName = $(this).val().split('\\').pop();
+    $(this).next('.custom-file-label').addClass("selected").html(fileName);
+  });
+</script>
+<script>
+  window.TrackJS &&
+    TrackJS.install({
+      token: "ee6fab19c5a04ac1a32a645abde4613a",
+      application: "argon-dashboard-free"
+    });
+</script>

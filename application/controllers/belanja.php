@@ -37,7 +37,7 @@ class Belanja extends CI_Controller {
 	
 	public function detail_produk()
 	{
-		$id=($this->uri->segment(3))?$this->uri->segment(3):0;
+		$id=($this->uri->segment(3))?$this->url->segment(3):0;
 		$data['kategori'] = $this->keranjang_model->get_kategori_all();
 		$data['detail'] = $this->keranjang_model->get_produk_id($id)->row_array();
 		$this->load->view('header',$data);

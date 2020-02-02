@@ -99,7 +99,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section_heading text-center">
-                            <h2>Koleksi Trending Hijab</h2>
+                            <h2>Koleksi Hijab Terbaru</h2>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                             </div>
                             <!-- Product Description -->
                             <div class="product-description">
-                                <h4 class="product-price">Rp. <?php echo number_format($b->harga_barang, 0,",",".") ?></h4>
+                                <h4 class="product-price">Rp. <?php echo number_format($b->harga_barang, 0, ",", ".") ?></h4>
                                 <p><?= $b->nama_barang ?></p>
                                 <!-- Add to Cart -->
                                 <a href="" class="add-to-cart-btn">ADD TO CART</a>
@@ -152,7 +152,7 @@
                                         <div class="col-sm">
                                             <div class="quickview_pro_des">
                                                 <h4 class="title"><?php echo $row->nama_barang ?></h4>
-                                                <h5 class="price">Rp. <?php echo number_format($row->harga_barang, 0,",",".")?></h5>
+                                                <h5 class="price">Rp. <?php echo number_format($row->harga_barang, 0, ",", ".") ?></h5>
                                                 <p><?php echo $row->deskripsi_barang ?></p>
                                                 <a href="<?php echo site_url('detailproduk/index/' . $row->id_barang) ?>">View Full Product Details</a>
                                             </div>
@@ -181,7 +181,7 @@
 
         <!-- ****** Offer Area Start ****** -->
         <section class="offer_area section_padding_100 bg-img" style="background-image: url(<?php echo base_url(); ?>/assets/img/bg-img/bg-bg.jpg);">
-        <div class="container h-100">
+            <div class="container h-100">
                 <div class="row h-100 align-items-end justify-content-end">
                     <div class="col-12 col-md-8 col-lg-6">
                         <div class="offer-content-area wow fadeInUp" data-wow-delay="1s">

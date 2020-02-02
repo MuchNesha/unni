@@ -90,6 +90,13 @@
             </a>
           </li>
         </ul>
+        <h4 class="navbar-heading text-muted">Report</h4>
+        <ul class="navbar-nav mb-md-3">
+          <li class="nav-item  class=" active" ">
+          <a class=" nav-link active " href=" <?php echo base_url(); ?>admin/laporan"> <i class="ni ni-single-copy-04 text-green"></i> Laporan
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>

@@ -39,13 +39,17 @@
                         <div class="header-cart-menu d-flex align-items-center ml-auto">
                             <!-- Cart Area -->
                             <div class="cart">
-                                <?php // $cart= $this->cart->contents(); ?> 
-                                <?php // foreach ($cart as $item) ?>
-                                <a href="<?= site_url('belanja/tampil_cart')?>" id="header-cart-btn" target="_blank"><span class="cart_quantity"><?php  //echo $item['qty']; ?></span> <i class="ti-bag"></i> Total Belanja Anda</color></a>
+                                <?php // $cart= $this->cart->contents(); 
+                                ?>
+                                <?php // foreach ($cart as $item) 
+                                ?>
+                                <a href="<?= site_url('belanja/tampil_cart') ?>" id="header-cart-btn" target="_blank"><span class="cart_quantity"><?php  //echo $item['qty']; 
+                                                                                                                                                    ?></span> <i class="ti-bag"></i> Total Belanja Anda</color></a>
                             </div>
                             <div class="header-right-side-menu ml-15">
                                 </i>
-                                <font color=red> Rp.<?php // echo number_format($item['subtotal'],0,",","."); ?> </color>
+                                <font color=red> Rp.<?php // echo number_format($item['subtotal'],0,",","."); 
+                                                    ?> </color>
                             </div>
                         </div>
                     </div>
@@ -83,24 +87,25 @@
                                             <a class="dropdown-item" href="#">Baju Muslim</a>
                                             <a class="dropdown-item" href="#">Aksesoris</a>
                                             <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            < class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="<?php echo base_url()?>assets/logos.png"></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo base_url()?>belanja/tampil_cart"><i class="glyphicon glyphicon-belanja-cart"></i>  Keranjang Belanja</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-                                            
+                                                <div class="container">
+                                                    <div class="navbar-header">
+                                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                                            <span class="sr-only">Toggle navigation</span>
+                                                            <span class="icon-bar"></span>
+                                                            <span class="icon-bar"></span>
+                                                            < class="icon-bar"></span>
+                                                        </button>
+                                                        <a class="navbar-brand" href="#"><img src="<?php echo base_url() ?>assets/logos.png"></a>
+                                                    </div>
+                                                    <div id="navbar" class="collapse navbar-collapse">
+                                                        <ul class="nav navbar-nav navbar-right">
+                                                            <li><a href="<?php echo base_url() ?>belanja/tampil_cart"><i class="glyphicon glyphicon-belanja-cart"></i> Keranjang Belanja</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!--/.nav-collapse -->
+                                                </div>
+                                            </nav>
+
                                         </div>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="<?= site_url('konfirmasi'); ?>">Konfirmasi</a></li>
@@ -122,12 +127,12 @@
 <div class="container">
     <div class="row  pt-2 pb-2">
         <div class="col-md-2 pt-6 text-center">
-        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('belanja/tampil_cart'); ?>'">1</button>
+            <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('belanja/tampil_cart'); ?>'">1</button>
             <a class="text-center" href="<?= site_url('belanja/keranjang'); ?>"><br><br>KERANJANG BELANJA</a>
         </div>
         <div class="col-1"></div>
         <div class="col-md-2 pt-6 text-center">
-        <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('pengiriman'); ?>'">2</button>
+            <button type="button" class="btn karl-checkout-btn" onclick="window.location.href='<?= site_url('pengiriman'); ?>'">2</button>
             <a class="text-center" href="<?= site_url('pengiriman'); ?>"><br><br>PENGIRIMAN</a>
         </div>
         <div class="col-1"></div>
@@ -142,15 +147,15 @@
         </div>
     </div>
     <br>
-        <!-- ****** Checkout Area Start ****** -->
-        <div class="checkout_area section_padding_100">
-            <div class="container">
-                <div class="row">
+    <!-- ****** Checkout Area Start ****** -->
+    <div class="checkout_area section_padding_100">
+        <div class="container">
+            <div class="row">
 
-                    <div class="col-12 md-6">
-                        <div class="checkout_details_area mt-50 clearfix">
+                <div class="col-12 md-6">
+                    <div class="checkout_details_area mt-50 clearfix">
 
-                            <div class="row" >
+                        <div class="row">
                             <div class="cart-page-heading">
                                 <h3>Silahkan isi data</h3>
                                 <p>Setelah transfer uang, isi ID pesanan dan konfirmasi transfer tadi agar barang belanjaan anda segera di proses dan dikirim</p>
@@ -171,11 +176,11 @@
                                         <input type="number" class="form-control" id="postcode" name="jumlah_bayar">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                    <label for="country">Metode Pembayaran <span>*</span></label>
+                                        <label for="country">Metode Pembayaran <span>*</span></label>
                                         <select class="custom-select d-block w-100" name="metode_pembayaran">
-                                        <option name="metode_pembayaran" value="transfer ">Transfer ATM</option>
-                                        <option name="metode_pembayaran" value="lain">Lain</option>
-                                    </select>
+                                            <option name="metode_pembayaran" value="transfer ">Transfer ATM</option>
+                                            <option name="metode_pembayaran" value="lain">Lain</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="state">Dari Bank <span>*</span></label>
@@ -187,12 +192,12 @@
                                     </div>
                                     <div class="col-12 mb-4">
                                         <label for="k">Unggah Bukti struk <span>*</span></label>
-                                        <input type="file" class="form-control" id="email_address" name="gambar_bukti">
+                                        <input class="form-control" type="file" name="gambar_bukti" />
                                     </div>
                                     <div class="col-3 mb-5">
-                                    <button class="btn karl-checkout-btn" type="submit">konfirmasi</button>
-                                </div>
-                                    
+                                        <button class="btn karl-checkout-btn" type="submit">konfirmasi</button>
+                                    </div>
+
                                 </div>
                             </form>
                         </div>
@@ -203,20 +208,20 @@
         </div>
         <!-- ****** Checkout Area End ****** -->
 
-        
+
     </div>
     <!-- /.wrapper end -->
 
     <script>
-  $('.custom-file-input').on('change', function() {
-    let fileName = $(this).val().split('\\').pop();
-    $(this).next('.custom-file-label').addClass("selected").html(fileName);
-  });
-</script>
-<script>
-  window.TrackJS &&
-    TrackJS.install({
-      token: "ee6fab19c5a04ac1a32a645abde4613a",
-      application: "argon-dashboard-free"
-    });
-</script>
+        $('.custom-file-input').on('change', function() {
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+    </script>
+    <script>
+        window.TrackJS &&
+            TrackJS.install({
+                token: "ee6fab19c5a04ac1a32a645abde4613a",
+                application: "argon-dashboard-free"
+            });
+    </script>

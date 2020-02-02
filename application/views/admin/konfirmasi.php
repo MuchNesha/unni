@@ -60,7 +60,7 @@
                       <h4>Tanggal :</h4>
                       <h5><?php echo $row->tgl_bayar ?></h5>
                       <h4>Jumlah Bayar :</h4>
-                      <h5><?php echo $row->jumlah_bayar ?></h5>
+                      <h5>Rp.<?php echo number_format($row->jumlah_bayar,0,",",".") ?></h5>
                       <h4>Metode Pembayaran :</h4>
                       <h5><?php echo $row->metode_pembayaran ?></h5>
                       <h4>Dari Bank :</h4>
@@ -121,8 +121,8 @@
                     </span>
                   </td>
                   <td>
-                    <span class="mb-0 text-sm">
-                      <?php echo $konfirmasi->jumlah_bayar ?>
+                    <span class="mb-0 text-sm">Rp.
+                      <?php echo number_format($konfirmasi->jumlah_bayar,0,",",".") ?>
                     </span>
                   </td>
                   <td>

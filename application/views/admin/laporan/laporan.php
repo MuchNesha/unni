@@ -51,23 +51,22 @@
                         <select name="tahun">
                             <option value="">Pilih</option>
                             <?php
-                            // // foreach ($option_tahun as $data) { // Ambil data tahun dari model yang dikirim dari controller
-                            // //     echo '<option value="' . $data->tahun . '">' . $data->tahun . '</option>';
-                            // }
-                            // 
+                            foreach ($option_tahun as $data) { // Ambil data tahun dari model yang dikirim dari controller
+                                echo '<option value="' . $data->tahun . '">' . $data->tahun . '</option>';
+                            }
                             ?>
                         </select>
                         <br /><br />
                     </div>
 
                     <button type="submit">Tampilkan</button>
-                    <!-- <a href="<?php echo base_url(); ?>">Reset Filter</a> -->
+                    <a href="<?php echo base_url('admin/laporan'); ?>">Reset Filter</a>
                 </form>
                 <hr />
 
-                <!-- <b><?php echo $ket; ?></b><br /><br /> -->
-                <!-- <a href="<?php echo $url_cetak; ?>">CETAK PDF</a><br /><br /> -->
-                <!-- Table -->
+                <b><?php echo $ket; ?></b><br /><br />
+                <a href="<?php echo $url_cetak; ?>">CETAK PDF</a><br /><br />
+
                 <br>
                 <br>
                 <div class="row">
@@ -90,21 +89,23 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- <?php foreach ($barang as $barang) : ?> -->
-                                        <tr>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
+                                        <?php
+                                        if (!empty($transaksi)) {
+                                            $no = 1;
+                                            foreach ($transaksi as $data) {
+                                                $tanggal = date('d-m-Y', strtotime($data->tanggal));
 
-                                            <td>
-                                                <a href="<?php echo site_url('admin/databarang/edit/' . $barang->id_barang) ?>">
-                                                    <button type="submit" class="btn btn-primary">Edit/Rincian</button></a>
-                                                <a href="<?php echo site_url('admin/databarang/delete/' . $barang->id_barang) ?>">
-                                                    <button type="submit" class="btn btn-danger">Hapus</button></a>
-                                            </td>
-                                        </tr>
-                                        <!-- <?php endforeach; ?> -->
+                                                echo "<tr>";
+                                                echo "<td>" . $tanggal . "</td>";
+                                                echo "<td>" . $data->id_transaksi . "</td>";
+                                                echo "<td>" . $data->harga_total . "</td>";
+                                                echo "<td>" . $data->catatan_pengiriman . "</td>";
+                                                echo "<td>" . $data->status_pemesanan . "</td>";
+                                                echo "</tr>";
+                                                $no++;
+                                            }
+                                        }
+                                        ?>
                                     </tbody>
 
 

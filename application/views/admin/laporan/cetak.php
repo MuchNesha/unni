@@ -32,14 +32,14 @@
         if (!empty($transaksi)) {
             $no = 1;
             foreach ($transaksi as $data) {
-                $tgl = date('d-m-Y', strtotime($data->tgl));
+                $tanggal = date('d-m-Y', strtotime($data->tanggal));
 
                 echo "<tr>";
-                echo "<td>" . $tgl . "</td>";
-                echo "<td>" . $data->kode . "</td>";
-                echo "<td>" . $data->barang . "</td>";
-                echo "<td>" . $data->jumlah . "</td>";
-                echo "<td>" . $data->total_harga . "</td>";
+                echo "<td>" . $tanggal . "</td>";
+                echo "<td>" . $data->id_transaksi . "</td>";
+                echo "<td>" . $data->harga_total . "</td>";
+                echo "<td>" . $data->catatan_pengiriman . "</td>";
+                echo "<td>" . $data->status_pemesanan . "</td>";
                 echo "</tr>";
                 $no++;
             }

@@ -192,7 +192,7 @@
                                     </div>
                                     <div class="col-12 mb-4">
                                         <label for="k">Unggah Bukti struk <span>*</span></label>
-                                        <input type="file" class="form-control" id="email_address" name="gambar_bukti">
+                                        <input class="form-control" type="file" name="gambar_bukti" />
                                     </div>
                                     <div class="col-3 mb-5">
                                         <button class="btn karl-checkout-btn" type="submit">konfirmasi</button>

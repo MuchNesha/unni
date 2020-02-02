@@ -120,7 +120,7 @@
                                     <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
                                     <label class="custom-control-label" for="xxl">XXL</label>
                                 </div> -->
-                                <div class="col-md-3">
+                                <!-- <div class="col-md-3">
                                     <label>Ukuran yang Tersedia</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="ukuran" id="exampleRadios1" value="M" checked>
@@ -139,15 +139,15 @@
                                         <label class="form-check-label" for="exampleRadios3">
                                             XL
                                         </label>
+                                    </div> -->
+                                <br />
+                                <input class="btn btn-primary" type="submit">
+                                <br />
+                                <?php if ($this->session->flashdata('success')) : ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <?php echo $this->session->flashdata('success'); ?>
                                     </div>
-                                    <br />
-                                    <input class="btn btn-primary" type="submit">
-                                    <br />
-                                    <?php if ($this->session->flashdata('success')) : ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?php echo $this->session->flashdata('success'); ?>
-                                        </div>
-                                    <?php endif; ?>
+                                <?php endif; ?>
                         </form>
                     </div>
                 </div>

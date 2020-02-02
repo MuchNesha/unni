@@ -23,19 +23,19 @@
 
                     <h4 class="title"><a href="#"><?php echo $barang->nama_barang ?></a></h4>
 
-                    <h4 class="price">Rp. <?php echo number_format($barang->harga_barang, 0,",",".") ?></h4>
+                    <h4 class="price">Rp. <?php echo number_format($barang->harga_barang, 0, ",", ".") ?></h4>
 
                     <p class="available">Stock Barang<span class="text-muted"> <?php echo $barang->stok ?></span></p>
 
 
-                    <div class="widget size mb-50">
+                    <!-- <div class="widget size mb-50">
                         <h6 class="widget-title">Ukuran</h6>
                         <div class="widget-desc">
                             <ul>
                                 <li><a href=""><?php echo $barang->ukuran ?></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Add to Cart Form --
                     <div class="col-12 col-md-6">
@@ -49,38 +49,38 @@
                                     <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                 </div>
 -->
-                            </form> 
-                            <!-- <p><input type='radio' name='' value='' />Grosir</p> -->
-                            <form class="cart clearfix mb-50 d-flex" method="post">
-                                <div class="quantity">
-                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1"> 
-                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                </div>
-                                <button type="submit" name="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
-                            </form>
-                        </form>
-                    </div> 
+                    </form>
+                    <!-- <p><input type='radio' name='' value='' />Grosir</p> -->
+                    <form class="cart clearfix mb-50 d-flex" method="post">
+                        <div class="quantity">
+                            <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                            <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
+                            <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                        </div>
+                        <button type="submit" name="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
+                    </form>
+                    </form>
+                </div>
 
-                    <div id="accordion" role="tablist">
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <h6 class="mb-0">
-                                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Deskripsi</a>
-                                </h6>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <p> <?php echo $barang->deskripsi_barang ?></p>
-                                </div>
-                            </div>
+                <div id="accordion" role="tablist">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Deskripsi</a>
+                            </h6>
                         </div>
 
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p> <?php echo $barang->deskripsi_barang ?></p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <!-- <<<<<<<<<<<<<<<<<<<< Single Product Details Area End >>>>>>>>>>>>>>>>>>>>>>>>> -->
 

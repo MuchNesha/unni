@@ -127,7 +127,7 @@
                                 <input class="custom-control-input" name="ukuran" id="xxl" value="XXL" type="checkbox">
                                 <label class="custom-control-label" for="xxl">XXL</label>
                             </div> -->
-                            <label>Ukuran yang Tersedia</label>
+                            <!-- <label>Ukuran yang Tersedia</label>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <select name="ukuran" class="form-control">
@@ -141,24 +141,26 @@
                                         <option value="XL" <?php if ($barang->ukuran == "XL") {
                                                                 echo "selected=\"selected\"";
                                                             } ?>>XL</option>
-                                    </select> </div> <button class="btn btn-primary" type="submit">Ubah</button>
-                            </div>
+                                    </select> 
+                                </div>  -->
+                            <button class="btn btn-primary" type="submit">Ubah</button>
+                    </div>
+                </div>
+
+
+
+                <br />
+                <?php if ($this->session->flashdata('success')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $this->session->flashdata('success'); ?>
                     </div>
 
-
-
-                    <br />
-                    <?php if ($this->session->flashdata('success')) : ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $this->session->flashdata('success'); ?>
-                        </div>
-
-                    <?php endif; ?>
-                    </form>
-                </div>
+                <?php endif; ?>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 

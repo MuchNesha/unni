@@ -1,17 +1,21 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class pembayaran extends CI_Controller {
+class pembayaran extends CI_Controller
+{
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model("keranjang_model");
 	}
 
 	public function index()
 	{
-		$this->load->view('header');
-		$this->load->view('pembayaran/pembayaran');
-		$this->load->view('footer');
+		$data['kategori'] = $this->keranjang_model->get_kategori_all();
+		$this->load->view('header', $data);
+		$this->load->view('pembayaran/pembayaran', $data);
+		$this->load->view('footer', $data);
 	}
 }

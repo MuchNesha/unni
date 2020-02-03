@@ -1,5 +1,7 @@
 <?php $this->load->view('admin/partials/head.php'); ?>
 <?php $this->load->view('admin/partials/menu.php'); ?>
+<link rel="stylesheet" href="<?php echo base_url('assets/jquery-ui/jquery-ui.min.css'); ?>" /> <!-- Load file css jquery-ui -->
+<script src="<?php echo base_url('assets/jquery.min.js'); ?>"></script> <!-- Load file jquery -->
 <div class="main-content">
     <!-- Page content -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -11,7 +13,7 @@
                 <br> <br>
 
                 <form method="get" action="">
-                    <label>Filter Berdasarkan</label><br>
+                    <label style="color:aliceblue">Filter Berdasarkan</label><br>
                     <select name="filter" id="filter">
                         <option value="">Pilih</option>
                         <option value="1">Per Tanggal</option>
@@ -21,13 +23,13 @@
                     <br /><br />
 
                     <div id="form-tanggal">
-                        <label>Tanggal</label><br>
+                        <label style="color:aliceblue">Tanggal</label><br>
                         <input type="text" name="tanggal" class="input-tanggal" />
                         <br /><br />
                     </div>
 
                     <div id="form-bulan">
-                        <label>Bulan</label><br>
+                        <label style="color:aliceblue">Bulan</label><br>
                         <select name="bulan">
                             <option value="">Pilih</option>
                             <option value="1">Januari</option>
@@ -47,7 +49,7 @@
                     </div>
 
                     <div id="form-tahun">
-                        <label>Tahun</label><br>
+                        <label style="color:aliceblue">Tahun</label><br>
                         <select name="tahun">
                             <option value="">Pilih</option>
                             <?php
@@ -59,7 +61,7 @@
                         <br /><br />
                     </div>
 
-                    <button type="submit">Tampilkan</button>
+                    <button class="btn btn-primary" type="submit">Tampilkan</button>
                     <a href="<?php echo base_url('admin/laporan'); ?>">Reset Filter</a>
                 </form>
                 <hr />

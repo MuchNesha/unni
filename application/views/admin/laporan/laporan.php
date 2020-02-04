@@ -66,7 +66,7 @@
                 </form>
                 <hr />
 
-                <b><?php echo $ket; ?></b><br /><br />
+                <b style="color:aliceblue"><?php echo $ket; ?></b><br /><br />
                 <a href="<?php echo $url_cetak; ?>">CETAK PDF</a><br /><br />
 
                 <br>
@@ -75,7 +75,7 @@
                     <div class="col">
                         <div class="card shadow">
                             <div class="card-header border-0">
-                                <h3 class="mb-0">List Barang</h3>
+                                <h3 class="mb-0">List Data</h3>
                             </div>
                             <div class="table-responsive">
                                 <table class="table align-items-center table-flush">
@@ -83,9 +83,10 @@
                                         <tr>
                                             <th>Tanggal</th>
                                             <th>Kode Transaksi</th>
-                                            <th>Barang</th>
-                                            <th>Jumlah</th>
-                                            <th>Total Harga</th>
+                                            <th>harga total</th>
+                                            <th>berat total</th>
+                                            <th>catatan pengiriman</th>
+                                            <th>status pemesanan</th>
 
 
                                         </tr>
@@ -101,6 +102,7 @@
                                                 echo "<td>" . $tanggal . "</td>";
                                                 echo "<td>" . $data->id_transaksi . "</td>";
                                                 echo "<td>" . $data->harga_total . "</td>";
+                                                echo "<td>" . $data->berat_total . "</td>";
                                                 echo "<td>" . $data->catatan_pengiriman . "</td>";
                                                 echo "<td>" . $data->status_pemesanan . "</td>";
                                                 echo "</tr>";
@@ -109,33 +111,6 @@
                                         }
                                         ?>
                                     </tbody>
-
-
-                                    <script src="<?php echo base_url('assets/jquery-ui/jquery-ui.min.js'); ?>"></script> <!-- Load file plugin js jquery-ui -->
-                                    <script>
-                                        $(document).ready(function() { // Ketika halaman selesai di load
-                                            $('.input-tanggal').datepicker({
-                                                dateFormat: 'yy-mm-dd' // Set format tanggalnya jadi yyyy-mm-dd
-                                            });
-
-                                            $('#form-tanggal, #form-bulan, #form-tahun').hide(); // Sebagai default kita sembunyikan form filter tanggal, bulan & tahunnya
-
-                                            $('#filter').change(function() { // Ketika user memilih filter
-                                                if ($(this).val() == '1') { // Jika filter nya 1 (per tanggal)
-                                                    $('#form-bulan, #form-tahun').hide(); // Sembunyikan form bulan dan tahun
-                                                    $('#form-tanggal').show(); // Tampilkan form tanggal
-                                                } else if ($(this).val() == '2') { // Jika filter nya 2 (per bulan)
-                                                    $('#form-tanggal').hide(); // Sembunyikan form tanggal
-                                                    $('#form-bulan, #form-tahun').show(); // Tampilkan form bulan dan tahun
-                                                } else { // Jika filternya 3 (per tahun)
-                                                    $('#form-tanggal, #form-bulan').hide(); // Sembunyikan form tanggal dan bulan
-                                                    $('#form-tahun').show(); // Tampilkan form tahun
-                                                }
-
-                                                $('#form-tanggal input, #form-bulan select, #form-tahun select').val(''); // Clear data pada textbox tanggal, combobox bulan & tahun
-                                            })
-                                        })
-                                    </script>
                                 </table>
                             </div>
                             <div class="card-footer py-4">

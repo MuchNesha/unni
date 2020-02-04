@@ -37,7 +37,7 @@ class laporan extends CI_Controller
                 $transaksi = $this->model_laporan->view_by_year($tahun); // Panggil fungsi view_by_year yang ada di TransaksiModel
             }
         } else { // Jika user tidak mengklik tombol tampilkan
-            $ket = 'Semua Data Transaksi';
+            $ket = 'Laporan Penjualan Hijabyhumairah';
             $url_cetak = 'laporan/cetak';
             $transaksi = $this->model_laporan->view_all(); // Panggil fungsi view_all yang ada di TransaksiModel
         }
@@ -58,7 +58,7 @@ class laporan extends CI_Controller
                 $tangal = $_GET['tanggal'];
 
                 $ket = 'Data Transaksi Tanggal ' . date('d-m-y', strtotime($tangal));
-                $transaksi = $this->model_laporan-- > view_by_date($tangal); // Panggil fungsi view_by_date yang ada di TransaksiModel
+                $transaksi = $this->model_laporan->view_by_date($tangal); // Panggil fungsi view_by_date yang ada di TransaksiModel
             } else if ($filter == '2') { // Jika filter nya 2 (per bulan)
                 $bulan = $_GET['bulan'];
                 $tahun = $_GET['tahun'];
@@ -73,7 +73,7 @@ class laporan extends CI_Controller
                 $transaksi = $this->model_laporan->view_by_year($tahun); // Panggil fungsi view_by_year yang ada di TransaksiModel
             }
         } else { // Jika user tidak mengklik tombol tampilkan
-            $ket = 'Semua Data Transaksi';
+            $ket = 'Laporan Penjualan Hijabyhumairah';
             $transaksi = $this->model_laporan->view_all(); // Panggil fungsi view_all yang ada di TransaksiModel
         }
 

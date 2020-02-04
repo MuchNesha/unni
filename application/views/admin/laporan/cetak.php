@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <b style="text-align: center;"><?php echo $ket; ?></b><br /><br />
+    <h1 style="text-align: center;">Laporan Penjualan HijabbyHumairah</h1>
+
+    <b><?php echo $ket; ?></b><br /><br />
 
     <table border="1" cellpadding="8">
         <tr>

@@ -37,7 +37,7 @@ class laporan extends CI_Controller
                 $transaksi = $this->model_laporan->view_by_year($tahun); // Panggil fungsi view_by_year yang ada di TransaksiModel
             }
         } else { // Jika user tidak mengklik tombol tampilkan
-            $ket = 'Laporan Penjualan Hijabyhumairah';
+            $ket = 'Semua Data Transaksi';
             $url_cetak = 'laporan/cetak';
             $transaksi = $this->model_laporan->view_all(); // Panggil fungsi view_all yang ada di TransaksiModel
         }
@@ -73,7 +73,7 @@ class laporan extends CI_Controller
                 $transaksi = $this->model_laporan->view_by_year($tahun); // Panggil fungsi view_by_year yang ada di TransaksiModel
             }
         } else { // Jika user tidak mengklik tombol tampilkan
-            $ket = 'Laporan Penjualan Hijabyhumairah';
+            $ket = 'Semua Data Transaksi';
             $transaksi = $this->model_laporan->view_all(); // Panggil fungsi view_all yang ada di TransaksiModel
         }
 

@@ -19,7 +19,7 @@ class laporan extends CI_Controller
                 $tangal = $_GET['tanggal'];
 
                 $ket = 'Data Transaksi Tanggal ' . date('d-m-y', strtotime($tangal));
-                $url_cetak = 'transaksi/cetak?filter=1&tanggal=' . $tangal;
+                $url_cetak = 'laporan/cetak?filter=1&tanggal=' . $tangal;
                 $transaksi = $this->model_laporan->view_by_date($tangal); // Panggil fungsi view_by_date yang ada di TransaksiModel
             } else if ($filter == '2') { // Jika filter nya 2 (per bulan)
                 $bulan = $_GET['bulan'];
@@ -27,13 +27,13 @@ class laporan extends CI_Controller
                 $nama_bulan = array('', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
 
                 $ket = 'Data Transaksi Bulan ' . $nama_bulan[$bulan] . ' ' . $tahun;
-                $url_cetak = 'transaksi/cetak?filter=2&bulan=' . $bulan . '&tahun=' . $tahun;
+                $url_cetak = 'laporan/cetak?filter=2&bulan=' . $bulan . '&tahun=' . $tahun;
                 $transaksi = $this->model_laporan->view_by_month($bulan, $tahun); // Panggil fungsi view_by_month yang ada di TransaksiModel
             } else { // Jika filter nya 3 (per tahun)
                 $tahun = $_GET['tahun'];
 
                 $ket = 'Data Transaksi Tahun ' . $tahun;
-                $url_cetak = 'transaksi/cetak?filter=3&tahun=' . $tahun;
+                $url_cetak = 'laporan/cetak?filter=3&tahun=' . $tahun;
                 $transaksi = $this->model_laporan->view_by_year($tahun); // Panggil fungsi view_by_year yang ada di TransaksiModel
             }
         } else { // Jika user tidak mengklik tombol tampilkan

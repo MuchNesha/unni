@@ -17,6 +17,14 @@ class konfirmasi extends CI_Controller
 		$this->load->view('konfirmasi/Konfirmasi');
 		$this->load->view('footer');
 	}
+
+	public function save($kode)
+	{
+		//$this->load->view('header');
+		$data['konfirmasi']= $this->model_konfirmasi1->getData($kode);
+		$this->load->view('konfirmasi/Konfirmasi', $data);
+		$this->load->view('footer');
+	}
 	public function add()
 	{
         $this->model_konfirmasi1->save();

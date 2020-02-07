@@ -40,6 +40,7 @@ class model_konfirmasi1 extends CI_Model
     {
         $post = $this->input->post();
         $this->id_pesanan = $post["id_pesanan"];
+        $this->id_pelanggan = $post["id_pelanggan"];
         $this->tgl_bayar = $post["tgl_bayar"];
         $this->jumlah_bayar = $post["jumlah_bayar"];
         $this->metode_pembayaran = $post["metode_pembayaran"];
@@ -50,7 +51,13 @@ class model_konfirmasi1 extends CI_Model
 
         $this->db->insert($this->_table, $this);
     }
-
+    public function getData($kode)
+    {
+        $this->db->select('*');
+        $this->db->where('id_pelanggan', $kode);
+        $query = $this->db->get('pelanggan');
+        return $query->result();
+    }
     private function _uploadImage()
     {
         $config['upload_path']          = './assets/upload/bukti';

@@ -13,7 +13,7 @@ class model_laporan extends CI_Model
     {
         $this->db->where('MONTH(tanggal)', $month); // Tambahkan where bulan
         $this->db->where('YEAR(tanggal)', $year); // Tambahkan where tahun
-
+     //   $this->db->join('detail_transaksi, detail_transaksi.id_transaksi = transaksi.id_transaksi');
         return $this->db->get('transaksi')->result(); // Tampilkan data transaksi sesuai bulan dan tahun yang diinput oleh user pada filter
     }
 

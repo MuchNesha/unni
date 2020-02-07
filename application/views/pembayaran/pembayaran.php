@@ -1,3 +1,5 @@
+
+            <?php foreach($pelanggan as $test) { ?>
 <div class="container">
     <div class="row  pt-2 pb-2">
         <div class="col-md-2 pt-6 text-center">
@@ -16,7 +18,7 @@
         </div>
         <div class="col-1"></div>
         <div class="col-md-2 pt-6 float-right text-center">
-            <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('konfirmasi'); ?>'">4</button>
+            <button type="button" class="btn karl-btn" onclick="window.location.href='<?= site_url('konfirmasi/save/'. $test->id_pelanggan); ?>'">4</button>
             <a class="text-center" href="<?= site_url('konfirmasi'); ?>"><br>KONFIRMASI</a>
         </div>
     </div>
@@ -27,7 +29,6 @@
     <div class="cart_area section_padding_100 clearfix">
         <div class="container">
             <div class="row">
-            <?php foreach($pelanggan as $test) { ?>
 
                 <div class="col-12">
                     <div class="cart-page-heading">

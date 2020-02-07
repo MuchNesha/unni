@@ -161,11 +161,15 @@
                                 <p>Setelah transfer uang, isi ID pesanan dan konfirmasi transfer tadi agar barang belanjaan anda segera di proses dan dikirim</p>
                             </div>
 
+                            <?php foreach($konfirmasi as $test) { ?>
+
                             <form action="<?php echo base_url('konfirmasi/add') ?>" method="post">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
+                                    <input hidden type="text" class="form-control" id="id_pelanggan" value="<?= $test->id_pelanggan ?>" name="id_pelanggan" required>
+
                                         <label for="nama">ID Pesanan <span>*</span></label>
-                                        <input type="text" class="form-control" id="first_name" value="" name="id_pesanan" required>
+                                        <input type="text" class="form-control" id="id_pesanan" value="<?= $test->id_pesanan ?>" name="id_pesanan" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="company">Tanggal Bayar</label>
@@ -200,6 +204,7 @@
 
                                 </div>
                             </form>
+                            <?php } ?>
                         </div>
                     </div>
 

@@ -75,7 +75,7 @@
                                 <td colspan="3"><h4 style="color: red"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></h4></td>
                               <td colspan="12" align="right">
                               <button class='btn karl-btn'  type="submit">Update Cart</button>
-                              <a href="<?php echo base_url()?>belanja/check_out"  class ='btn karl-checkout-btn'>Check Out</a>
+                              <a href="<?php echo base_url()?>pengiriman"  class ='btn karl-checkout-btn'>Check Out</a>
                             </table>
                         </div>
             </div>

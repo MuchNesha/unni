@@ -23,7 +23,7 @@ class pengiriman extends CI_Controller
     {
 
         $this->model_pelanggan->save();
-        redirect('pengiriman');
+        // redirect('pengiriman');
     }
 
     public function input_data($data, $tabel)

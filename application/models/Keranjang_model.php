@@ -17,6 +17,14 @@ class Keranjang_model extends CI_Model {
 		$query = $this->db->get('barang');
 		return $query->result_array();
 	}
+
+	public function getPelanggan($userKode)
+	{
+		$this->db->select('*');
+		$this->db->where('id_pesanan', $userKode);
+		$query = $this->db->get('pelanggan');
+		return $query->result();
+	}
 	
 	public function get_kategori_all()
 	{

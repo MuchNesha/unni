@@ -27,13 +27,15 @@
     <div class="cart_area section_padding_100 clearfix">
         <div class="container">
             <div class="row">
+            <?php foreach($pelanggan as $test) { ?>
+
                 <div class="col-12">
                     <div class="cart-page-heading">
                         <h2 style="color:grey;">LANGKAH 1 -</h2>
                         <h3> ID PESANAN ANDA</h3>
                         <p>Catat atau screenshoot ID Pesanan ini untuk keperluan konfirmasi pembayaran nanti</p>
                         <br><br>
-                        <h3 style="color:red;">112-1xxx12</h3>
+                        <h3 style="color:red;"><?= $test->id_pesanan ?></h3>
                     </div>
 
                     <div class="cart-page-heading">
@@ -90,28 +92,28 @@
                 <br>
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <h5>Nama Lengkap</h5>
-                        <p>gfgf</p>
+                        <h5>Nama pelanggan</h5>
+                        <p><?= $test->nama_pelanggan ?></p>
                     </div>
                     <div class="col-md-6 mb-4">
                         <h5>Provinsi</h5>
-                        <p>dkdkd</p>
+                        <p><?= $test->provinsi ?></p>
                     </div>
                     <div class="col-md-6 mb-4">
                         <h5>Nomor Handphone</h5>
-                        <p>0101029</p>
+                        <p><?= $test->no_hp_pelanggan ?></p>
                     </div>
                     <div class="col-md-6 mb-4">
-                        <h5>Kota/Kabupaten</h5>
-                        <p>jjjfjfjff</p>
+                        <h5>Kabupaten</h5>
+                        <p><?= $test->kabupaten ?></p>
                     </div>
                     <div class="col-md-6 mb-4">
                         <h5>Email</h5>
-                        <p>pppppp@ggg.com</p>
+                        <p><?= $test->email_pelanggan ?></p>
                     </div>
                     <div class="col-md-6 mb-4">
                         <h5>Kecamatan</h5>
-                        <p>Ammbbb</p>
+                        <p><?= $test->kecamatan ?></p>
                     </div>
                     <div class="col-md-6 mb-4">
                         <h5>Catatan Pengiriman</h5>
@@ -119,17 +121,17 @@
                     </div>
                     <div class="col-md-6 mb-4">
                         <h5>Kode Pos</h5>
-                        <p>511441</p>
+                        <p><?= $test->kode_pos ?></p>
                     </div>
                     <div class="col-md-2 lg-2">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="<?= site_url('konfirmasi'); ?>">
                             Launch demo modal
                         </button>
                     </div>
 
                 </div>
-
+            <?php } ?>
             </div>
             <div class="cart-page-heading">
                 <h2 style="color:grey;">LANGKAH 3 -</h2>

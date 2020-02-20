@@ -17,6 +17,8 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/core-style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/footer2.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/tracking-page.css">
 
     <!-- Responsive CSS -->
     <link href="<?php echo base_url(); ?>/assets/css/responsive.css" rel="stylesheet">
@@ -39,13 +41,17 @@
                         <div class="header-cart-menu d-flex align-items-center ml-auto">
                             <!-- Cart Area -->
                             <div class="cart">
-                                <?php // $cart= $this->cart->contents(); ?> 
-                                <?php // foreach ($cart as $item) ?>
-                                <a href="<?= site_url('belanja/tampil_cart')?>" id="header-cart-btn" target="_blank"><span class="cart_quantity"><?php  //echo $item['qty']; ?></span> <i class="ti-bag"></i> Total Belanja Anda</color></a>
+                                <?php // $cart= $this->cart->contents(); 
+                                ?>
+                                <?php // foreach ($cart as $item) 
+                                ?>
+                                <a href="<?= site_url('belanja/tampil_cart') ?>" id="header-cart-btn" target="_blank"><span class="cart_quantity"><?php  //echo $item['qty']; 
+                                                                                                                                                    ?></span> <i class="ti-bag"></i> Total Belanja Anda</color></a>
                             </div>
                             <div class="header-right-side-menu ml-15">
                                 </i>
-                                <font color=red> Rp.<?php // echo number_format($item['subtotal'],0,",","."); ?> </color>
+                                <font color=red> Rp.<?php // echo number_format($item['subtotal'],0,",","."); 
+                                                    ?> </color>
                             </div>
                         </div>
                     </div>
@@ -83,12 +89,13 @@
                                             <a class="dropdown-item" href="#">Baju Muslim</a>
                                             <a class="dropdown-item" href="#">Aksesoris</a>
                                             <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-      
-    </nav>
-                                            
+
+                                            </nav>
+
                                         </div>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="<?= site_url('konfirmasi'); ?>">Konfirmasi</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?= site_url('konfirmasi'); ?>">Tracking</a></li>
                                     <li class="nav-item"><a class="nav-link" href="<?= site_url('tentangkami'); ?>">Tentang</a></li>
                                     <li class="nav-item"><a class="nav-link" href="<?= site_url('kontakkami'); ?>">Kontak</a></li>
                                 </ul>

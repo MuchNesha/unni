@@ -58,18 +58,18 @@
                                         <input class="form-control" type="text" name="harga_brg" value="<?php echo $barang->harga_barang ?>" />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <!-- <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="grosir">Harga Grosir</label>
                                         <input class="form-control" type="text" name="grosir_barang" value="<?php echo $barang->grosir_barang ?>" />
                                     </div>
-                                </div>
-                                <div class="col-md-3">
+                                </div> -->
+                                <!-- <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="per">Per</label>
                                         <input class="form-control" type="text" name="per" value="<?php echo $barang->per ?>" />
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gambar">Gambar Barang</label>
@@ -88,12 +88,12 @@
                                         <input class="form-control" type="text" name="stok" placeholder="Harga" value="<?php echo $barang->stok ?>" />
                                     </div>
                                 </div>
-                                <div class=" col-3">
+                                <!-- <div class=" col-3">
                                     <div class="form-group">
                                         <label for="diskon">Diskon</label>
                                         <input class="form-control" type="text" name="diskon_barang" placeholder="%" value="<?php echo $barang->diskon_barang ?>" />
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -128,7 +128,6 @@
                                 <label class="custom-control-label" for="xxl">XXL</label>
                             </div> -->
 
-  -->
                             <button class="btn btn-primary" type="submit">Ubah</button>
                     </div>
                 </div>

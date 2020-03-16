@@ -5,12 +5,12 @@ class model_barang extends CI_Model
     private $_table = "barang";
     public $nama_barang;
     public $id_jenis;
-    public $ukuran;
+ //   public $ukuran;
     public $harga_barang;
-    public $grosir_barang;
-    public $per;
+    //public $grosir_barang;
+    //public $per;
     public $stok;
-    public $diskon_barang;
+   // public $diskon_barang;
     public $gambar;
     public $deskripsi_barang;
 
@@ -49,13 +49,13 @@ class model_barang extends CI_Model
         $this->nama_barang = $post["nama_brg"];
         $this->id_jenis = $post["id_jenis"];
         $this->harga_barang = $post["harga_brg"];
-        $this->grosir_barang = $post["grosir_barang"];
-        $this->per = $post["per"];
+       // $this->grosir_barang = $post["grosir_barang"];
+       // $this->per = $post["per"];
         $this->stok = $post["stok"];
-        $this->diskon_barang = $post["diskon_barang"];
+       // $this->diskon_barang = $post["diskon_barang"];
         $this->gambar = $this->_uploadImage();
         $this->deskripsi_barang = $post["deskripsi"];
-        $this->ukuran = $post["ukuran"];
+      //  $this->ukuran = $post["ukuran"];
 
 
         $this->db->insert($this->_table, $this);
@@ -69,17 +69,17 @@ class model_barang extends CI_Model
         $this->nama_barang = $post["nama_barang"];
         $this->id_jenis = $post["id_jenis"];
         $this->harga_barang = $post["harga_brg"];
-        $this->grosir_barang = $post["grosir_barang"];
-        $this->per = $post["per"];
+      //  $this->grosir_barang = $post["grosir_barang"];
+       // $this->per = $post["per"];
         $this->stok = $post["stok"];
-        $this->diskon_barang = $post["diskon_barang"];
+       // $this->diskon_barang = $post["diskon_barang"];
         if (!empty($_FILES["gambar"]["name"])) {
             $this->gambar = $this->_uploadImage();
         } else {
             $this->gambar = $post["old_image"];
         }
         $this->deskripsi_barang = $post["deskripsi"];
-        $this->ukuran = $post["ukuran"];
+        //$this->ukuran = $post["ukuran"];
 
         $this->db->update($this->_table, $this, array('id_barang' => $post['id_barang']));
     }

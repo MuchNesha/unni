@@ -196,7 +196,9 @@
                                     </div>
                                     <div class="col-12 mb-4">
                                         <label for="k">Unggah Bukti struk <span>*</span></label>
-                                        <input class="form-control" type="file" name="gambar_bukti" />
+                                        <div class="custom-file">
+                                            <input class="custom-file-input" type="file" name="gambar_bukti" />
+                                        </div>
                                     </div>
                                     <div class="col-3 mb-5">
                                         <button class="btn karl-checkout-btn" type="submit">konfirmasi</button>
@@ -218,7 +220,7 @@
     <!-- /.wrapper end -->
 
     <script>
-        $('.custom-file-input').on('change', function() {
+        $('.custome-file-input').on('change', function() {
             let fileName = $(this).val().split('\\').pop();
             $(this).next('.custom-file-label').addClass("selected").html(fileName);
         });

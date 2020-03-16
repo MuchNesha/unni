@@ -56,12 +56,12 @@
                                         <input class="form-control" type="number" name="harga_brg" placeholder="Rp." />
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="grosir">Harga Grosir Barang</label>
                                         <input class="form-control" type="number" name="grosir_barang" placeholder="Rp." />
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="grosir">Per</label>
@@ -80,12 +80,12 @@
                                         <input class="form-control" type="number" name="stok" placeholder="Stock" />
                                     </div>
                                 </div>
-                                <div class=" col-6">
+                                <!-- <div class=" col-6">
                                     <div class="form-group">
                                         <label for="Stock">Diskon (%)</label>
                                         <input class="form-control" type="number" name="diskon_barang" placeholder="%" />
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 
